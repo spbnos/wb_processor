@@ -1,0 +1,32 @@
+{
+  "sales_features": {
+    "name": "sales_features",
+    "entity_type": "sku",
+    "description": "Агрегированные фичи продаж по SKU",
+    "feature_names": [
+      "revenue_7d",
+      "revenue_30d",
+      "revenue_90d",
+      "qty_sold_7d",
+      "qty_sold_30d",
+      "avg_price_30d",
+      "order_count_30d",
+      "revenue_trend_30d",
+      "days_since_last_sale",
+      "commission_rate_30d"
+    ],
+    "created_at": "2026-05-04T18:59:28.956447+00:00"
+  },
+  "stock_features": {
+    "name": "stock_features",
+    "entity_type": "sku",
+    "description": "Фичи остатков склада по SKU",
+    "feature_names": [
+      "stock_qty_current",
+      "stock_reserved_current",
+      "stock_in_transit_current",
+      "stockout_risk_score"
+    ],
+    "created_at": "2026-05-04T18:59:28.963449+00:00"
+  }
+}

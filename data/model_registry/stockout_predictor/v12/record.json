@@ -1,0 +1,29 @@
+{
+  "model_name": "stockout_predictor",
+  "version": "v12",
+  "status": "archived",
+  "metrics": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "roc_auc": 1.0,
+    "ap_score": 1.0,
+    "pos_rate": 0.3529
+  },
+  "params": {
+    "risk_threshold": 0.7,
+    "test_size": 0.2,
+    "max_iter": 500
+  },
+  "feature_set": "stock_features",
+  "feature_names": [
+    "stock_qty_current",
+    "stock_reserved_current",
+    "stock_in_transit_current",
+    "revenue_30d",
+    "qty_sold_30d"
+  ],
+  "training_samples": 102,
+  "trained_at": "2026-05-25T10:05:53.339093+00:00",
+  "description": "LogisticRegression stockout risk predictor"
+}

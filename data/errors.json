@@ -1,0 +1,506 @@
+[
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'sku': 9 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:34:19.202809",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'commission': 15 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:34:19.202809",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'cpc': 3 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:34:19.204810",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'revenue': 3 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:34:19.205809",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'date': 6 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:34:19.205809",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'clicks': 2 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:34:19.206809",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'name': 13 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:34:19.207810",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'price': 4 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:34:19.207810",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'logistics': 3 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:34:19.209809",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'commission': 15 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:52:36.897942",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'name': 13 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:52:36.898942",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'price': 4 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:52:36.900943",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'logistics': 3 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:52:36.901942",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'sku': 9 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:52:36.902944",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'date': 6 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:52:36.902944",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'revenue': 3 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:52:36.903944",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'cpc': 3 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:52:36.904944",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'clicks': 2 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-05T03:52:36.905942",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'commission': 15 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-16T17:05:54.755511",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'sku': 9 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-16T17:05:54.755511",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'cpc': 3 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-16T17:05:54.756510",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'revenue': 3 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-16T17:05:54.756510",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'name': 13 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-16T17:05:54.757510",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'logistics': 3 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-16T17:05:54.758511",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'date': 6 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-16T17:05:54.759520",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'price': 4 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-16T17:05:54.760510",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'clicks': 2 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-16T17:05:54.762509",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'sku': 9 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:34.223759",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'name': 13 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:34.224761",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'commission': 15 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:34.224761",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'cpc': 3 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:34.225730",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'date': 6 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:34.226730",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'revenue': 3 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:34.226730",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'price': 4 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:34.227729",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'logistics': 3 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:34.227729",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "message": "Колонка 'clicks': 2 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:34.228729",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'transport_compensation': 797 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:36.458735",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'acceptance_fee': 11 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:36.458735",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'storage_fee': 797 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:36.460734",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'payment_period_change': 797 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:36.461735",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'quantity': 441 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:36.461735",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'pvz_fee': 797 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:36.462735",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260516_4163561 - 1.xlsx",
+    "message": "Колонка 'transport_compensation': 605 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:38.632922",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260516_4163561 - 1.xlsx",
+    "message": "Колонка 'storage_fee': 605 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:38.632922",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260516_4163561 - 1.xlsx",
+    "message": "Колонка 'quantity': 396 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:38.634922",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260516_4163561 - 1.xlsx",
+    "message": "Колонка 'pvz_fee': 605 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-17T09:40:38.635922",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'storage_fee': 797 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-20T17:49:04.065302",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'payment_period_change': 797 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-20T17:49:04.065302",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'transport_compensation': 797 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-20T17:49:04.066304",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'acceptance_fee': 11 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-20T17:49:04.068303",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'quantity': 441 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-20T17:49:04.068303",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'pvz_fee': 797 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-20T17:49:04.068303",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260516_4163561 - 1.xlsx",
+    "message": "Колонка 'storage_fee': 605 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-20T17:49:05.650211",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260516_4163561 - 1.xlsx",
+    "message": "Колонка 'transport_compensation': 605 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-20T17:49:05.650211",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260516_4163561 - 1.xlsx",
+    "message": "Колонка 'quantity': 396 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-20T17:49:05.651211",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "incoming\\Ежедневный детализированный отчет №416356120260516_4163561 - 1.xlsx",
+    "message": "Колонка 'pvz_fee': 605 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-20T17:49:05.652211",
+    "resolved": false
+  }
+]

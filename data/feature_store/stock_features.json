@@ -1,0 +1,3674 @@
+{
+  "242983675::stock_qty_current": {
+    "entity_id": "242983675",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 9.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "242983675::stock_reserved_current": {
+    "entity_id": "242983675",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "242983675::stock_in_transit_current": {
+    "entity_id": "242983675",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "242983675::stockout_risk_score": {
+    "entity_id": "242983675",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.1,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "242997805::stock_qty_current": {
+    "entity_id": "242997805",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "242997805::stock_reserved_current": {
+    "entity_id": "242997805",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "242997805::stock_in_transit_current": {
+    "entity_id": "242997805",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "242997805::stockout_risk_score": {
+    "entity_id": "242997805",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "242997807::stock_qty_current": {
+    "entity_id": "242997807",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "242997807::stock_reserved_current": {
+    "entity_id": "242997807",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "242997807::stock_in_transit_current": {
+    "entity_id": "242997807",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "242997807::stockout_risk_score": {
+    "entity_id": "242997807",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "243006666::stock_qty_current": {
+    "entity_id": "243006666",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "243006666::stock_reserved_current": {
+    "entity_id": "243006666",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "243006666::stock_in_transit_current": {
+    "entity_id": "243006666",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "243006666::stockout_risk_score": {
+    "entity_id": "243006666",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "243006668::stock_qty_current": {
+    "entity_id": "243006668",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "243006668::stock_reserved_current": {
+    "entity_id": "243006668",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "243006668::stock_in_transit_current": {
+    "entity_id": "243006668",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "243006668::stockout_risk_score": {
+    "entity_id": "243006668",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "246996741::stock_qty_current": {
+    "entity_id": "246996741",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "246996741::stock_reserved_current": {
+    "entity_id": "246996741",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "246996741::stock_in_transit_current": {
+    "entity_id": "246996741",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "246996741::stockout_risk_score": {
+    "entity_id": "246996741",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "246996747::stock_qty_current": {
+    "entity_id": "246996747",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "246996747::stock_reserved_current": {
+    "entity_id": "246996747",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "246996747::stock_in_transit_current": {
+    "entity_id": "246996747",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "246996747::stockout_risk_score": {
+    "entity_id": "246996747",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "247196251::stock_qty_current": {
+    "entity_id": "247196251",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "247196251::stock_reserved_current": {
+    "entity_id": "247196251",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "247196251::stock_in_transit_current": {
+    "entity_id": "247196251",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "247196251::stockout_risk_score": {
+    "entity_id": "247196251",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "247826221::stock_qty_current": {
+    "entity_id": "247826221",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "247826221::stock_reserved_current": {
+    "entity_id": "247826221",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "247826221::stock_in_transit_current": {
+    "entity_id": "247826221",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "247826221::stockout_risk_score": {
+    "entity_id": "247826221",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "249112100::stock_qty_current": {
+    "entity_id": "249112100",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 2.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "249112100::stock_reserved_current": {
+    "entity_id": "249112100",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "249112100::stock_in_transit_current": {
+    "entity_id": "249112100",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "249112100::stockout_risk_score": {
+    "entity_id": "249112100",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.3333,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "249205197::stock_qty_current": {
+    "entity_id": "249205197",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "249205197::stock_reserved_current": {
+    "entity_id": "249205197",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "249205197::stock_in_transit_current": {
+    "entity_id": "249205197",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "249205197::stockout_risk_score": {
+    "entity_id": "249205197",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "251246093::stock_qty_current": {
+    "entity_id": "251246093",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "251246093::stock_reserved_current": {
+    "entity_id": "251246093",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "251246093::stock_in_transit_current": {
+    "entity_id": "251246093",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "251246093::stockout_risk_score": {
+    "entity_id": "251246093",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "251836511::stock_qty_current": {
+    "entity_id": "251836511",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "251836511::stock_reserved_current": {
+    "entity_id": "251836511",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "251836511::stock_in_transit_current": {
+    "entity_id": "251836511",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "251836511::stockout_risk_score": {
+    "entity_id": "251836511",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "253395866::stock_qty_current": {
+    "entity_id": "253395866",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "253395866::stock_reserved_current": {
+    "entity_id": "253395866",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "253395866::stock_in_transit_current": {
+    "entity_id": "253395866",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "253395866::stockout_risk_score": {
+    "entity_id": "253395866",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "255326391::stock_qty_current": {
+    "entity_id": "255326391",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "255326391::stock_reserved_current": {
+    "entity_id": "255326391",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "255326391::stock_in_transit_current": {
+    "entity_id": "255326391",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "255326391::stockout_risk_score": {
+    "entity_id": "255326391",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "263693296::stock_qty_current": {
+    "entity_id": "263693296",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "263693296::stock_reserved_current": {
+    "entity_id": "263693296",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "263693296::stock_in_transit_current": {
+    "entity_id": "263693296",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "263693296::stockout_risk_score": {
+    "entity_id": "263693296",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264482030::stock_qty_current": {
+    "entity_id": "264482030",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264482030::stock_reserved_current": {
+    "entity_id": "264482030",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264482030::stock_in_transit_current": {
+    "entity_id": "264482030",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264482030::stockout_risk_score": {
+    "entity_id": "264482030",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264650324::stock_qty_current": {
+    "entity_id": "264650324",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 11.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264650324::stock_reserved_current": {
+    "entity_id": "264650324",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264650324::stock_in_transit_current": {
+    "entity_id": "264650324",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264650324::stockout_risk_score": {
+    "entity_id": "264650324",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.0833,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264650325::stock_qty_current": {
+    "entity_id": "264650325",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264650325::stock_reserved_current": {
+    "entity_id": "264650325",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264650325::stock_in_transit_current": {
+    "entity_id": "264650325",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264650325::stockout_risk_score": {
+    "entity_id": "264650325",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264651116::stock_qty_current": {
+    "entity_id": "264651116",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 2.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264651116::stock_reserved_current": {
+    "entity_id": "264651116",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264651116::stock_in_transit_current": {
+    "entity_id": "264651116",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264651116::stockout_risk_score": {
+    "entity_id": "264651116",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.3333,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264662109::stock_qty_current": {
+    "entity_id": "264662109",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264662109::stock_reserved_current": {
+    "entity_id": "264662109",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264662109::stock_in_transit_current": {
+    "entity_id": "264662109",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264662109::stockout_risk_score": {
+    "entity_id": "264662109",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264662417::stock_qty_current": {
+    "entity_id": "264662417",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264662417::stock_reserved_current": {
+    "entity_id": "264662417",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264662417::stock_in_transit_current": {
+    "entity_id": "264662417",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "264662417::stockout_risk_score": {
+    "entity_id": "264662417",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916404::stock_qty_current": {
+    "entity_id": "273916404",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916404::stock_reserved_current": {
+    "entity_id": "273916404",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916404::stock_in_transit_current": {
+    "entity_id": "273916404",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916404::stockout_risk_score": {
+    "entity_id": "273916404",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916405::stock_qty_current": {
+    "entity_id": "273916405",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916405::stock_reserved_current": {
+    "entity_id": "273916405",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916405::stock_in_transit_current": {
+    "entity_id": "273916405",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916405::stockout_risk_score": {
+    "entity_id": "273916405",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916706::stock_qty_current": {
+    "entity_id": "273916706",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916706::stock_reserved_current": {
+    "entity_id": "273916706",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916706::stock_in_transit_current": {
+    "entity_id": "273916706",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916706::stockout_risk_score": {
+    "entity_id": "273916706",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916707::stock_qty_current": {
+    "entity_id": "273916707",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916707::stock_reserved_current": {
+    "entity_id": "273916707",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916707::stock_in_transit_current": {
+    "entity_id": "273916707",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916707::stockout_risk_score": {
+    "entity_id": "273916707",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916708::stock_qty_current": {
+    "entity_id": "273916708",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 5.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916708::stock_reserved_current": {
+    "entity_id": "273916708",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916708::stock_in_transit_current": {
+    "entity_id": "273916708",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273916708::stockout_risk_score": {
+    "entity_id": "273916708",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.1667,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273917372::stock_qty_current": {
+    "entity_id": "273917372",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 6.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273917372::stock_reserved_current": {
+    "entity_id": "273917372",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273917372::stock_in_transit_current": {
+    "entity_id": "273917372",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273917372::stockout_risk_score": {
+    "entity_id": "273917372",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.1429,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273931361::stock_qty_current": {
+    "entity_id": "273931361",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 2.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273931361::stock_reserved_current": {
+    "entity_id": "273931361",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273931361::stock_in_transit_current": {
+    "entity_id": "273931361",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273931361::stockout_risk_score": {
+    "entity_id": "273931361",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.3333,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273931362::stock_qty_current": {
+    "entity_id": "273931362",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273931362::stock_reserved_current": {
+    "entity_id": "273931362",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273931362::stock_in_transit_current": {
+    "entity_id": "273931362",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273931362::stockout_risk_score": {
+    "entity_id": "273931362",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934915::stock_qty_current": {
+    "entity_id": "273934915",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934915::stock_reserved_current": {
+    "entity_id": "273934915",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934915::stock_in_transit_current": {
+    "entity_id": "273934915",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934915::stockout_risk_score": {
+    "entity_id": "273934915",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934916::stock_qty_current": {
+    "entity_id": "273934916",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934916::stock_reserved_current": {
+    "entity_id": "273934916",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934916::stock_in_transit_current": {
+    "entity_id": "273934916",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934916::stockout_risk_score": {
+    "entity_id": "273934916",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934917::stock_qty_current": {
+    "entity_id": "273934917",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934917::stock_reserved_current": {
+    "entity_id": "273934917",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934917::stock_in_transit_current": {
+    "entity_id": "273934917",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934917::stockout_risk_score": {
+    "entity_id": "273934917",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934918::stock_qty_current": {
+    "entity_id": "273934918",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 3.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934918::stock_reserved_current": {
+    "entity_id": "273934918",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934918::stock_in_transit_current": {
+    "entity_id": "273934918",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273934918::stockout_risk_score": {
+    "entity_id": "273934918",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.25,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273942112::stock_qty_current": {
+    "entity_id": "273942112",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 2.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273942112::stock_reserved_current": {
+    "entity_id": "273942112",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273942112::stock_in_transit_current": {
+    "entity_id": "273942112",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "273942112::stockout_risk_score": {
+    "entity_id": "273942112",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.3333,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "276118409::stock_qty_current": {
+    "entity_id": "276118409",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "276118409::stock_reserved_current": {
+    "entity_id": "276118409",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "276118409::stock_in_transit_current": {
+    "entity_id": "276118409",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "276118409::stockout_risk_score": {
+    "entity_id": "276118409",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "277127479::stock_qty_current": {
+    "entity_id": "277127479",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 3.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "277127479::stock_reserved_current": {
+    "entity_id": "277127479",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "277127479::stock_in_transit_current": {
+    "entity_id": "277127479",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "277127479::stockout_risk_score": {
+    "entity_id": "277127479",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.25,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "277127753::stock_qty_current": {
+    "entity_id": "277127753",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "277127753::stock_reserved_current": {
+    "entity_id": "277127753",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "277127753::stock_in_transit_current": {
+    "entity_id": "277127753",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "277127753::stockout_risk_score": {
+    "entity_id": "277127753",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "303718709::stock_qty_current": {
+    "entity_id": "303718709",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 3.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "303718709::stock_reserved_current": {
+    "entity_id": "303718709",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "303718709::stock_in_transit_current": {
+    "entity_id": "303718709",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "303718709::stockout_risk_score": {
+    "entity_id": "303718709",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.25,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "306126594::stock_qty_current": {
+    "entity_id": "306126594",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "306126594::stock_reserved_current": {
+    "entity_id": "306126594",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "306126594::stock_in_transit_current": {
+    "entity_id": "306126594",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "306126594::stockout_risk_score": {
+    "entity_id": "306126594",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "306130372::stock_qty_current": {
+    "entity_id": "306130372",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 2.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "306130372::stock_reserved_current": {
+    "entity_id": "306130372",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "306130372::stock_in_transit_current": {
+    "entity_id": "306130372",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "306130372::stockout_risk_score": {
+    "entity_id": "306130372",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.3333,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "310927589::stock_qty_current": {
+    "entity_id": "310927589",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "310927589::stock_reserved_current": {
+    "entity_id": "310927589",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "310927589::stock_in_transit_current": {
+    "entity_id": "310927589",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "310927589::stockout_risk_score": {
+    "entity_id": "310927589",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "310927590::stock_qty_current": {
+    "entity_id": "310927590",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "310927590::stock_reserved_current": {
+    "entity_id": "310927590",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "310927590::stock_in_transit_current": {
+    "entity_id": "310927590",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "310927590::stockout_risk_score": {
+    "entity_id": "310927590",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "313895685::stock_qty_current": {
+    "entity_id": "313895685",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "313895685::stock_reserved_current": {
+    "entity_id": "313895685",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "313895685::stock_in_transit_current": {
+    "entity_id": "313895685",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "313895685::stockout_risk_score": {
+    "entity_id": "313895685",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "320404636::stock_qty_current": {
+    "entity_id": "320404636",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "320404636::stock_reserved_current": {
+    "entity_id": "320404636",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "320404636::stock_in_transit_current": {
+    "entity_id": "320404636",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "320404636::stockout_risk_score": {
+    "entity_id": "320404636",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "326603144::stock_qty_current": {
+    "entity_id": "326603144",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "326603144::stock_reserved_current": {
+    "entity_id": "326603144",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "326603144::stock_in_transit_current": {
+    "entity_id": "326603144",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "326603144::stockout_risk_score": {
+    "entity_id": "326603144",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "326603636::stock_qty_current": {
+    "entity_id": "326603636",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "326603636::stock_reserved_current": {
+    "entity_id": "326603636",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "326603636::stock_in_transit_current": {
+    "entity_id": "326603636",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "326603636::stockout_risk_score": {
+    "entity_id": "326603636",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "327269378::stock_qty_current": {
+    "entity_id": "327269378",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "327269378::stock_reserved_current": {
+    "entity_id": "327269378",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "327269378::stock_in_transit_current": {
+    "entity_id": "327269378",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "327269378::stockout_risk_score": {
+    "entity_id": "327269378",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "327269380::stock_qty_current": {
+    "entity_id": "327269380",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 3.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "327269380::stock_reserved_current": {
+    "entity_id": "327269380",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "327269380::stock_in_transit_current": {
+    "entity_id": "327269380",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "327269380::stockout_risk_score": {
+    "entity_id": "327269380",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.25,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "327269381::stock_qty_current": {
+    "entity_id": "327269381",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 2.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "327269381::stock_reserved_current": {
+    "entity_id": "327269381",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "327269381::stock_in_transit_current": {
+    "entity_id": "327269381",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "327269381::stockout_risk_score": {
+    "entity_id": "327269381",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.3333,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "335420741::stock_qty_current": {
+    "entity_id": "335420741",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "335420741::stock_reserved_current": {
+    "entity_id": "335420741",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "335420741::stock_in_transit_current": {
+    "entity_id": "335420741",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "335420741::stockout_risk_score": {
+    "entity_id": "335420741",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "412318253::stock_qty_current": {
+    "entity_id": "412318253",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "412318253::stock_reserved_current": {
+    "entity_id": "412318253",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "412318253::stock_in_transit_current": {
+    "entity_id": "412318253",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "412318253::stockout_risk_score": {
+    "entity_id": "412318253",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430065416::stock_qty_current": {
+    "entity_id": "430065416",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 8.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430065416::stock_reserved_current": {
+    "entity_id": "430065416",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430065416::stock_in_transit_current": {
+    "entity_id": "430065416",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430065416::stockout_risk_score": {
+    "entity_id": "430065416",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.1111,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430065417::stock_qty_current": {
+    "entity_id": "430065417",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 4.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430065417::stock_reserved_current": {
+    "entity_id": "430065417",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430065417::stock_in_transit_current": {
+    "entity_id": "430065417",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430065417::stockout_risk_score": {
+    "entity_id": "430065417",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.2,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430065418::stock_qty_current": {
+    "entity_id": "430065418",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 17.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430065418::stock_reserved_current": {
+    "entity_id": "430065418",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430065418::stock_in_transit_current": {
+    "entity_id": "430065418",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430065418::stockout_risk_score": {
+    "entity_id": "430065418",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.0556,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430134125::stock_qty_current": {
+    "entity_id": "430134125",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 12.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430134125::stock_reserved_current": {
+    "entity_id": "430134125",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430134125::stock_in_transit_current": {
+    "entity_id": "430134125",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "430134125::stockout_risk_score": {
+    "entity_id": "430134125",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.0769,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "502444730::stock_qty_current": {
+    "entity_id": "502444730",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "502444730::stock_reserved_current": {
+    "entity_id": "502444730",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "502444730::stock_in_transit_current": {
+    "entity_id": "502444730",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "502444730::stockout_risk_score": {
+    "entity_id": "502444730",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "525021266::stock_qty_current": {
+    "entity_id": "525021266",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 3.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "525021266::stock_reserved_current": {
+    "entity_id": "525021266",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "525021266::stock_in_transit_current": {
+    "entity_id": "525021266",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "525021266::stockout_risk_score": {
+    "entity_id": "525021266",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.25,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "525043061::stock_qty_current": {
+    "entity_id": "525043061",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "525043061::stock_reserved_current": {
+    "entity_id": "525043061",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "525043061::stock_in_transit_current": {
+    "entity_id": "525043061",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "525043061::stockout_risk_score": {
+    "entity_id": "525043061",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "543589416::stock_qty_current": {
+    "entity_id": "543589416",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 2.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "543589416::stock_reserved_current": {
+    "entity_id": "543589416",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "543589416::stock_in_transit_current": {
+    "entity_id": "543589416",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "543589416::stockout_risk_score": {
+    "entity_id": "543589416",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.3333,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "600650218::stock_qty_current": {
+    "entity_id": "600650218",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "600650218::stock_reserved_current": {
+    "entity_id": "600650218",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "600650218::stock_in_transit_current": {
+    "entity_id": "600650218",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "600650218::stockout_risk_score": {
+    "entity_id": "600650218",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "608869952::stock_qty_current": {
+    "entity_id": "608869952",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "608869952::stock_reserved_current": {
+    "entity_id": "608869952",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "608869952::stock_in_transit_current": {
+    "entity_id": "608869952",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "608869952::stockout_risk_score": {
+    "entity_id": "608869952",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "608869954::stock_qty_current": {
+    "entity_id": "608869954",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "608869954::stock_reserved_current": {
+    "entity_id": "608869954",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "608869954::stock_in_transit_current": {
+    "entity_id": "608869954",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "608869954::stockout_risk_score": {
+    "entity_id": "608869954",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "608869956::stock_qty_current": {
+    "entity_id": "608869956",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 10.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "608869956::stock_reserved_current": {
+    "entity_id": "608869956",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "608869956::stock_in_transit_current": {
+    "entity_id": "608869956",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "608869956::stockout_risk_score": {
+    "entity_id": "608869956",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.0909,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "611901047::stock_qty_current": {
+    "entity_id": "611901047",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "611901047::stock_reserved_current": {
+    "entity_id": "611901047",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "611901047::stock_in_transit_current": {
+    "entity_id": "611901047",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "611901047::stockout_risk_score": {
+    "entity_id": "611901047",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "611901052::stock_qty_current": {
+    "entity_id": "611901052",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 20.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "611901052::stock_reserved_current": {
+    "entity_id": "611901052",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "611901052::stock_in_transit_current": {
+    "entity_id": "611901052",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "611901052::stockout_risk_score": {
+    "entity_id": "611901052",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.0476,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "611901054::stock_qty_current": {
+    "entity_id": "611901054",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "611901054::stock_reserved_current": {
+    "entity_id": "611901054",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "611901054::stock_in_transit_current": {
+    "entity_id": "611901054",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "611901054::stockout_risk_score": {
+    "entity_id": "611901054",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "619260999::stock_qty_current": {
+    "entity_id": "619260999",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "619260999::stock_reserved_current": {
+    "entity_id": "619260999",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "619260999::stock_in_transit_current": {
+    "entity_id": "619260999",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "619260999::stockout_risk_score": {
+    "entity_id": "619260999",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "619261002::stock_qty_current": {
+    "entity_id": "619261002",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "619261002::stock_reserved_current": {
+    "entity_id": "619261002",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "619261002::stock_in_transit_current": {
+    "entity_id": "619261002",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "619261002::stockout_risk_score": {
+    "entity_id": "619261002",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "619534025::stock_qty_current": {
+    "entity_id": "619534025",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "619534025::stock_reserved_current": {
+    "entity_id": "619534025",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "619534025::stock_in_transit_current": {
+    "entity_id": "619534025",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "619534025::stockout_risk_score": {
+    "entity_id": "619534025",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "725161854::stock_qty_current": {
+    "entity_id": "725161854",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "725161854::stock_reserved_current": {
+    "entity_id": "725161854",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "725161854::stock_in_transit_current": {
+    "entity_id": "725161854",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "725161854::stockout_risk_score": {
+    "entity_id": "725161854",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "725312311::stock_qty_current": {
+    "entity_id": "725312311",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "725312311::stock_reserved_current": {
+    "entity_id": "725312311",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "725312311::stock_in_transit_current": {
+    "entity_id": "725312311",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "725312311::stockout_risk_score": {
+    "entity_id": "725312311",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727227071::stock_qty_current": {
+    "entity_id": "727227071",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727227071::stock_reserved_current": {
+    "entity_id": "727227071",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727227071::stock_in_transit_current": {
+    "entity_id": "727227071",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727227071::stockout_risk_score": {
+    "entity_id": "727227071",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727227074::stock_qty_current": {
+    "entity_id": "727227074",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727227074::stock_reserved_current": {
+    "entity_id": "727227074",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727227074::stock_in_transit_current": {
+    "entity_id": "727227074",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727227074::stockout_risk_score": {
+    "entity_id": "727227074",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727362667::stock_qty_current": {
+    "entity_id": "727362667",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727362667::stock_reserved_current": {
+    "entity_id": "727362667",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727362667::stock_in_transit_current": {
+    "entity_id": "727362667",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727362667::stockout_risk_score": {
+    "entity_id": "727362667",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727362670::stock_qty_current": {
+    "entity_id": "727362670",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727362670::stock_reserved_current": {
+    "entity_id": "727362670",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727362670::stock_in_transit_current": {
+    "entity_id": "727362670",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727362670::stockout_risk_score": {
+    "entity_id": "727362670",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727362671::stock_qty_current": {
+    "entity_id": "727362671",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727362671::stock_reserved_current": {
+    "entity_id": "727362671",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727362671::stock_in_transit_current": {
+    "entity_id": "727362671",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "727362671::stockout_risk_score": {
+    "entity_id": "727362671",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729143950::stock_qty_current": {
+    "entity_id": "729143950",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729143950::stock_reserved_current": {
+    "entity_id": "729143950",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729143950::stock_in_transit_current": {
+    "entity_id": "729143950",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729143950::stockout_risk_score": {
+    "entity_id": "729143950",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729144037::stock_qty_current": {
+    "entity_id": "729144037",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729144037::stock_reserved_current": {
+    "entity_id": "729144037",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729144037::stock_in_transit_current": {
+    "entity_id": "729144037",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729144037::stockout_risk_score": {
+    "entity_id": "729144037",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729144192::stock_qty_current": {
+    "entity_id": "729144192",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729144192::stock_reserved_current": {
+    "entity_id": "729144192",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729144192::stock_in_transit_current": {
+    "entity_id": "729144192",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729144192::stockout_risk_score": {
+    "entity_id": "729144192",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729145133::stock_qty_current": {
+    "entity_id": "729145133",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729145133::stock_reserved_current": {
+    "entity_id": "729145133",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729145133::stock_in_transit_current": {
+    "entity_id": "729145133",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729145133::stockout_risk_score": {
+    "entity_id": "729145133",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729507968::stock_qty_current": {
+    "entity_id": "729507968",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729507968::stock_reserved_current": {
+    "entity_id": "729507968",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729507968::stock_in_transit_current": {
+    "entity_id": "729507968",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729507968::stockout_risk_score": {
+    "entity_id": "729507968",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729520940::stock_qty_current": {
+    "entity_id": "729520940",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729520940::stock_reserved_current": {
+    "entity_id": "729520940",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729520940::stock_in_transit_current": {
+    "entity_id": "729520940",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729520940::stockout_risk_score": {
+    "entity_id": "729520940",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729548452::stock_qty_current": {
+    "entity_id": "729548452",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729548452::stock_reserved_current": {
+    "entity_id": "729548452",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729548452::stock_in_transit_current": {
+    "entity_id": "729548452",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "729548452::stockout_risk_score": {
+    "entity_id": "729548452",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "765931945::stock_qty_current": {
+    "entity_id": "765931945",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 3.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "765931945::stock_reserved_current": {
+    "entity_id": "765931945",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "765931945::stock_in_transit_current": {
+    "entity_id": "765931945",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "765931945::stockout_risk_score": {
+    "entity_id": "765931945",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.25,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "765931946::stock_qty_current": {
+    "entity_id": "765931946",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 2.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "765931946::stock_reserved_current": {
+    "entity_id": "765931946",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "765931946::stock_in_transit_current": {
+    "entity_id": "765931946",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "765931946::stockout_risk_score": {
+    "entity_id": "765931946",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.3333,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "766415883::stock_qty_current": {
+    "entity_id": "766415883",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "766415883::stock_reserved_current": {
+    "entity_id": "766415883",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "766415883::stock_in_transit_current": {
+    "entity_id": "766415883",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "766415883::stockout_risk_score": {
+    "entity_id": "766415883",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "859289391::stock_qty_current": {
+    "entity_id": "859289391",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "859289391::stock_reserved_current": {
+    "entity_id": "859289391",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "859289391::stock_in_transit_current": {
+    "entity_id": "859289391",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "859289391::stockout_risk_score": {
+    "entity_id": "859289391",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "859289392::stock_qty_current": {
+    "entity_id": "859289392",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "859289392::stock_reserved_current": {
+    "entity_id": "859289392",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "859289392::stock_in_transit_current": {
+    "entity_id": "859289392",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "859289392::stockout_risk_score": {
+    "entity_id": "859289392",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577333::stock_qty_current": {
+    "entity_id": "866577333",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577333::stock_reserved_current": {
+    "entity_id": "866577333",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577333::stock_in_transit_current": {
+    "entity_id": "866577333",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577333::stockout_risk_score": {
+    "entity_id": "866577333",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577334::stock_qty_current": {
+    "entity_id": "866577334",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577334::stock_reserved_current": {
+    "entity_id": "866577334",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577334::stock_in_transit_current": {
+    "entity_id": "866577334",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577334::stockout_risk_score": {
+    "entity_id": "866577334",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577335::stock_qty_current": {
+    "entity_id": "866577335",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577335::stock_reserved_current": {
+    "entity_id": "866577335",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577335::stock_in_transit_current": {
+    "entity_id": "866577335",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577335::stockout_risk_score": {
+    "entity_id": "866577335",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577336::stock_qty_current": {
+    "entity_id": "866577336",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577336::stock_reserved_current": {
+    "entity_id": "866577336",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577336::stock_in_transit_current": {
+    "entity_id": "866577336",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577336::stockout_risk_score": {
+    "entity_id": "866577336",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577338::stock_qty_current": {
+    "entity_id": "866577338",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577338::stock_reserved_current": {
+    "entity_id": "866577338",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577338::stock_in_transit_current": {
+    "entity_id": "866577338",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577338::stockout_risk_score": {
+    "entity_id": "866577338",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577339::stock_qty_current": {
+    "entity_id": "866577339",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 3.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577339::stock_reserved_current": {
+    "entity_id": "866577339",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577339::stock_in_transit_current": {
+    "entity_id": "866577339",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577339::stockout_risk_score": {
+    "entity_id": "866577339",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.25,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577340::stock_qty_current": {
+    "entity_id": "866577340",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 5.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577340::stock_reserved_current": {
+    "entity_id": "866577340",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577340::stock_in_transit_current": {
+    "entity_id": "866577340",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577340::stockout_risk_score": {
+    "entity_id": "866577340",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.1667,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577341::stock_qty_current": {
+    "entity_id": "866577341",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 2.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577341::stock_reserved_current": {
+    "entity_id": "866577341",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577341::stock_in_transit_current": {
+    "entity_id": "866577341",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577341::stockout_risk_score": {
+    "entity_id": "866577341",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.3333,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577342::stock_qty_current": {
+    "entity_id": "866577342",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 7.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577342::stock_reserved_current": {
+    "entity_id": "866577342",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577342::stock_in_transit_current": {
+    "entity_id": "866577342",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577342::stockout_risk_score": {
+    "entity_id": "866577342",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.125,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577343::stock_qty_current": {
+    "entity_id": "866577343",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 10.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577343::stock_reserved_current": {
+    "entity_id": "866577343",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577343::stock_in_transit_current": {
+    "entity_id": "866577343",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577343::stockout_risk_score": {
+    "entity_id": "866577343",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.0909,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577344::stock_qty_current": {
+    "entity_id": "866577344",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 2.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577344::stock_reserved_current": {
+    "entity_id": "866577344",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577344::stock_in_transit_current": {
+    "entity_id": "866577344",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577344::stockout_risk_score": {
+    "entity_id": "866577344",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.3333,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577345::stock_qty_current": {
+    "entity_id": "866577345",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 3.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577345::stock_reserved_current": {
+    "entity_id": "866577345",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577345::stock_in_transit_current": {
+    "entity_id": "866577345",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "866577345::stockout_risk_score": {
+    "entity_id": "866577345",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.25,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "972502203::stock_qty_current": {
+    "entity_id": "972502203",
+    "feature_set": "stock_features",
+    "feature_name": "stock_qty_current",
+    "value": 1.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "972502203::stock_reserved_current": {
+    "entity_id": "972502203",
+    "feature_set": "stock_features",
+    "feature_name": "stock_reserved_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "972502203::stock_in_transit_current": {
+    "entity_id": "972502203",
+    "feature_set": "stock_features",
+    "feature_name": "stock_in_transit_current",
+    "value": 0.0,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  },
+  "972502203::stockout_risk_score": {
+    "entity_id": "972502203",
+    "feature_set": "stock_features",
+    "feature_name": "stockout_risk_score",
+    "value": 0.5,
+    "computed_at": "2026-05-21T10:28:31.414387+00:00",
+    "window_days": null,
+    "extra": null
+  }
+}

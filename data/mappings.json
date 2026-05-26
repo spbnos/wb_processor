@@ -1,0 +1,1627 @@
+[
+  {
+    "id": 1,
+    "name": "Del Test",
+    "struct_hash": "hash_del1111",
+    "category": "wb_report",
+    "subcategory": "sales",
+    "purpose": "profit",
+    "column_count": 2,
+    "raw_columns": [
+      "SKU",
+      "Цена"
+    ],
+    "notes": null,
+    "is_active": false,
+    "created_at": "2026-04-29T11:36:14.793628",
+    "updated_at": "2026-04-29T11:36:14.793628",
+    "fields": [
+      {
+        "source_column": "SKU",
+        "target_field": "sku",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": true,
+        "description": null
+      },
+      {
+        "source_column": "Цена",
+        "target_field": "price",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "auto:Ежедневный детализированный отчет №4163561202605031_4163561 - 1",
+    "struct_hash": "23427a7a23e3b2fa",
+    "category": "wb_report",
+    "subcategory": "custom",
+    "purpose": "analytics",
+    "column_count": 82,
+    "raw_columns": [
+      "№",
+      "Номер поставки",
+      "Предмет",
+      "Код номенклатуры",
+      "Бренд",
+      "Артикул поставщика",
+      "Название",
+      "Размер",
+      "Баркод",
+      "Тип документа",
+      "Обоснование для оплаты",
+      "Дата заказа покупателем",
+      "Дата продажи",
+      "Кол-во",
+      "Цена розничная",
+      "Вайлдберриз реализовал Товар (Пр)",
+      "Согласованный продуктовый дисконт, %",
+      "Промокод, %",
+      "Итоговая согласованная скидка, %",
+      "Цена розничная с учетом согласованной скидки",
+      "Размер снижения кВВ из-за рейтинга, %",
+      "Размер изменения кВВ из-за акции, %",
+      "Платформенные скидки, %",
+      "Размер кВВ, %",
+      "Размер кВВ без НДС, % Базовый",
+      "Итоговый кВВ без НДС, %",
+      "Вознаграждение с продаж до вычета услуг поверенного, без НДС",
+      "Возмещение за выдачу и возврат товаров на ПВЗ",
+      "Компенсация платёжных услуг/Комиссия за интеграцию платёжных сервисов",
+      "Размер компенсации платёжных услуг/Комиссии за интеграцию платёжных сервисов, %",
+      "Тип платежа: компенсация платёжных услуг/Комиссия за интеграцию платёжных сервисов",
+      "Вознаграждение Вайлдберриз (ВВ), без НДС",
+      "НДС с Вознаграждения Вайлдберриз",
+      "К перечислению Продавцу за реализованный Товар",
+      "Количество доставок",
+      "Количество возврата",
+      "Услуги по доставке товара покупателю",
+      "Дата начала действия фиксации",
+      "Дата конца действия фиксации",
+      "Признак услуги платной доставки",
+      "Общая сумма штрафов",
+      "Корректировка Вознаграждения Вайлдберриз (ВВ)",
+      "Виды логистики, штрафов и корректировок ВВ",
+      "Стикер МП",
+      "Наименование банка-эквайера",
+      "Номер офиса",
+      "Наименование офиса доставки",
+      "ИНН партнера",
+      "Партнер",
+      "Склад",
+      "Страна",
+      "Тип коробов",
+      "Номер таможенной декларации",
+      "Номер сборочного задания",
+      "Код маркировки",
+      "ШК",
+      "Srid",
+      "Возмещение издержек по перевозке/по складским операциям с товаром",
+      "Организатор перевозки",
+      "Хранение",
+      "Удержания",
+      "Операции на приемке",
+      "Фиксированный коэффициент склада по поставке",
+      "Признак продажи юридическому лицу",
+      "Номер короба для обработки товара",
+      "Скидка по программе софинансирования",
+      "Скидка Wibes, %",
+      "Компенсация скидки по программе лояльности",
+      "Стоимость участия в программе лояльности",
+      "Сумма баллов, удержанных по программе лояльности",
+      "Id корзины заказа",
+      "Разовое изменение срока перечисления денежных средств",
+      "Id собственной акции продавца с дополнительной скидкой",
+      "Размер дополнительной скидки по собственной акции продавца, %",
+      "Способы продажи и тип товара",
+      "Уникальный идентификатор скидки лояльности от продавца",
+      "Размер скидки лояльности от продавца,%",
+      "Id промокода",
+      "Скидка за промокод, %",
+      "Id подменного артикула",
+      "Скидка по подменному артикулу, %",
+      "Оптовая скидка для бизнеса, %"
+    ],
+    "notes": null,
+    "is_active": true,
+    "created_at": "2026-05-20T17:49:01.189921",
+    "updated_at": "2026-05-20T17:49:01.189921",
+    "fields": [
+      {
+        "source_column": "№",
+        "target_field": "row_number",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Номер поставки",
+        "target_field": "supply_id",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Предмет",
+        "target_field": "category",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Код номенклатуры",
+        "target_field": "sku",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Бренд",
+        "target_field": "brand",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.94"
+      },
+      {
+        "source_column": "Артикул поставщика",
+        "target_field": "vendor_code",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Название",
+        "target_field": "name",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.94"
+      },
+      {
+        "source_column": "Размер",
+        "target_field": "size",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Баркод",
+        "target_field": "barcode",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.94"
+      },
+      {
+        "source_column": "Тип документа",
+        "target_field": "transaction_type",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Обоснование для оплаты",
+        "target_field": "payment_reason",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Дата заказа покупателем",
+        "target_field": "order_date",
+        "data_type": "date",
+        "date_format": "%Y-%m-%d",
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Дата продажи",
+        "target_field": "date",
+        "data_type": "date",
+        "date_format": "%Y-%m-%d",
+        "is_required": false,
+        "description": "auto:kb:exact@0.94"
+      },
+      {
+        "source_column": "Кол-во",
+        "target_field": "quantity",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.94"
+      },
+      {
+        "source_column": "Цена розничная",
+        "target_field": "price",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Вайлдберриз реализовал Товар (Пр)",
+        "target_field": "revenue",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Согласованный продуктовый дисконт, %",
+        "target_field": "product_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Промокод, %",
+        "target_field": "promo_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Итоговая согласованная скидка, %",
+        "target_field": "total_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Цена розничная с учетом согласованной скидки",
+        "target_field": "price_with_discount",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Размер снижения кВВ из-за рейтинга, %",
+        "target_field": "rating_kvv_reduction_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Размер изменения кВВ из-за акции, %",
+        "target_field": "promo_kvv_change_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Платформенные скидки, %",
+        "target_field": "platform_discount_pct",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Размер кВВ, %",
+        "target_field": "kvv_pct",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Размер кВВ без НДС, % Базовый",
+        "target_field": "kvv_base_pct",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Итоговый кВВ без НДС, %",
+        "target_field": "kvv_final_pct",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Вознаграждение с продаж до вычета услуг поверенного, без НДС",
+        "target_field": "commission_before_agent",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Возмещение за выдачу и возврат товаров на ПВЗ",
+        "target_field": "pvz_fee",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Компенсация платёжных услуг/Комиссия за интеграцию платёжных сервисов",
+        "target_field": "payment_commission",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Размер компенсации платёжных услуг/Комиссии за интеграцию платёжных сервисов, %",
+        "target_field": "payment_commission_pct",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Тип платежа: компенсация платёжных услуг/Комиссия за интеграцию платёжных сервисов",
+        "target_field": "payment_type",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Вознаграждение Вайлдберриз (ВВ), без НДС",
+        "target_field": "commission",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "НДС с Вознаграждения Вайлдберриз",
+        "target_field": "commission_vat",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "К перечислению Продавцу за реализованный Товар",
+        "target_field": "net_profit",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Количество доставок",
+        "target_field": "delivery_count",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Количество возврата",
+        "target_field": "return_count",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Услуги по доставке товара покупателю",
+        "target_field": "logistics",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Дата начала действия фиксации",
+        "target_field": "fix_date_start",
+        "data_type": "date",
+        "date_format": "%Y-%m-%d",
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Дата конца действия фиксации",
+        "target_field": "fix_date_end",
+        "data_type": "date",
+        "date_format": "%Y-%m-%d",
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Признак услуги платной доставки",
+        "target_field": "paid_delivery_flag",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.65"
+      },
+      {
+        "source_column": "Общая сумма штрафов",
+        "target_field": "penalties",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Корректировка Вознаграждения Вайлдберриз (ВВ)",
+        "target_field": "commission_correction",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Виды логистики, штрафов и корректировок ВВ",
+        "target_field": "logistics_type",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Стикер МП",
+        "target_field": "marketplace_sticker",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.65"
+      },
+      {
+        "source_column": "Наименование банка-эквайера",
+        "target_field": "acquirer_bank",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Номер офиса",
+        "target_field": "office_id",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Наименование офиса доставки",
+        "target_field": "warehouse",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "ИНН партнера",
+        "target_field": "partner_inn",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.65"
+      },
+      {
+        "source_column": "Партнер",
+        "target_field": "partner_name",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.65"
+      },
+      {
+        "source_column": "Склад",
+        "target_field": "warehouse_origin",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Страна",
+        "target_field": "country",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Тип коробов",
+        "target_field": "box_type",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Номер таможенной декларации",
+        "target_field": "customs_declaration",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.65"
+      },
+      {
+        "source_column": "Номер сборочного задания",
+        "target_field": "assembly_task_id",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.65"
+      },
+      {
+        "source_column": "Код маркировки",
+        "target_field": "marking_code",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.65"
+      },
+      {
+        "source_column": "ШК",
+        "target_field": "shk",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Srid",
+        "target_field": "srid",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Возмещение издержек по перевозке/по складским операциям с товаром",
+        "target_field": "transport_compensation",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Организатор перевозки",
+        "target_field": "carrier",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.65"
+      },
+      {
+        "source_column": "Хранение",
+        "target_field": "storage_fee",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Удержания",
+        "target_field": "deductions",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Операции на приемке",
+        "target_field": "acceptance_fee",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Фиксированный коэффициент склада по поставке",
+        "target_field": "warehouse_coefficient",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Признак продажи юридическому лицу",
+        "target_field": "b2b_flag",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Номер короба для обработки товара",
+        "target_field": "box_number",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Скидка по программе софинансирования",
+        "target_field": "cofinancing_discount",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Скидка Wibes, %",
+        "target_field": "wibes_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Компенсация скидки по программе лояльности",
+        "target_field": "loyalty_discount_compensation",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Стоимость участия в программе лояльности",
+        "target_field": "loyalty_program_fee",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Сумма баллов, удержанных по программе лояльности",
+        "target_field": "loyalty_points_deducted",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Id корзины заказа",
+        "target_field": "basket_id",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Разовое изменение срока перечисления денежных средств",
+        "target_field": "payment_period_change",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Id собственной акции продавца с дополнительной скидкой",
+        "target_field": "seller_promo_id",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Размер дополнительной скидки по собственной акции продавца, %",
+        "target_field": "seller_promo_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Способы продажи и тип товара",
+        "target_field": "sale_method",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Уникальный идентификатор скидки лояльности от продавца",
+        "target_field": "seller_loyalty_discount_id",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Размер скидки лояльности от продавца,%",
+        "target_field": "seller_loyalty_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Id промокода",
+        "target_field": "promo_id",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.65"
+      },
+      {
+        "source_column": "Скидка за промокод, %",
+        "target_field": "promo_code_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Id подменного артикула",
+        "target_field": "substitute_sku_id",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.65"
+      },
+      {
+        "source_column": "Скидка по подменному артикулу, %",
+        "target_field": "substitute_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      },
+      {
+        "source_column": "Оптовая скидка для бизнеса, %",
+        "target_field": "b2b_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.90"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "auto:Ежедневный детализированный отчет №4163561202605141_4163561 - 1",
+    "struct_hash": "d971debc27a3bc35",
+    "category": "wb_report",
+    "subcategory": "custom",
+    "purpose": "analytics",
+    "column_count": 82,
+    "raw_columns": [
+      "№",
+      "Номер поставки",
+      "Предмет",
+      "Код номенклатуры",
+      "Бренд",
+      "Артикул поставщика",
+      "Название",
+      "Размер",
+      "Баркод",
+      "Тип документа",
+      "Обоснование для оплаты",
+      "Дата заказа покупателем",
+      "Дата продажи",
+      "Кол-во",
+      "Цена розничная",
+      "Вайлдберриз реализовал Товар (Пр)",
+      "Согласованный продуктовый дисконт, %",
+      "Промокод, %",
+      "Итоговая согласованная скидка, %",
+      "Цена розничная с учетом согласованной скидки",
+      "Размер снижения кВВ из-за рейтинга, %",
+      "Размер изменения кВВ из-за акции, %",
+      "Платформенные скидки, %",
+      "Размер кВВ, %",
+      "Размер кВВ без НДС, % Базовый",
+      "Итоговый кВВ без НДС, %",
+      "Вознаграждение с продаж до вычета услуг поверенного, без НДС",
+      "Возмещение за выдачу и возврат товаров на ПВЗ",
+      "Компенсация платёжных услуг/Комиссия за интеграцию платёжных сервисов",
+      "Размер компенсации платёжных услуг/Комиссии за интеграцию платёжных сервисов, %",
+      "Тип платежа: компенсация платёжных услуг/Комиссия за интеграцию платёжных сервисов",
+      "Вознаграждение Вайлдберриз (ВВ), без НДС",
+      "НДС с Вознаграждения Вайлдберриз",
+      "К перечислению Продавцу за реализованный Товар",
+      "Количество доставок",
+      "Количество возврата",
+      "Услуги по доставке товара покупателю",
+      "Дата начала действия фиксации",
+      "Дата конца действия фиксации",
+      "Признак услуги платной доставки",
+      "Общая сумма штрафов",
+      "Корректировка Вознаграждения Вайлдберриз (ВВ)",
+      "Виды логистики, штрафов и корректировок ВВ",
+      "Стикер МП",
+      "Наименование банка-эквайера",
+      "Номер офиса",
+      "Наименование офиса доставки",
+      "ИНН партнера",
+      "Партнер",
+      "Склад",
+      "Страна",
+      "Тип коробов",
+      "Номер таможенной декларации",
+      "Номер сборочного задания",
+      "Код маркировки",
+      "ШК",
+      "Srid",
+      "Возмещение издержек по перевозке/по складским операциям с товаром",
+      "Организатор перевозки",
+      "Хранение",
+      "Удержания",
+      "Операции на приемке",
+      "Фиксированный коэффициент склада по поставке",
+      "Признак продажи юридическому лицу",
+      "Номер короба для обработки товара",
+      "Скидка по программе софинансирования",
+      "Скидка Wibes, %",
+      "Компенсация скидки по программе лояльности",
+      "Стоимость участия в программе лояльности",
+      "Сумма баллов, удержанных по программе лояльности",
+      "Id корзины заказа",
+      "Разовое изменение срока перечисления денежных средств",
+      "Id собственной акции продавца с дополнительной скидкой",
+      "Размер дополнительной скидки по собственной акции продавца, %",
+      "Способы продажи и тип товара",
+      "Уникальный идентификатор скидки лояльности от продавца",
+      "Размер скидки лояльности от продавца, %",
+      "Id промокода",
+      "Скидка за промокод, %",
+      "Id подменного артикула",
+      "Скидка по подменному артикулу, %",
+      "Оптовая скидка для бизнеса, %"
+    ],
+    "notes": null,
+    "is_active": true,
+    "created_at": "2026-05-20T17:49:02.314155",
+    "updated_at": "2026-05-20T17:49:02.314155",
+    "fields": [
+      {
+        "source_column": "№",
+        "target_field": "row_number",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Номер поставки",
+        "target_field": "supply_id",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Предмет",
+        "target_field": "category",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Код номенклатуры",
+        "target_field": "sku",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Бренд",
+        "target_field": "brand",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Артикул поставщика",
+        "target_field": "vendor_code",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Название",
+        "target_field": "name",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Размер",
+        "target_field": "size",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Баркод",
+        "target_field": "barcode",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Тип документа",
+        "target_field": "transaction_type",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Обоснование для оплаты",
+        "target_field": "payment_reason",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Дата заказа покупателем",
+        "target_field": "order_date",
+        "data_type": "date",
+        "date_format": "%Y-%m-%d",
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Дата продажи",
+        "target_field": "date",
+        "data_type": "date",
+        "date_format": "%Y-%m-%d",
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Кол-во",
+        "target_field": "quantity",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Цена розничная",
+        "target_field": "price",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Вайлдберриз реализовал Товар (Пр)",
+        "target_field": "revenue",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Согласованный продуктовый дисконт, %",
+        "target_field": "product_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Промокод, %",
+        "target_field": "promo_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Итоговая согласованная скидка, %",
+        "target_field": "total_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Цена розничная с учетом согласованной скидки",
+        "target_field": "price_with_discount",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Размер снижения кВВ из-за рейтинга, %",
+        "target_field": "rating_kvv_reduction_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Размер изменения кВВ из-за акции, %",
+        "target_field": "promo_kvv_change_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Платформенные скидки, %",
+        "target_field": "platform_discount_pct",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Размер кВВ, %",
+        "target_field": "kvv_pct",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Размер кВВ без НДС, % Базовый",
+        "target_field": "kvv_base_pct",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Итоговый кВВ без НДС, %",
+        "target_field": "kvv_final_pct",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Вознаграждение с продаж до вычета услуг поверенного, без НДС",
+        "target_field": "commission_before_agent",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Возмещение за выдачу и возврат товаров на ПВЗ",
+        "target_field": "pvz_fee",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Компенсация платёжных услуг/Комиссия за интеграцию платёжных сервисов",
+        "target_field": "payment_commission",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Размер компенсации платёжных услуг/Комиссии за интеграцию платёжных сервисов, %",
+        "target_field": "payment_commission_pct",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Тип платежа: компенсация платёжных услуг/Комиссия за интеграцию платёжных сервисов",
+        "target_field": "payment_type",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Вознаграждение Вайлдберриз (ВВ), без НДС",
+        "target_field": "commission",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "НДС с Вознаграждения Вайлдберриз",
+        "target_field": "commission_vat",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "К перечислению Продавцу за реализованный Товар",
+        "target_field": "net_profit",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Количество доставок",
+        "target_field": "delivery_count",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Количество возврата",
+        "target_field": "return_count",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Услуги по доставке товара покупателю",
+        "target_field": "logistics",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Дата начала действия фиксации",
+        "target_field": "fix_date_start",
+        "data_type": "date",
+        "date_format": "%Y-%m-%d",
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Дата конца действия фиксации",
+        "target_field": "fix_date_end",
+        "data_type": "date",
+        "date_format": "%Y-%m-%d",
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Признак услуги платной доставки",
+        "target_field": "paid_delivery_flag",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.65"
+      },
+      {
+        "source_column": "Общая сумма штрафов",
+        "target_field": "penalties",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Корректировка Вознаграждения Вайлдберриз (ВВ)",
+        "target_field": "commission_correction",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Виды логистики, штрафов и корректировок ВВ",
+        "target_field": "logistics_type",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Стикер МП",
+        "target_field": "marketplace_sticker",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.67"
+      },
+      {
+        "source_column": "Наименование банка-эквайера",
+        "target_field": "acquirer_bank",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Номер офиса",
+        "target_field": "office_id",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Наименование офиса доставки",
+        "target_field": "warehouse",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "ИНН партнера",
+        "target_field": "partner_inn",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.67"
+      },
+      {
+        "source_column": "Партнер",
+        "target_field": "partner_name",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.67"
+      },
+      {
+        "source_column": "Склад",
+        "target_field": "warehouse_origin",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Страна",
+        "target_field": "country",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Тип коробов",
+        "target_field": "box_type",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Номер таможенной декларации",
+        "target_field": "customs_declaration",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.67"
+      },
+      {
+        "source_column": "Номер сборочного задания",
+        "target_field": "assembly_task_id",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.67"
+      },
+      {
+        "source_column": "Код маркировки",
+        "target_field": "marking_code",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.67"
+      },
+      {
+        "source_column": "ШК",
+        "target_field": "shk",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Srid",
+        "target_field": "srid",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Возмещение издержек по перевозке/по складским операциям с товаром",
+        "target_field": "transport_compensation",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Организатор перевозки",
+        "target_field": "carrier",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.67"
+      },
+      {
+        "source_column": "Хранение",
+        "target_field": "storage_fee",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Удержания",
+        "target_field": "deductions",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Операции на приемке",
+        "target_field": "acceptance_fee",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Фиксированный коэффициент склада по поставке",
+        "target_field": "warehouse_coefficient",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Признак продажи юридическому лицу",
+        "target_field": "b2b_flag",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Номер короба для обработки товара",
+        "target_field": "box_number",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Скидка по программе софинансирования",
+        "target_field": "cofinancing_discount",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Скидка Wibes, %",
+        "target_field": "wibes_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Компенсация скидки по программе лояльности",
+        "target_field": "loyalty_discount_compensation",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Стоимость участия в программе лояльности",
+        "target_field": "loyalty_program_fee",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Сумма баллов, удержанных по программе лояльности",
+        "target_field": "loyalty_points_deducted",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Id корзины заказа",
+        "target_field": "basket_id",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Разовое изменение срока перечисления денежных средств",
+        "target_field": "payment_period_change",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Id собственной акции продавца с дополнительной скидкой",
+        "target_field": "seller_promo_id",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Размер дополнительной скидки по собственной акции продавца, %",
+        "target_field": "seller_promo_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Способы продажи и тип товара",
+        "target_field": "sale_method",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Уникальный идентификатор скидки лояльности от продавца",
+        "target_field": "seller_loyalty_discount_id",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Размер скидки лояльности от продавца, %",
+        "target_field": "seller_loyalty_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:fuzzy@0.76"
+      },
+      {
+        "source_column": "Id промокода",
+        "target_field": "promo_id",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.65"
+      },
+      {
+        "source_column": "Скидка за промокод, %",
+        "target_field": "promo_code_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Id подменного артикула",
+        "target_field": "substitute_sku_id",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.67"
+      },
+      {
+        "source_column": "Скидка по подменному артикулу, %",
+        "target_field": "substitute_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      },
+      {
+        "source_column": "Оптовая скидка для бизнеса, %",
+        "target_field": "b2b_discount_pct",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb:exact@0.92"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "auto:История-затрат-Не определено-2026-05-14T00_00_00+03_00-2026-05-14T00_00_00+03_00",
+    "struct_hash": "ec0b9d250f6a83b9",
+    "category": "external",
+    "subcategory": "custom",
+    "purpose": "analytics",
+    "column_count": 7,
+    "raw_columns": [
+      "ID кампании",
+      "Кампания",
+      "Раздел",
+      "Дата списания",
+      "Источник списания",
+      "Сумма",
+      "Номер документа"
+    ],
+    "notes": null,
+    "is_active": true,
+    "created_at": "2026-05-20T17:49:05.956209",
+    "updated_at": "2026-05-20T17:49:05.956209",
+    "fields": [
+      {
+        "source_column": "ID кампании",
+        "target_field": "campaign_id",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:alias_exact@0.90"
+      },
+      {
+        "source_column": "Кампания",
+        "target_field": "campaign_id",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:alias_exact@0.90"
+      },
+      {
+        "source_column": "Раздел",
+        "target_field": "category",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:alias_exact@0.90"
+      },
+      {
+        "source_column": "Дата списания",
+        "target_field": "date",
+        "data_type": "date",
+        "date_format": "auto",
+        "is_required": false,
+        "description": "auto:fuzzy_partial@0.72"
+      },
+      {
+        "source_column": "Источник списания",
+        "target_field": "net_profit",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:fuzzy_partial@0.60"
+      },
+      {
+        "source_column": "Сумма",
+        "target_field": "revenue",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:fuzzy_partial@0.72"
+      },
+      {
+        "source_column": "Номер документа",
+        "target_field": "price",
+        "data_type": "bool",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:fuzzy_partial@0.60"
+      }
+    ]
+  }
+]
