@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { CheckCircle, XCircle, ChevronDown, AlertCircle } from 'lucide-react'
+import { useState, useCallback } from 'react'
+import { CheckCircle, XCircle, ChevronDown, AlertCircle, RefreshCw, AlertTriangle } from 'lucide-react'
 import { useApi } from '../hooks/useApi'
 import { api } from '../api/client'
 import ConfidenceBar from '../components/ConfidenceBar'
@@ -17,7 +17,7 @@ const TARGET_FIELDS = [
 
 function levelBadge(level: string) {
   if (level === 'needs_review') return <Badge label="NEEDS REVIEW" variant="warn" />
-  if (level === 'low_conf')     return <Badge label="LOW CONF" variant="error" />
+  if (level === 'low_conf')     return <Badge label="LOW CONF"     variant="error" />
   return <Badge label={level.toUpperCase()} variant="dim" />
 }
 
@@ -43,10 +43,7 @@ function ReviewCard({ item, onApprove, onReject, loading }: ItemCardProps) {
       {/* Header */}
       <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', marginBottom:14 }}>
         <div>
-          <div style={{
-            fontFamily:'var(--font-display)', fontSize:15,
-            fontWeight:700, color:'var(--text-white)',
-          }}>
+          <div style={{ fontFamily:'var(--font-display)', fontSize:15, fontWeight:700, color:'var(--text-white)' }}>
             {item.source_column}
           </div>
           <div style={{ fontFamily:'var(--font-mono)', fontSize:9, color:'var(--text-dim)', marginTop:3 }}>
@@ -70,10 +67,7 @@ function ReviewCard({ item, onApprove, onReject, loading }: ItemCardProps) {
           </div>
         </div>
         <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:10 }}>
-          <code style={{
-            fontFamily:'var(--font-mono)', fontSize:13,
-            color:'var(--amber)', fontWeight:500,
-          }}>
+          <code style={{ fontFamily:'var(--font-mono)', fontSize:13, color:'var(--amber)', fontWeight:500 }}>
             {item.suggested_field ?? '—'}
           </code>
           <span style={{ color:'var(--text-dim)', fontSize:11 }}>({item.suggested_type})</span>
@@ -139,9 +133,9 @@ function ReviewCard({ item, onApprove, onReject, loading }: ItemCardProps) {
             flex:1, display:'flex', alignItems:'center', justifyContent:'center', gap:6,
             padding:'8px', borderRadius:'var(--radius-sm)',
             background:'var(--green-dim)', border:'1px solid var(--green)',
-            color:'var(--green)', cursor:'pointer',
+            color:'var(--green)', cursor: loading ? 'not-allowed' : 'pointer',
             fontFamily:'var(--font-mono)', fontSize:11, fontWeight:500,
-            transition:'all 0.15s',
+            transition:'all 0.15s', opacity: loading ? 0.5 : 1,
           }}
         >
           <CheckCircle size={13}/> ОДОБРИТЬ
@@ -168,9 +162,9 @@ function ReviewCard({ item, onApprove, onReject, loading }: ItemCardProps) {
               flex:1, display:'flex', alignItems:'center', justifyContent:'center', gap:6,
               padding:'8px', borderRadius:'var(--radius-sm)',
               background:'var(--red-dim)', border:'1px solid var(--red)',
-              color:'var(--red)', cursor:'pointer',
+              color:'var(--red)', cursor: loading ? 'not-allowed' : 'pointer',
               fontFamily:'var(--font-mono)', fontSize:11,
-              transition:'all 0.15s',
+              transition:'all 0.15s', opacity: loading ? 0.5 : 1,
             }}
           >
             <XCircle size={13}/> ИСПРАВИТЬ → {customField}
@@ -182,58 +176,103 @@ function ReviewCard({ item, onApprove, onReject, loading }: ItemCardProps) {
 }
 
 export default function MappingReview() {
-  const { data, loading, refetch } = useApi(api.reviewItems, [])
+  // Polling каждые 5с — автообновление без F5
+  const { data, loading, error, refetch } = useApi(api.reviewItems, [], 5_000)
   const [resolving, setResolving] = useState<string | null>(null)
-  const [resolved, setResolved]   = useState<Set<string>>(new Set())
+  const [resolved,  setResolved]  = useState<Set<string>>(new Set())
 
   const pending = (data ?? []).filter(i => i.status === 'pending' && !resolved.has(i.id))
 
-  async function handleApprove(id: string, field?: string) {
+  const handleApprove = useCallback(async (id: string, field?: string) => {
     setResolving(id)
     try {
       await api.approve(id, field)
       setResolved(s => new Set([...s, id]))
-    } finally { setResolving(null) }
-  }
+      refetch()   // немедленно синхронизируем с сервером
+    } catch (e) {
+      console.error('Approve failed:', e)
+    } finally {
+      setResolving(null)
+    }
+  }, [refetch])
 
-  async function handleReject(id: string, field: string) {
+  const handleReject = useCallback(async (id: string, field: string) => {
     setResolving(id)
     try {
       await api.reject(id, field)
       setResolved(s => new Set([...s, id]))
-    } finally { setResolving(null) }
-  }
+      refetch()
+    } catch (e) {
+      console.error('Reject failed:', e)
+    } finally {
+      setResolving(null)
+    }
+  }, [refetch])
 
   return (
     <div style={{ padding:28 }}>
+      {/* Header */}
       <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:24 }}>
         <div>
-          <h1 style={{
-            fontFamily:'var(--font-display)', fontSize:22,
-            fontWeight:800, color:'var(--text-white)',
-          }}>
+          <h1 style={{ fontFamily:'var(--font-display)', fontSize:22, fontWeight:800, color:'var(--text-white)' }}>
             Mapping Review
           </h1>
           <div style={{ fontFamily:'var(--font-mono)', fontSize:10, color:'var(--text-dim)', marginTop:4 }}>
-            Решения SmartMapper требующие подтверждения
+            Решения SmartMapper требующие подтверждения · обновляется каждые 5с
           </div>
         </div>
-        {pending.length > 0 && (
-          <div style={{
-            fontFamily:'var(--font-mono)', fontSize:12, color:'var(--amber)',
-            display:'flex', alignItems:'center', gap:8,
-          }}>
-            <AlertCircle size={16} />
-            {pending.length} ожидают
-          </div>
-        )}
+        <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+          {pending.length > 0 && (
+            <div style={{ fontFamily:'var(--font-mono)', fontSize:12, color:'var(--amber)', display:'flex', alignItems:'center', gap:8 }}>
+              <AlertCircle size={16} />
+              {pending.length} ожидают
+            </div>
+          )}
+          <button
+            onClick={refetch}
+            disabled={loading}
+            style={{
+              padding:'6px 10px', borderRadius:'var(--radius-sm)',
+              background:'var(--bg-raised)', border:'1px solid var(--border-base)',
+              color:'var(--text-muted)', cursor:'pointer',
+              display:'flex', alignItems:'center', gap:5,
+              fontFamily:'var(--font-mono)', fontSize:10,
+              opacity: loading ? 0.5 : 1, transition:'all 0.15s',
+            }}
+          >
+            <RefreshCw size={11} style={{ animation: loading ? 'spin 1s linear infinite' : 'none' }} />
+            ОБНОВИТЬ
+          </button>
+        </div>
       </div>
 
-      {loading ? (
+      {/* Error state — ранее молча скрывалось */}
+      {error && (
+        <div style={{
+          display:'flex', alignItems:'center', gap:10,
+          padding:'14px 16px', marginBottom:20,
+          background:'rgba(239,68,68,0.08)', border:'1px solid rgba(239,68,68,0.3)',
+          borderRadius:'var(--radius)', fontFamily:'var(--font-mono)', fontSize:11,
+        }}>
+          <AlertTriangle size={14} color="var(--red)" />
+          <span style={{ color:'var(--red)' }}>Ошибка загрузки: {error}</span>
+          <button onClick={refetch} style={{
+            marginLeft:'auto', padding:'4px 10px',
+            background:'transparent', border:'1px solid var(--red)',
+            borderRadius:3, color:'var(--red)',
+            fontFamily:'var(--font-mono)', fontSize:10, cursor:'pointer',
+          }}>
+            RETRY
+          </button>
+        </div>
+      )}
+
+      {/* Content */}
+      {loading && !data ? (
         <div style={{ display:'flex', justifyContent:'center', padding:60 }}>
           <Spinner size={32} />
         </div>
-      ) : pending.length === 0 ? (
+      ) : !error && pending.length === 0 ? (
         <div style={{
           textAlign:'center', padding:'60px 20px',
           background:'var(--bg-panel)', border:'1px solid var(--border-dim)',
