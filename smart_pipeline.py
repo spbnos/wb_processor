@@ -249,19 +249,20 @@ class SmartPipeline:
             f"can_proceed={smart_result.can_proceed}"
         )
 
-        # Blocking LOW_CONF — если много неизвестных колонок, всё равно продолжаем
-        # Unknown WB-specific columns просто игнорируем
+        # Blocking LOW_CONF — ни одной распознанной колонки → defer
         if not smart_result.can_proceed and smart_result.auto_count == 0:
             logger.warning(
                 f"[smart_pipeline] No recognized columns at all — file deferred"
             )
-            self._enqueue_review(smart_result, filepath, sample_df)
+            # Enqueue что есть (LOW_CONF items), чтобы пользователь мог помочь
+            if smart_result.review_count > 0:
+                self._enqueue_review(smart_result, filepath, sample_df)
             return None
-        elif not smart_result.can_proceed:
+
+        if not smart_result.can_proceed:
             logger.warning(
-                f"[smart_pipeline] Blocking fields: {smart_result.blocking_fields} — proceeding anyway with partial mapping"
+                f"[smart_pipeline] Blocking fields: {smart_result.blocking_fields} — proceeding with partial mapping"
             )
-            self._enqueue_review(smart_result, filepath, sample_df)
 
         # Сохраняем маппинг
         config = smart_result_to_config(
@@ -272,7 +273,7 @@ class SmartPipeline:
         saved = self.storage.save(config)
         logger.info(f"[smart_pipeline] Saved new mapping: '{config.name}' id={saved.id}")
 
-        # Enqueue NEEDS_REVIEW items (не блокируют, но показываются в Dashboard)
+        # Enqueue NEEDS_REVIEW / LOW_CONF items — единственный вызов
         if smart_result.review_count > 0:
             self._enqueue_review(smart_result, filepath, sample_df)
 
