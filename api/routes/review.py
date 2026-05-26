@@ -33,8 +33,10 @@ class ReviewItemResponse(BaseModel):
     match_method: str
     runner_up_field: Optional[str]
     runner_up_score: float
+    filepath: str
     filename: str
     status: str
+    created_at: str          # требуется фронтендом (types/index.ts)
     sample_values: list
     correct_field: Optional[str] = None
     resolved_by: Optional[str] = None
@@ -66,8 +68,10 @@ def _item_to_response(item: ReviewItem) -> ReviewItemResponse:
         match_method=item.match_method,
         runner_up_field=item.runner_up_field,
         runner_up_score=item.runner_up_score,
+        filepath=item.filepath,
         filename=item.filename,
         status=item.status,
+        created_at=item.created_at,
         sample_values=item.sample_values,
         correct_field=item.correct_field,
         resolved_by=item.resolved_by,
@@ -86,6 +90,37 @@ async def get_pending_reviews(
     """
     items = queue.get_pending(struct_hash=struct_hash)
     return [_item_to_response(i) for i in items]
+
+
+# ВАЖНО: /stats и /apply/{...} объявлены ДО /{item_id}/... 
+# чтобы FastAPI не перехватил "stats" как item_id
+@router.get("/stats", response_model=ReviewStatsResponse)
+async def get_review_stats(
+    _auth: dict = Depends(require_auth),
+    queue: ReviewQueue = Depends(get_review_queue),
+):
+    s = queue.stats()
+    return ReviewStatsResponse(**s)
+
+
+@router.post("/apply/{struct_hash}")
+async def apply_reviews(
+    struct_hash: str,
+    _auth: dict = Depends(require_auth),
+    redis: RedisQueueClient = Depends(get_redis_client),
+):
+    """
+    Отправляет задачу APPLY_REVIEWS в worker queue.
+    Worker применит все approved/rejected items к маппингу.
+    """
+    task = make_apply_reviews_task(struct_hash)
+    task_id = redis.enqueue(task)
+    return {
+        "task_id": task_id,
+        "struct_hash": struct_hash,
+        "status": "queued",
+        "message": "Review decisions will be applied by worker",
+    }
 
 
 @router.post("/{item_id}/approve", response_model=ReviewItemResponse)
@@ -114,32 +149,3 @@ async def reject_review(
     if not resolved:
         raise HTTPException(status_code=404, detail=f"Review item {item_id!r} not found")
     return _item_to_response(resolved)
-
-
-@router.get("/stats", response_model=ReviewStatsResponse)
-async def get_review_stats(
-    _auth: dict = Depends(require_auth),
-    queue: ReviewQueue = Depends(get_review_queue),
-):
-    s = queue.stats()
-    return ReviewStatsResponse(**s)
-
-
-@router.post("/apply/{struct_hash}")
-async def apply_reviews(
-    struct_hash: str,
-    _auth: dict = Depends(require_auth),
-    redis: RedisQueueClient = Depends(get_redis_client),
-):
-    """
-    Отправляет задачу APPLY_REVIEWS в worker queue.
-    Worker применит все approved/rejected items к маппингу.
-    """
-    task = make_apply_reviews_task(struct_hash)
-    task_id = redis.enqueue(task)
-    return {
-        "task_id": task_id,
-        "struct_hash": struct_hash,
-        "status": "queued",
-        "message": "Review decisions will be applied by worker",
-    }
