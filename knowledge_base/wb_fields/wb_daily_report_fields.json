@@ -1,0 +1,508 @@
+{
+  "_meta": {
+    "source": "WB Ежедневный детализированный отчёт (анализ реального файла 2026-05)",
+    "version": "1.0",
+    "report_type": "ежедневный_детализированный",
+    "total_columns": 80,
+    "description": "Полный справочник колонок WB детализированного отчёта с маппингом на internal target_fields"
+  },
+
+  "fields": {
+    "№": {
+      "target_field": "ignore",
+      "data_type": "int",
+      "description": "Порядковый номер строки",
+      "aliases": ["№", "номер строки", "row_num"]
+    },
+    "Номер поставки": {
+      "target_field": "campaign_id",
+      "data_type": "str",
+      "description": "Номер поставки товара на склад WB",
+      "aliases": ["номер поставки", "поставка"]
+    },
+    "Предмет": {
+      "target_field": "category",
+      "data_type": "str",
+      "description": "Категория/предмет товара (Колье, Платье и т.д.)",
+      "aliases": ["предмет", "вид товара", "предмет wb"]
+    },
+    "Код номенклатуры": {
+      "target_field": "sku",
+      "data_type": "str",
+      "description": "nmId — уникальный ID товара в системе WB",
+      "aliases": ["код номенклатуры", "nmid", "nm_id", "код номенкл"]
+    },
+    "Бренд": {
+      "target_field": "brand",
+      "data_type": "str",
+      "description": "Бренд товара",
+      "aliases": ["бренд", "brand"]
+    },
+    "Артикул поставщика": {
+      "target_field": "sku",
+      "data_type": "str",
+      "description": "Артикул продавца (ваш внутренний артикул)",
+      "aliases": ["артикул поставщика", "артикул продавца", "vendor code"]
+    },
+    "Название": {
+      "target_field": "name",
+      "data_type": "str",
+      "description": "Название товара",
+      "aliases": ["название", "наименование", "название товара"]
+    },
+    "Размер": {
+      "target_field": "ignore",
+      "data_type": "str",
+      "description": "Размер товара (для одежды/обуви)",
+      "aliases": ["размер", "size"]
+    },
+    "Баркод": {
+      "target_field": "barcode",
+      "data_type": "str",
+      "description": "Штрихкод товара EAN-13",
+      "aliases": ["баркод", "barcode", "штрихкод", "штрих-код"]
+    },
+    "Тип документа": {
+      "target_field": "transaction_type",
+      "data_type": "str",
+      "description": "Продажа / Возврат / Логистика",
+      "aliases": ["тип документа", "тип операции", "тип транзакции"]
+    },
+    "Обоснование для оплаты": {
+      "target_field": "transaction_type",
+      "data_type": "str",
+      "description": "Логистика / Продажа — детализация типа операции",
+      "aliases": ["обоснование для оплаты", "обоснование оплаты"]
+    },
+    "Дата заказа покупателем": {
+      "target_field": "date",
+      "data_type": "date",
+      "date_format": "%Y-%m-%d",
+      "description": "Дата когда покупатель оформил заказ",
+      "aliases": ["дата заказа покупателем", "дата заказа", "order date"]
+    },
+    "Дата продажи": {
+      "target_field": "date",
+      "data_type": "date",
+      "date_format": "%Y-%m-%d",
+      "description": "Фактическая дата продажи/выдачи",
+      "aliases": ["дата продажи", "дата реализации", "sale date"]
+    },
+    "Кол-во": {
+      "target_field": "quantity",
+      "data_type": "int",
+      "description": "Количество единиц товара",
+      "aliases": ["кол-во", "количество", "qty"]
+    },
+    "Цена розничная": {
+      "target_field": "price",
+      "data_type": "float",
+      "description": "Розничная цена без скидок",
+      "aliases": ["цена розничная", "розничная цена", "retail price"]
+    },
+    "Вайлдберриз реализовал Товар (Пр)": {
+      "target_field": "revenue",
+      "data_type": "float",
+      "description": "Сумма фактической реализации — главная выручка",
+      "aliases": ["вайлдберриз реализовал товар", "вб реализовал", "wb реализовал"]
+    },
+    "Согласованный продуктовый дисконт, %": {
+      "target_field": "discount_product_pct",
+      "data_type": "float",
+      "description": "% согласованной скидки на продукт",
+      "aliases": ["согласованный продуктовый дисконт", "продуктовый дисконт"]
+    },
+    "Промокод, %": {
+      "target_field": "discount_promo_pct",
+      "data_type": "float",
+      "description": "Размер скидки по промокоду в %",
+      "aliases": ["промокод, %", "промокод", "promo pct"]
+    },
+    "Итоговая согласованная скидка, %": {
+      "target_field": "discount_total_pct",
+      "data_type": "float",
+      "description": "Итоговый % скидки (все скидки суммарно)",
+      "aliases": ["итоговая согласованная скидка", "итоговая скидка", "total discount pct"]
+    },
+    "Цена розничная с учетом согласованной скидки": {
+      "target_field": "price",
+      "data_type": "float",
+      "description": "Итоговая цена продажи покупателю",
+      "aliases": ["цена розничная с учетом скидки", "цена с учетом скидки"]
+    },
+    "Размер снижения кВВ из-за рейтинга, %": {
+      "target_field": "kvv_rating_discount_pct",
+      "data_type": "float",
+      "description": "Снижение комиссии ВВ за счёт рейтинга продавца",
+      "aliases": ["размер снижения квв из-за рейтинга", "снижение квв рейтинг"]
+    },
+    "Размер изменения кВВ из-за акции, %": {
+      "target_field": "kvv_promo_delta_pct",
+      "data_type": "float",
+      "description": "Изменение ВВ за участие в акции WB",
+      "aliases": ["размер изменения квв из-за акции", "изменение квв акция"]
+    },
+    "Платформенные скидки, %": {
+      "target_field": "platform_discount_pct",
+      "data_type": "float",
+      "description": "Скидки которые WB даёт за свой счёт",
+      "aliases": ["платформенные скидки", "platform discount"]
+    },
+    "Размер кВВ, %": {
+      "target_field": "commission_pct",
+      "data_type": "float",
+      "description": "кВВ = Комиссия Вайлдберриз в % (ключевой показатель!)",
+      "aliases": ["размер квв, %", "размер квв", "квв %", "комиссия вв %"]
+    },
+    "Размер кВВ без НДС, % Базовый": {
+      "target_field": "commission_base_pct",
+      "data_type": "float",
+      "description": "Базовая комиссия ВВ без НДС в %",
+      "aliases": ["размер квв без ндс, % базовый", "базовый квв", "base kvv"]
+    },
+    "Итоговый кВВ без НДС, %": {
+      "target_field": "commission_final_pct",
+      "data_type": "float",
+      "description": "Итоговая комиссия ВВ без НДС %",
+      "aliases": ["итоговый квв без ндс", "итоговый квв"]
+    },
+    "Вознаграждение с продаж до вычета услуг поверенного, без НДС": {
+      "target_field": "commission",
+      "data_type": "float",
+      "description": "Сумма вознаграждения WB до вычета услуг (руб/тенге)",
+      "aliases": ["вознаграждение с продаж до вычета услуг поверенного", "вознаграждение до вычета"]
+    },
+    "Возмещение за выдачу и возврат товаров на ПВЗ": {
+      "target_field": "logistics",
+      "data_type": "float",
+      "description": "Стоимость операций выдачи/возврата на ПВЗ",
+      "aliases": ["возмещение за выдачу и возврат товаров на пвз", "возмещение пвз"]
+    },
+    "Компенсация платёжных услуг/Комиссия за интеграцию платёжных сервисов": {
+      "target_field": "payment_commission",
+      "data_type": "float",
+      "description": "Комиссия эквайринга/платёжных сервисов",
+      "aliases": ["компенсация платёжных услуг", "комиссия платёжных сервисов", "эквайринг"]
+    },
+    "Размер компенсации платёжных услуг/Комиссии за интеграцию платёжных сервисов, %": {
+      "target_field": "payment_commission_pct",
+      "data_type": "float",
+      "description": "% комиссии эквайринга",
+      "aliases": ["размер компенсации платёжных услуг", "% эквайринга"]
+    },
+    "Тип платежа: компенсация платёжных услуг/Комиссия за интеграцию платёжных сервисов": {
+      "target_field": "payment_type",
+      "data_type": "str",
+      "description": "Тип платёжной операции",
+      "aliases": ["тип платежа", "тип компенсации платёжных услуг"]
+    },
+    "Вознаграждение Вайлдберриз (ВВ), без НДС": {
+      "target_field": "commission",
+      "data_type": "float",
+      "description": "Итоговое вознаграждение WB без НДС (руб) — главная комиссия",
+      "aliases": ["вознаграждение вайлдберриз", "вознаграждение вв без ндс", "вв без ндс"]
+    },
+    "НДС с Вознаграждения Вайлдберриз": {
+      "target_field": "commission_vat",
+      "data_type": "float",
+      "description": "НДС с комиссии WB",
+      "aliases": ["ндс с вознаграждения вайлдберриз", "ндс вв", "vat commission"]
+    },
+    "К перечислению Продавцу за реализованный Товар": {
+      "target_field": "net_profit",
+      "data_type": "float",
+      "description": "Итоговая сумма к выплате продавцу — КЛЮЧЕВОЙ показатель",
+      "aliases": ["к перечислению продавцу за реализованный товар", "к перечислению продавцу", "к выплате продавцу"]
+    },
+    "Количество доставок": {
+      "target_field": "delivery_count",
+      "data_type": "int",
+      "description": "Количество операций доставки",
+      "aliases": ["количество доставок", "кол-во доставок"]
+    },
+    "Количество возврата": {
+      "target_field": "return_count",
+      "data_type": "int",
+      "description": "Количество возвратов",
+      "aliases": ["количество возврата", "кол-во возвратов", "возвраты"]
+    },
+    "Услуги по доставке товара покупателю": {
+      "target_field": "logistics",
+      "data_type": "float",
+      "description": "Стоимость логистики от склада до покупателя",
+      "aliases": ["услуги по доставке товара покупателю", "услуги доставки", "логистика покупателю"]
+    },
+    "Дата начала действия фиксации": {
+      "target_field": "period_start",
+      "data_type": "date",
+      "date_format": "%Y-%m-%d",
+      "description": "Начало периода фиксации комиссии",
+      "aliases": ["дата начала действия фиксации", "дата начала фиксации"]
+    },
+    "Дата конца действия фиксации": {
+      "target_field": "period_end",
+      "data_type": "date",
+      "date_format": "%Y-%m-%d",
+      "description": "Конец периода фиксации комиссии",
+      "aliases": ["дата конца действия фиксации", "дата конца фиксации"]
+    },
+    "Признак услуги платной доставки": {
+      "target_field": "paid_delivery_flag",
+      "data_type": "bool",
+      "description": "Флаг: платная ли доставка",
+      "aliases": ["признак услуги платной доставки", "платная доставка флаг"]
+    },
+    "Общая сумма штрафов": {
+      "target_field": "fines_total",
+      "data_type": "float",
+      "description": "Сумма всех штрафов WB",
+      "aliases": ["общая сумма штрафов", "штрафы", "fines"]
+    },
+    "Корректировка Вознаграждения Вайлдберриз (ВВ)": {
+      "target_field": "commission_correction",
+      "data_type": "float",
+      "description": "Корректировка комиссии WB",
+      "aliases": ["корректировка вознаграждения вайлдберриз", "корректировка вв"]
+    },
+    "Виды логистики, штрафов и корректировок ВВ": {
+      "target_field": "logistics_type",
+      "data_type": "str",
+      "description": "Тип операции: К клиенту при продаже, Возврат и т.д.",
+      "aliases": ["виды логистики штрафов и корректировок вв", "тип логистики"]
+    },
+    "Стикер МП": {
+      "target_field": "mp_sticker",
+      "data_type": "str",
+      "description": "Код стикера маркетплейса (внутренний)",
+      "aliases": ["стикер мп", "стикер маркетплейса", "mp sticker"]
+    },
+    "Наименование банка-эквайера": {
+      "target_field": "acquirer_bank",
+      "data_type": "str",
+      "description": "Банк-эквайер платежа (HALYK, Сбер и т.д.)",
+      "aliases": ["наименование банка-эквайера", "банк эквайер", "acquirer"]
+    },
+    "Номер офиса": {
+      "target_field": "office_id",
+      "data_type": "str",
+      "description": "ID офиса/ПВЗ выдачи товара",
+      "aliases": ["номер офиса", "id офиса", "офис"]
+    },
+    "Наименование офиса доставки": {
+      "target_field": "warehouse",
+      "data_type": "str",
+      "description": "Название ПВЗ/офиса выдачи — регион и адрес",
+      "aliases": ["наименование офиса доставки", "офис доставки", "наименование офиса"]
+    },
+    "ИНН партнера": {
+      "target_field": "partner_inn",
+      "data_type": "str",
+      "description": "ИНН партнёра (для трансграничных продаж)",
+      "aliases": ["инн партнера", "инн", "inn"]
+    },
+    "Партнер": {
+      "target_field": "partner_name",
+      "data_type": "str",
+      "description": "Название партнёра (для трансграничных продаж)",
+      "aliases": ["партнер", "partner"]
+    },
+    "Склад": {
+      "target_field": "warehouse",
+      "data_type": "str",
+      "description": "Название склада WB отгрузки",
+      "aliases": ["склад", "склад wb", "warehouse"]
+    },
+    "Страна": {
+      "target_field": "region",
+      "data_type": "str",
+      "description": "Страна доставки покупателю",
+      "aliases": ["страна", "страна доставки", "country"]
+    },
+    "Тип коробов": {
+      "target_field": "box_type",
+      "data_type": "str",
+      "description": "Тип упаковки: Микс, Монобренд и т.д.",
+      "aliases": ["тип коробов", "тип упаковки", "box type"]
+    },
+    "Номер таможенной декларации": {
+      "target_field": "customs_declaration",
+      "data_type": "str",
+      "description": "Номер ГТД для трансграничных товаров",
+      "aliases": ["номер таможенной декларации", "номер гтд", "гтд", "customs declaration"]
+    },
+    "Номер сборочного задания": {
+      "target_field": "assembly_task_id",
+      "data_type": "str",
+      "description": "ID сборочного задания на складе WB",
+      "aliases": ["номер сборочного задания", "сборочное задание", "assembly task"]
+    },
+    "Код маркировки": {
+      "target_field": "marking_code",
+      "data_type": "str",
+      "description": "Код честного знака / маркировки",
+      "aliases": ["код маркировки", "маркировка", "честный знак"]
+    },
+    "ШК": {
+      "target_field": "barcode",
+      "data_type": "str",
+      "description": "Штрих-код (ШК) — внутренний код WB",
+      "aliases": ["шк", "штрих-код wb", "shk"]
+    },
+    "Srid": {
+      "target_field": "srid",
+      "data_type": "str",
+      "description": "Уникальный ID заказа WB (session request id)",
+      "aliases": ["srid", "id заказа wb", "session request id"]
+    },
+    "Возмещение издержек по перевозке/по складским операциям с товаром": {
+      "target_field": "logistics",
+      "data_type": "float",
+      "description": "Возмещение складских и транспортных расходов",
+      "aliases": ["возмещение издержек по перевозке", "возмещение складских операций"]
+    },
+    "Организатор перевозки": {
+      "target_field": "carrier",
+      "data_type": "str",
+      "description": "Кто организовал перевозку (WB или партнёр)",
+      "aliases": ["организатор перевозки", "перевозчик", "carrier"]
+    },
+    "Хранение": {
+      "target_field": "storage_cost",
+      "data_type": "float",
+      "description": "Стоимость хранения товара на складе WB",
+      "aliases": ["хранение", "стоимость хранения", "storage cost"]
+    },
+    "Удержания": {
+      "target_field": "deductions",
+      "data_type": "float",
+      "description": "Прочие удержания WB",
+      "aliases": ["удержания", "прочие удержания", "deductions"]
+    },
+    "Операции на приемке": {
+      "target_field": "acceptance_ops",
+      "data_type": "float",
+      "description": "Стоимость операций приёмки товара на складе",
+      "aliases": ["операции на приемке", "приёмка", "acceptance"]
+    },
+    "Фиксированный коэффициент склада по поставке": {
+      "target_field": "warehouse_coeff",
+      "data_type": "float",
+      "description": "Коэффициент склада (региональные поправки)",
+      "aliases": ["фиксированный коэффициент склада по поставке", "коэффициент склада"]
+    },
+    "Признак продажи юридическому лицу": {
+      "target_field": "b2b_flag",
+      "data_type": "str",
+      "description": "Да/Нет — продажа юрлицу",
+      "aliases": ["признак продажи юридическому лицу", "продажа юрлицу", "b2b"]
+    },
+    "Номер короба для обработки товара": {
+      "target_field": "box_id",
+      "data_type": "str",
+      "description": "Номер короба при обработке на складе",
+      "aliases": ["номер короба для обработки товара", "номер короба"]
+    },
+    "Скидка по программе софинансирования": {
+      "target_field": "cofinancing_discount",
+      "data_type": "float",
+      "description": "Скидка которую WB даёт за счёт совместного финансирования",
+      "aliases": ["скидка по программе софинансирования", "софинансирование", "cofinancing"]
+    },
+    "Скидка Wibes, %": {
+      "target_field": "wibes_discount_pct",
+      "data_type": "float",
+      "description": "Скидка по программе Wibes (аналитика WB)",
+      "aliases": ["скидка wibes", "wibes discount", "wibes %"]
+    },
+    "Компенсация скидки по программе лояльности": {
+      "target_field": "loyalty_compensation",
+      "data_type": "float",
+      "description": "Компенсация WB за скидку по программе лояльности",
+      "aliases": ["компенсация скидки по программе лояльности", "компенсация лояльность"]
+    },
+    "Стоимость участия в программе лояльности": {
+      "target_field": "loyalty_cost",
+      "data_type": "float",
+      "description": "Стоимость участия в программе лояльности WB",
+      "aliases": ["стоимость участия в программе лояльности", "программа лояльности"]
+    },
+    "Сумма баллов, удержанных по программе лояльности": {
+      "target_field": "loyalty_points_deducted",
+      "data_type": "float",
+      "description": "Баллы удержанные по программе лояльности",
+      "aliases": ["сумма баллов удержанных по программе лояльности", "баллы лояльность"]
+    },
+    "Id корзины заказа": {
+      "target_field": "basket_id",
+      "data_type": "str",
+      "description": "ID корзины заказа покупателя",
+      "aliases": ["id корзины заказа", "id корзины", "basket id"]
+    },
+    "Разовое изменение срока перечисления денежных средств": {
+      "target_field": "payment_delay",
+      "data_type": "float",
+      "description": "Разовое изменение срока выплат",
+      "aliases": ["разовое изменение срока перечисления", "изменение срока выплат"]
+    },
+    "Id собственной акции продавца с дополнительной скидкой": {
+      "target_field": "seller_promo_id",
+      "data_type": "str",
+      "description": "ID акции продавца с доп скидкой",
+      "aliases": ["id собственной акции продавца", "id акции продавца"]
+    },
+    "Размер дополнительной скидки по собственной акции продавца, %": {
+      "target_field": "seller_promo_discount_pct",
+      "data_type": "float",
+      "description": "% дополнительной скидки по акции продавца",
+      "aliases": ["размер дополнительной скидки по собственной акции продавца"]
+    },
+    "Способы продажи и тип товара": {
+      "target_field": "sale_type",
+      "data_type": "str",
+      "description": "FBW/FBS/DBS и тип товара (МГТ и т.д.)",
+      "aliases": ["способы продажи и тип товара", "способ продажи", "fbw fbs dbs"]
+    },
+    "Уникальный идентификатор скидки лояльности от продавца": {
+      "target_field": "seller_loyalty_id",
+      "data_type": "str",
+      "description": "ID скидки лояльности от продавца",
+      "aliases": ["уникальный идентификатор скидки лояльности от продавца"]
+    },
+    "Размер скидки лояльности от продавца,%": {
+      "target_field": "seller_loyalty_pct",
+      "data_type": "float",
+      "description": "% скидки лояльности от продавца",
+      "aliases": ["размер скидки лояльности от продавца"]
+    },
+    "Id промокода": {
+      "target_field": "promo_id",
+      "data_type": "str",
+      "description": "ID промокода",
+      "aliases": ["id промокода", "промокод id", "promo id"]
+    },
+    "Скидка за промокод, %": {
+      "target_field": "promo_discount_pct",
+      "data_type": "float",
+      "description": "% скидки по промокоду",
+      "aliases": ["скидка за промокод, %", "промокод скидка %"]
+    },
+    "Id подменного артикула": {
+      "target_field": "substitute_sku_id",
+      "data_type": "str",
+      "description": "ID подменного артикула (если товар заменён)",
+      "aliases": ["id подменного артикула", "подменный артикул id"]
+    },
+    "Скидка по подменному артикулу, %": {
+      "target_field": "substitute_discount_pct",
+      "data_type": "float",
+      "description": "% скидки по подменному артикулу",
+      "aliases": ["скидка по подменному артикулу"]
+    },
+    "Оптовая скидка для бизнеса, %": {
+      "target_field": "b2b_discount_pct",
+      "data_type": "float",
+      "description": "% оптовой скидки для юрлиц",
+      "aliases": ["оптовая скидка для бизнеса", "b2b скидка"]
+    }
+  }
+}

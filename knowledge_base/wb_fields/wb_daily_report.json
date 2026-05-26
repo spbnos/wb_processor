@@ -1,0 +1,536 @@
+{
+  "_meta": {
+    "source": "WB Ежедневный детализированный отчёт",
+    "version": "2026",
+    "description": "Эталонный справочник всех колонок WB детализированного отчёта с правильными маппингами",
+    "total_columns": 78
+  },
+
+  "fields": {
+    "№": {
+      "target": "ignore",
+      "type": "int",
+      "description": "Порядковый номер строки",
+      "category": "service"
+    },
+    "Номер поставки": {
+      "target": "campaign_id",
+      "type": "str",
+      "description": "Номер поставки товара на склад WB",
+      "category": "logistics"
+    },
+    "Предмет": {
+      "target": "category",
+      "type": "str",
+      "description": "Категория/предмет товара на WB",
+      "category": "product"
+    },
+    "Код номенклатуры": {
+      "target": "sku",
+      "type": "str",
+      "description": "nmID — уникальный числовой идентификатор товара на WB",
+      "category": "product",
+      "wb_field": "nmID"
+    },
+    "Бренд": {
+      "target": "brand",
+      "type": "str",
+      "description": "Бренд товара",
+      "category": "product"
+    },
+    "Артикул поставщика": {
+      "target": "sku",
+      "type": "str",
+      "description": "Артикул продавца (vendorCode)",
+      "category": "product",
+      "wb_field": "vendorCode",
+      "priority": "secondary"
+    },
+    "Название": {
+      "target": "name",
+      "type": "str",
+      "description": "Название товара",
+      "category": "product"
+    },
+    "Размер": {
+      "target": "ignore",
+      "type": "str",
+      "description": "Размер товара",
+      "category": "product_attr"
+    },
+    "Баркод": {
+      "target": "barcode",
+      "type": "str",
+      "description": "Баркод/EAN товара",
+      "category": "product"
+    },
+    "Тип документа": {
+      "target": "transaction_type",
+      "type": "str",
+      "description": "Тип операции: Продажа, Возврат, Логистика",
+      "category": "transaction",
+      "wb_values": ["Продажа", "Возврат", "Логистика", "Штраф", "Компенсация"]
+    },
+    "Обоснование для оплаты": {
+      "target": "transaction_type",
+      "type": "str",
+      "description": "Детальный тип операции для оплаты",
+      "category": "transaction",
+      "priority": "secondary"
+    },
+    "Дата заказа покупателем": {
+      "target": "date",
+      "type": "date",
+      "date_format": "%Y-%m-%d",
+      "description": "Дата когда покупатель оформил заказ",
+      "category": "time"
+    },
+    "Дата продажи": {
+      "target": "date",
+      "type": "date",
+      "date_format": "%Y-%m-%d",
+      "description": "Дата фактической продажи/выдачи",
+      "category": "time",
+      "priority": "primary"
+    },
+    "Кол-во": {
+      "target": "quantity",
+      "type": "int",
+      "description": "Количество товара в операции",
+      "category": "sales"
+    },
+    "Цена розничная": {
+      "target": "price",
+      "type": "float",
+      "description": "Розничная цена без скидок",
+      "category": "finance"
+    },
+    "Вайлдберриз реализовал Товар (Пр)": {
+      "target": "revenue",
+      "type": "float",
+      "description": "Сумма реализации — сколько покупатель заплатил",
+      "category": "finance",
+      "wb_field": "retail_price_withdisc_rub"
+    },
+    "Согласованный продуктовый дисконт, %": {
+      "target": "discount_pct",
+      "type": "float",
+      "description": "Согласованная скидка продавца, %",
+      "category": "finance"
+    },
+    "Промокод, %": {
+      "target": "promo_pct",
+      "type": "float",
+      "description": "Скидка по промокоду покупателя, %",
+      "category": "finance"
+    },
+    "Итоговая согласованная скидка, %": {
+      "target": "discount_pct",
+      "type": "float",
+      "description": "Итоговая скидка с учётом всех дисконтов",
+      "category": "finance",
+      "priority": "primary"
+    },
+    "Цена розничная с учетом согласованной скидки": {
+      "target": "price",
+      "type": "float",
+      "description": "Цена с учётом скидки продавца",
+      "category": "finance",
+      "priority": "secondary"
+    },
+    "Размер снижения кВВ из-за рейтинга, %": {
+      "target": "rating_discount_pct",
+      "type": "float",
+      "description": "Снижение комиссии WB из-за рейтинга продавца",
+      "category": "commission_detail"
+    },
+    "Размер изменения кВВ из-за акции, %": {
+      "target": "promo_commission_pct",
+      "type": "float",
+      "description": "Изменение комиссии WB из-за участия в акции",
+      "category": "commission_detail"
+    },
+    "Платформенные скидки, %": {
+      "target": "platform_discount_pct",
+      "type": "float",
+      "description": "Скидки платформы WB (не продавца)",
+      "category": "finance"
+    },
+    "Размер кВВ, %": {
+      "target": "commission_pct",
+      "type": "float",
+      "description": "Комиссия Вознаграждения Вайлдберриз (кВВ), % с НДС",
+      "category": "commission",
+      "wb_field": "commission_percent"
+    },
+    "Размер кВВ без НДС, % Базовый": {
+      "target": "commission_base_pct",
+      "type": "float",
+      "description": "Базовая комиссия WB без НДС, %",
+      "category": "commission_detail"
+    },
+    "Итоговый кВВ без НДС, %": {
+      "target": "commission_pct",
+      "type": "float",
+      "description": "Итоговая комиссия WB без НДС с учётом всех корректировок",
+      "category": "commission",
+      "priority": "primary"
+    },
+    "Вознаграждение с продаж до вычета услуг поверенного, без НДС": {
+      "target": "commission",
+      "type": "float",
+      "description": "Комиссия WB в рублях до вычета услуг, без НДС",
+      "category": "commission"
+    },
+    "Возмещение за выдачу и возврат товаров на ПВЗ": {
+      "target": "pvz_cost",
+      "type": "float",
+      "description": "Стоимость выдачи/возврата через ПВЗ",
+      "category": "logistics_detail"
+    },
+    "Компенсация платёжных услуг/Комиссия за интеграцию платёжных сервисов": {
+      "target": "payment_commission",
+      "type": "float",
+      "description": "Комиссия за платёжные услуги (эквайринг)",
+      "category": "commission_detail"
+    },
+    "Размер компенсации платёжных услуг/Комиссии за интеграцию платёжных сервисов, %": {
+      "target": "payment_commission_pct",
+      "type": "float",
+      "description": "Комиссия за эквайринг, %",
+      "category": "commission_detail"
+    },
+    "Тип платежа: компенсация платёжных услуг/Комиссия за интеграцию платёжных сервисов": {
+      "target": "payment_type",
+      "type": "str",
+      "description": "Тип платёжной услуги",
+      "category": "commission_detail"
+    },
+    "Вознаграждение Вайлдберриз (ВВ), без НДС": {
+      "target": "commission",
+      "type": "float",
+      "description": "Итоговое вознаграждение WB без НДС в рублях",
+      "category": "commission",
+      "priority": "primary",
+      "wb_field": "ppvz_vw"
+    },
+    "НДС с Вознаграждения Вайлдберриз": {
+      "target": "commission_vat",
+      "type": "float",
+      "description": "НДС от вознаграждения WB",
+      "category": "commission_detail"
+    },
+    "К перечислению Продавцу за реализованный Товар": {
+      "target": "net_profit",
+      "type": "float",
+      "description": "Сумма к выплате продавцу — чистая выручка",
+      "category": "finance",
+      "priority": "primary",
+      "wb_field": "ppvz_for_pay"
+    },
+    "Количество доставок": {
+      "target": "delivery_count",
+      "type": "int",
+      "description": "Количество доставок покупателю",
+      "category": "logistics"
+    },
+    "Количество возврата": {
+      "target": "return_count",
+      "type": "int",
+      "description": "Количество возвратов от покупателя",
+      "category": "logistics"
+    },
+    "Услуги по доставке товара покупателю": {
+      "target": "logistics",
+      "type": "float",
+      "description": "Стоимость логистики до покупателя",
+      "category": "logistics",
+      "priority": "primary",
+      "wb_field": "delivery_rub"
+    },
+    "Дата начала действия фиксации": {
+      "target": "period_start",
+      "type": "date",
+      "date_format": "%Y-%m-%d",
+      "description": "Начало периода фиксации тарифа",
+      "category": "time"
+    },
+    "Дата конца действия фиксации": {
+      "target": "period_end",
+      "type": "date",
+      "date_format": "%Y-%m-%d",
+      "description": "Конец периода фиксации тарифа",
+      "category": "time"
+    },
+    "Признак услуги платной доставки": {
+      "target": "paid_delivery_flag",
+      "type": "bool",
+      "description": "Признак что доставка платная для покупателя",
+      "category": "logistics_detail"
+    },
+    "Общая сумма штрафов": {
+      "target": "penalty",
+      "type": "float",
+      "description": "Штрафы WB продавцу",
+      "category": "penalties"
+    },
+    "Корректировка Вознаграждения Вайлдберриз (ВВ)": {
+      "target": "commission_adjustment",
+      "type": "float",
+      "description": "Корректировка комиссии WB",
+      "category": "commission_detail"
+    },
+    "Виды логистики, штрафов и корректировок ВВ": {
+      "target": "operation_type",
+      "type": "str",
+      "description": "Описание вида логистики или корректировки",
+      "category": "logistics_detail"
+    },
+    "Стикер МП": {
+      "target": "marketplace_sticker",
+      "type": "str",
+      "description": "Стикер маркетплейса для упаковки",
+      "category": "logistics_detail"
+    },
+    "Наименование банка-эквайера": {
+      "target": "bank_acquirer",
+      "type": "str",
+      "description": "Банк обрабатывающий платёж покупателя",
+      "category": "payment"
+    },
+    "Номер офиса": {
+      "target": "warehouse_id",
+      "type": "str",
+      "description": "ID склада/офиса WB где выдан товар",
+      "category": "logistics",
+      "wb_field": "office_id"
+    },
+    "Наименование офиса доставки": {
+      "target": "warehouse",
+      "type": "str",
+      "description": "Название склада/ПВЗ доставки",
+      "category": "logistics",
+      "priority": "primary"
+    },
+    "ИНН партнера": {
+      "target": "partner_inn",
+      "type": "str",
+      "description": "ИНН партнёра (WB-юрлицо принявшее товар)",
+      "category": "legal"
+    },
+    "Партнер": {
+      "target": "partner_name",
+      "type": "str",
+      "description": "Наименование партнёра WB",
+      "category": "legal"
+    },
+    "Склад": {
+      "target": "warehouse",
+      "type": "str",
+      "description": "Склад WB хранения",
+      "category": "logistics",
+      "priority": "primary",
+      "wb_field": "supplier_oper_name"
+    },
+    "Страна": {
+      "target": "region",
+      "type": "str",
+      "description": "Страна доставки",
+      "category": "geography"
+    },
+    "Тип коробов": {
+      "target": "box_type",
+      "type": "str",
+      "description": "Тип упаковки (Монотовар/Микс)",
+      "category": "logistics_detail"
+    },
+    "Номер таможенной декларации": {
+      "target": "customs_declaration",
+      "type": "str",
+      "description": "Номер ГТД для товаров из-за рубежа",
+      "category": "legal"
+    },
+    "Номер сборочного задания": {
+      "target": "assembly_task_id",
+      "type": "str",
+      "description": "Внутренний номер сборочного задания WB",
+      "category": "logistics_detail",
+      "wb_field": "rid"
+    },
+    "Код маркировки": {
+      "target": "marking_code",
+      "type": "str",
+      "description": "Код маркировки Честный ЗНАК",
+      "category": "legal"
+    },
+    "ШК": {
+      "target": "barcode",
+      "type": "str",
+      "description": "Штрихкод товара (дублирует Баркод)",
+      "category": "product",
+      "priority": "secondary"
+    },
+    "Srid": {
+      "target": "transaction_id",
+      "type": "str",
+      "description": "Уникальный ID операции WB (saleID)",
+      "category": "transaction",
+      "wb_field": "srid"
+    },
+    "Возмещение издержек по перевозке/по складским операциям с товаром": {
+      "target": "storage_cost",
+      "type": "float",
+      "description": "Возмещение складских и транспортных расходов",
+      "category": "logistics_detail"
+    },
+    "Организатор перевозки": {
+      "target": "carrier",
+      "type": "str",
+      "description": "Организация-перевозчик",
+      "category": "logistics_detail"
+    },
+    "Хранение": {
+      "target": "storage_cost",
+      "type": "float",
+      "description": "Стоимость хранения на складе WB",
+      "category": "logistics_detail",
+      "priority": "secondary"
+    },
+    "Удержания": {
+      "target": "penalty",
+      "type": "float",
+      "description": "Удержания WB (штрафы, корректировки)",
+      "category": "penalties",
+      "priority": "secondary"
+    },
+    "Операции на приемке": {
+      "target": "acceptance_cost",
+      "type": "float",
+      "description": "Стоимость операций на приёмке склада",
+      "category": "logistics_detail"
+    },
+    "Фиксированный коэффициент склада по поставке": {
+      "target": "warehouse_coefficient",
+      "type": "float",
+      "description": "Коэффициент склада для расчёта тарифов",
+      "category": "logistics_detail"
+    },
+    "Признак продажи юридическому лицу": {
+      "target": "is_legal_entity",
+      "type": "bool",
+      "description": "Продажа юрлицу (B2B) или физлицу (B2C)",
+      "category": "legal"
+    },
+    "Номер короба для обработки товара": {
+      "target": "box_id",
+      "type": "str",
+      "description": "Номер короба на складе WB",
+      "category": "logistics_detail"
+    },
+    "Скидка по программе софинансирования": {
+      "target": "cofinancing_discount",
+      "type": "float",
+      "description": "Скидка по программе совместного финансирования WB+продавец",
+      "category": "finance"
+    },
+    "Скидка Wibes, %": {
+      "target": "wibes_discount_pct",
+      "type": "float",
+      "description": "Скидка по сервису Wibes (видеоконтент WB)",
+      "category": "finance"
+    },
+    "Компенсация скидки по программе лояльности": {
+      "target": "loyalty_compensation",
+      "type": "float",
+      "description": "Компенсация WB продавцу за скидку лояльности",
+      "category": "finance"
+    },
+    "Стоимость участия в программе лояльности": {
+      "target": "loyalty_cost",
+      "type": "float",
+      "description": "Стоимость участия в программе лояльности WB",
+      "category": "finance"
+    },
+    "Сумма баллов, удержанных по программе лояльности": {
+      "target": "loyalty_points",
+      "type": "float",
+      "description": "Баллы WB рублей удержанных из выплаты",
+      "category": "finance"
+    },
+    "Id корзины заказа": {
+      "target": "order_id",
+      "type": "str",
+      "description": "ID корзины/заказа покупателя",
+      "category": "transaction",
+      "wb_field": "order_id"
+    },
+    "Разовое изменение срока перечисления денежных средств": {
+      "target": "payment_delay",
+      "type": "float",
+      "description": "Изменение срока выплаты (дней)",
+      "category": "finance"
+    },
+    "Id собственной акции продавца с дополнительной скидкой": {
+      "target": "seller_promo_id",
+      "type": "str",
+      "description": "ID собственной акции продавца",
+      "category": "promotions"
+    },
+    "Размер дополнительной скидки по собственной акции продавца, %": {
+      "target": "seller_promo_pct",
+      "type": "float",
+      "description": "Дополнительная скидка по акции продавца, %",
+      "category": "promotions"
+    },
+    "Способы продажи и тип товара": {
+      "target": "fulfillment_type",
+      "type": "str",
+      "description": "FBW/FBS и тип упаковки (МГТ, короба и т.д.)",
+      "category": "logistics",
+      "wb_values": ["FBW, (МГТ, короба)", "FBW, (МГТ, монотовар)", "FBS"]
+    },
+    "Уникальный идентификатор скидки лояльности от продавца": {
+      "target": "seller_loyalty_id",
+      "type": "str",
+      "description": "ID программы лояльности продавца",
+      "category": "promotions"
+    },
+    "Размер скидки лояльности от продавца,%": {
+      "target": "seller_loyalty_pct",
+      "type": "float",
+      "description": "Скидка по программе лояльности продавца, %",
+      "category": "promotions"
+    },
+    "Id промокода": {
+      "target": "promo_id",
+      "type": "str",
+      "description": "ID промокода применённого покупателем",
+      "category": "promotions"
+    },
+    "Скидка за промокод, %": {
+      "target": "promo_pct",
+      "type": "float",
+      "description": "Скидка по промокоду, %",
+      "category": "promotions",
+      "priority": "primary"
+    },
+    "Id подменного артикула": {
+      "target": "substitute_sku_id",
+      "type": "str",
+      "description": "ID подменного артикула (WB-замена при дефиците)",
+      "category": "product"
+    },
+    "Скидка по подменному артикулу, %": {
+      "target": "substitute_discount_pct",
+      "type": "float",
+      "description": "Скидка на подменный артикул, %",
+      "category": "product"
+    },
+    "Оптовая скидка для бизнеса, %": {
+      "target": "b2b_discount_pct",
+      "type": "float",
+      "description": "Скидка для B2B покупателей (юрлица), %",
+      "category": "finance"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "struct_hash": "h1",
+    "source_column": "Код номенклатуры",
+    "target_field": "sku",
+    "hits": 1,
+    "last_score": 0.8875,
+    "confirmed": false,
+    "last_seen": "2026-05-23T12:32:54.491056+00:00"
+  },
+  {
+    "struct_hash": "h1",
+    "source_column": "Дата продажи",
+    "target_field": "date",
+    "hits": 1,
+    "last_score": 0.8875,
+    "confirmed": false,
+    "last_seen": "2026-05-23T12:32:54.497729+00:00"
+  },
+  {
+    "struct_hash": "h1",
+    "source_column": "К перечислению Продавцу за реализованный Товар",
+    "target_field": "net_profit",
+    "hits": 1,
+    "last_score": 0.8875,
+    "confirmed": false,
+    "last_seen": "2026-05-23T12:32:54.504491+00:00"
+  }
+]

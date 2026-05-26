@@ -1,0 +1,52 @@
+{
+  "title": "WB Pipeline Dashboard",
+  "uid": "wb-pipeline",
+  "schemaVersion": 38,
+  "refresh": "30s",
+  "panels": [
+    {
+      "id": 1, "type": "stat", "title": "Files Processed (24h)",
+      "gridPos": {"x":0,"y":0,"w":6,"h":4},
+      "targets": [{"expr":"increase(wb_files_processed_total[24h])","legendFormat":"Total"}]
+    },
+    {
+      "id": 2, "type": "stat", "title": "Success Rate",
+      "gridPos": {"x":6,"y":0,"w":6,"h":4},
+      "targets": [{"expr":"rate(wb_files_processed_total{status='ok'}[1h]) / rate(wb_files_processed_total[1h]) * 100","legendFormat":"% success"}]
+    },
+    {
+      "id": 3, "type": "stat", "title": "Review Queue Pending",
+      "gridPos": {"x":12,"y":0,"w":6,"h":4},
+      "targets": [{"expr":"wb_review_queue_pending","legendFormat":"Pending"}]
+    },
+    {
+      "id": 4, "type": "stat", "title": "Active Mappings",
+      "gridPos": {"x":18,"y":0,"w":6,"h":4},
+      "targets": [{"expr":"wb_active_mappings_total","legendFormat":"Mappings"}]
+    },
+    {
+      "id": 5, "type": "timeseries", "title": "File Processing Duration (p95)",
+      "gridPos": {"x":0,"y":4,"w":12,"h":8},
+      "targets": [{"expr":"histogram_quantile(0.95, rate(wb_file_processing_duration_seconds_bucket[5m]))","legendFormat":"p95 {{category}}"}]
+    },
+    {
+      "id": 6, "type": "timeseries", "title": "Smart Mapping Decisions",
+      "gridPos": {"x":12,"y":4,"w":12,"h":8},
+      "targets": [
+        {"expr":"rate(wb_smart_mapping_decisions_total{level='auto_apply'}[5m])","legendFormat":"Auto Apply"},
+        {"expr":"rate(wb_smart_mapping_decisions_total{level='needs_review'}[5m])","legendFormat":"Needs Review"},
+        {"expr":"rate(wb_smart_mapping_decisions_total{level='low_conf'}[5m])","legendFormat":"Low Confidence"}
+      ]
+    },
+    {
+      "id": 7, "type": "timeseries", "title": "API Latency (p99)",
+      "gridPos": {"x":0,"y":12,"w":12,"h":8},
+      "targets": [{"expr":"histogram_quantile(0.99, rate(wb_api_request_duration_seconds_bucket[5m]))","legendFormat":"p99 {{path}}"}]
+    },
+    {
+      "id": 8, "type": "timeseries", "title": "Redis Queue Depth",
+      "gridPos": {"x":12,"y":12,"w":12,"h":8},
+      "targets": [{"expr":"wb_queue_depth","legendFormat":"{{queue}}"}]
+    }
+  ]
+}
