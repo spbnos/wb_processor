@@ -14,7 +14,7 @@ async function req<T>(path: string, opts: RequestInit = {}): Promise<T> {
   return res.json()
 }
 
-import type { SystemStats, ReviewItem, MappingItem, TaskResult, ModelVersion } from '../types'
+import type { SystemStats, ReviewItem, MappingItem, TaskResult, ModelVersion, KBStatus } from '../types'
 
 export const api = {
   health:         ()              => req<{status:string;uptime_seconds:number}>('/stats/health'),
@@ -22,7 +22,7 @@ export const api = {
   mappings:       ()              => req<MappingItem[]>('/mappings'),
   deleteMapping:  (id: number)    => req(`/mappings/${id}`, { method: 'DELETE' }),
   reviewItems:    ()              => req<ReviewItem[]>('/review'),
-  reviewStats:    ()              => req<{total:number;pending:number}>('/review/stats'),
+  reviewStats:    ()              => req<{total:number;pending:number;by_status:Record<string,number>}>('/review/stats'),
   approve:        (id: string, field?: string) =>
     req(`/review/${id}/approve`, { method: 'POST', body: JSON.stringify({ field: field ?? null }) }),
   reject:         (id: string, field: string) =>
@@ -38,4 +38,8 @@ export const api = {
   mlVersions:     (name: string)  => req<ModelVersion[]>(`/ml/models/${name}`),
   mlTrain:        ()              => req('/ml/train', { method: 'POST', body: '{}' }),
   mlFeatureStats: ()              => req<Record<string,unknown>>('/ml/features/stats'),
+  kbStatus:       ()              => req<KBStatus>('/kb/status'),
+  kbDocuments:    ()              => req<Record<string,unknown>[]>('/kb/documents'),
+  kbReindex:      ()              => req('/kb/index', { method: 'POST' }),
+  kbField:        (col: string)   => req(`/kb/field?col=${encodeURIComponent(col)}`),
 }
