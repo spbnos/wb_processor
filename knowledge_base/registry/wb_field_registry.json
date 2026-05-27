@@ -154,7 +154,13 @@
       "type": "float",
       "category": "advertising",
       "description": "Скидка по промокоду",
-      "use_in_analytics": true
+      "use_in_analytics": true,
+      "aliases": [
+        "промокод %",
+        "промо скидка %",
+        "promo pct",
+        "промокод скидка"
+      ]
     },
     "Итоговая согласованная скидка, %": {
       "target": "total_discount_pct",
@@ -201,7 +207,11 @@
       "aliases": [
         "размер квв, %",
         "квв",
-        "размер квв"
+        "размер квв",
+        "квв, %",
+        "квв%",
+        "комиссия вв %",
+        "вознаграждение %"
       ]
     },
     "Размер кВВ без НДС, % Базовый": {
@@ -220,7 +230,12 @@
       "type": "float",
       "category": "commission",
       "description": "Итоговый кВВ с учётом рейтинга и акций",
-      "use_in_analytics": true
+      "use_in_analytics": true,
+      "aliases": [
+        "итоговый квв",
+        "квв итого",
+        "final kvv"
+      ]
     },
     "Вознаграждение с продаж до вычета услуг поверенного, без НДС": {
       "target": "commission_before_agent",
@@ -361,8 +376,14 @@
       "target": "marketplace_sticker",
       "type": "str",
       "category": "service",
-      "description": "Внутренний стикер WB",
-      "use_in_analytics": false
+      "description": "Стикер маркетплейса — нужен для инвентаризации и отслеживания",
+      "use_in_analytics": true,
+      "aliases": [
+        "стикер маркетплейса",
+        "mp sticker",
+        "стикер вб",
+        "wb sticker"
+      ]
     },
     "Наименование банка-эквайера": {
       "target": "acquirer_bank",
@@ -376,7 +397,12 @@
       "type": "str",
       "category": "logistics",
       "description": "ID офиса/ПВЗ выдачи",
-      "use_in_analytics": true
+      "use_in_analytics": true,
+      "aliases": [
+        "номер офиса пвз",
+        "office number",
+        "id офиса"
+      ]
     },
     "Наименование офиса доставки": {
       "target": "warehouse",
@@ -387,22 +413,34 @@
       "aliases": [
         "наименование офиса доставки",
         "офис доставки",
-        "пвз"
+        "пвз",
+        "название офиса",
+        "delivery office"
       ]
     },
     "ИНН партнера": {
       "target": "partner_inn",
       "type": "str",
       "category": "legal",
-      "description": "ИНН партнёра (трансграничная торговля)",
-      "use_in_analytics": false
+      "description": "ИНН партнёра WB — нужен для партнёрской аналитики",
+      "use_in_analytics": true,
+      "aliases": [
+        "инн партнёра",
+        "inn partner",
+        "партнер инн"
+      ]
     },
     "Партнер": {
       "target": "partner_name",
       "type": "str",
       "category": "legal",
-      "description": "Название партнёра",
-      "use_in_analytics": false
+      "description": "Название партнёра — нужен для группировки по партнёрам",
+      "use_in_analytics": true,
+      "aliases": [
+        "партнёр",
+        "partner name",
+        "партнер вб"
+      ]
     },
     "Склад": {
       "target": "warehouse_origin",
@@ -422,22 +460,34 @@
       "target": "box_type",
       "type": "str",
       "category": "logistics",
-      "description": "Тип упаковки: Микс/Монокороб",
-      "use_in_analytics": false
+      "description": "Тип упаковки (монотовар/микс) — нужен для складской аналитики",
+      "use_in_analytics": true,
+      "aliases": [
+        "тип упаковки",
+        "монотовар",
+        "микс упаковка",
+        "box type"
+      ]
     },
     "Номер таможенной декларации": {
       "target": "customs_declaration",
       "type": "str",
       "category": "legal",
-      "description": "Номер ГТД",
-      "use_in_analytics": false
+      "description": "ГТД — нужен для compliance и трекинга импорта",
+      "use_in_analytics": true
     },
     "Номер сборочного задания": {
       "target": "assembly_task_id",
       "type": "str",
       "category": "service",
-      "description": "ID сборочного задания FBS",
-      "use_in_analytics": false
+      "description": "RID — уникальный ID заказа, критичен для трекинга",
+      "use_in_analytics": true,
+      "aliases": [
+        "сборочное задание",
+        "rid",
+        "order id wb",
+        "номер заказа вб"
+      ]
     },
     "Код маркировки": {
       "target": "marking_code",
@@ -528,7 +578,12 @@
       "type": "float",
       "category": "advertising",
       "description": "Скидка через Wibes (видеоотзывы WB)",
-      "use_in_analytics": true
+      "use_in_analytics": true,
+      "aliases": [
+        "wibes скидка %",
+        "скидка вайбс",
+        "wibes%"
+      ]
     },
     "Компенсация скидки по программе лояльности": {
       "target": "loyalty_discount_compensation",
@@ -555,8 +610,8 @@
       "target": "basket_id",
       "type": "str",
       "category": "service",
-      "description": "ID корзины покупателя",
-      "use_in_analytics": false
+      "description": "ID корзины — нужен для аналитики воронки заказов",
+      "use_in_analytics": true
     },
     "Разовое изменение срока перечисления денежных средств": {
       "target": "payment_period_change",
@@ -618,8 +673,8 @@
       "target": "substitute_sku_id",
       "type": "str",
       "category": "service",
-      "description": "ID подменного артикула",
-      "use_in_analytics": false
+      "description": "ID подменного артикула — нужен для аналитики замен",
+      "use_in_analytics": true
     },
     "Скидка по подменному артикулу, %": {
       "target": "substitute_discount_pct",
