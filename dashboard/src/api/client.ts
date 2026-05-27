@@ -24,9 +24,13 @@ export const api = {
   reviewItems:    ()              => req<ReviewItem[]>('/review'),
   reviewStats:    ()              => req<{total:number;pending:number;by_status:Record<string,number>}>('/review/stats'),
   approve:        (id: string, field?: string) =>
-    req(`/review/${id}/approve`, { method: 'POST', body: JSON.stringify({ field: field ?? null }) }),
+    req<ReviewItem>(`/review/${id}/approve`, { method: 'POST', body: JSON.stringify({ field: field ?? null }) }),
   reject:         (id: string, field: string) =>
-    req(`/review/${id}/reject`, { method: 'POST', body: JSON.stringify({ correct_field: field }) }),
+    req<ReviewItem>(`/review/${id}/reject`, { method: 'POST', body: JSON.stringify({ correct_field: field }) }),
+  applyReviews:   (structHash: string) =>
+    req<{struct_hash:string;applied_fields:number;reprocess_status:string;message:string}>(
+      `/review/apply/${structHash}`, { method: 'POST' }
+    ),
   uploadFile:     (file: File) => {
     const fd = new FormData(); fd.append('file', file)
     return fetch(`${BASE}/files/upload`, {
