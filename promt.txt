@@ -1,0 +1,600 @@
+Аналитика продавца
+Подтвержденные отчёты
+«Сводка аналитики»
+«Отчёт "Поставки по регионам"»
+«Отчёт "История остатков"»
+«Отчёт "Портрет покупателя"»
+«Отчёт "Календарь событий"»
+«Отчёт "Оценка товара"»
+«Отчёт "Воронка продаж"»
+«Отчёт "Воронка продаж. Сравнение с периодом"»
+«Отчёт "Воронка продаж. Сравнение с площадкой"»
+«Отчёт "Лента заказов"»
+«Отчёт "Сравнение карточек"»
+
+Другие отчёты WB
+
+Подтвержденные названия:
+
+«Динамика оборачиваемости»
+«Еженедельная динамика и анализ продаж»
+«Продажи»
+«Доля бренда в продажах»
+«Продажи по регионам»
+«Сводный по продавцу»
+«Заблокированные товары»
+«Отчет с перечнем номенклатур»
+«Платное хранение»
+«Отчет по товарам с обязательной маркировкой»
+«Отчет по остаткам на складе»
+«Платная приемка»
+«Отчет по коэффициенту логистики и хранения»
+«Скрытые товары»
+
+Официально подтвержденные API analytics endpoints
+
+Из WB OpenAPI:
+
+Подтверждено наличие:
+
+Воронки продаж
+Поисковых запросов по товарам
+Истории остатков
+Аналитики продавца CSV
+Расширенной аналитики продавца
+Особенно важные реальные сущности
+
+Из документации WB подтверждено:
+
+Search / SEO Intelligence
+
+Реально существует:
+
+«Поисковые запросы»
+
+Это крайне важно.
+
+Conversion Intelligence
+
+Реально существует:
+
+«Воронка продаж»
+Warehouse Intelligence
+
+Реально существует:
+
+«История остатков»
+«Поставки по регионам»
+Behavioral Intelligence
+
+Реально существует:
+
+«Портрет покупателя»
+Что это меняет архитектурно
+
+Теперь semantic ingestion должен строиться НЕ вокруг:
+
+абстрактных domain names,
+
+а вокруг:
+
+canonical WB report entities.
+Правильная enterprise architecture
+1. Canonical Report Registry
+WB_REPORT_REGISTRY
+
+report_id
+official_name
+domain
+source
+format
+schema_version
+semantic_tags
+api_endpoint
+Пример
+official_name:
+"Воронка продаж"
+
+domain:
+conversion_intelligence
+
+source:
+wb_analytics_api
+2. Semantic Mapping Layer
+
+НЕ:
+
+"sales.xlsx"
+
+А:
+
+"Отчёт 'Воронка продаж'"
+3. Historical Schema Versioning
+
+WB часто меняет:
+
+колонки,
+названия,
+форматы.
+
+Поэтому:
+
+report_name
+schema_hash
+schema_version
+detected_at
+4. Domain-driven ingestion
+Например
+«История остатков»
+
+→ warehouse_intelligence_domain
+
+«Поисковые запросы»
+
+→ search_intelligence_domain
+
+«Воронка продаж»
+
+→ conversion_intelligence_domain
+
+Самый важный вывод исследования
+
+WB seller ecosystem уже фактически предоставляет:
+
+primitive commerce intelligence graph.
+
+Но:
+
+в разрозненных отчетах,
+без исторического слоя,
+без semantic linkage,
+без ML intelligence,
+без unified behavioral model.
+Ваш проект должен стать
+unified semantic behavioral intelligence layer over WB ecosystem.
+Самые стратегически важные реальные отчеты WB
+
+На основе verified docs:
+
+Отчет	Стратегическая ценность
+Воронка продаж	Core ranking intelligence
+Поисковые запросы	SEO/search moat
+История остатков	Logistics ranking
+Поставки по регионам	Supply intelligence
+Оценка товара	Behavioral quality
+Сравнение карточек	Competitive intelligence
+Продажи	Revenue intelligence
+Платное хранение	Margin optimization
+Коэффициент логистики и хранения	Logistics economics
+Портрет покупателя	Behavioral segmentation
+
+Что делать дальше
+
+Следующий правильный этап:
+
+построить полный WB Canonical Semantic Registry
+
+где будут:
+
+ВСЕ реальные отчеты,
+реальные schema versions,
+реальные поля,
+lineage,
+semantic relations,
+ingestion contracts,
+historical compatibility rules.
+
+Это уже уровень:
+
+Databricks metadata platform,
+Palantir ontology,
+enterprise semantic governance systems.
+построить полный WB Canonical Semantic Registry
+WB Canonical Semantic Registry
+Enterprise Semantic Metadata Platform
+Wildberries AI-Native Commerce Intelligence System
+1. Главная цель
+
+Построить:
+
+единый canonical semantic layer
+
+для:
+
+ВСЕХ отчетов WB,
+ВСЕХ сущностей WB,
+ВСЕХ схем,
+ВСЕХ метрик,
+ВСЕХ связей,
+ВСЕЙ исторической эволюции данных.
+2. Что такое WB Canonical Semantic Registry
+
+Это НЕ просто список отчетов.
+
+Это:
+
+enterprise semantic ontology of Wildberries ecosystem.
+3. Главная проблема WB
+
+WB:
+
+меняет схемы,
+меняет колонки,
+меняет названия,
+меняет форматы,
+меняет API,
+переименовывает поля.
+
+Без semantic registry:
+
+ingestion ломается,
+историчность теряется,
+ML деградирует,
+аналитика становится недостоверной.
+4. TARGET ARCHITECTURE
+WB Reports / APIs
+        ↓
+Schema Detection Layer
+        ↓
+Semantic Mapping Engine
+        ↓
+Canonical Registry
+        ↓
+Metadata Platform
+        ↓
+Domain Intelligence
+        ↓
+ML / Forecasting
+        ↓
+AI Reasoning
+5. Главная сущность
+Canonical Entity Registry
+Каждая сущность WB должна иметь:
+Entity
+ ├── Canonical Name
+ ├── Synonyms
+ ├── Source Reports
+ ├── Schema Versions
+ ├── Data Types
+ ├── Semantic Meaning
+ ├── Historical Changes
+ ├── Relationships
+ ├── Domain Ownership
+ ├── Validation Rules
+ ├── Feature Store Mapping
+ ├── ML Usage
+ └── Lineage
+6. Главные домены registry
+sales_intelligence
+conversion_intelligence
+search_intelligence
+seo_intelligence
+warehouse_intelligence
+logistics_intelligence
+finance_intelligence
+advertising_intelligence
+content_intelligence
+review_intelligence
+pricing_intelligence
+seller_intelligence
+offer_intelligence
+forecasting_intelligence
+7. Canonical Report Registry
+Самая важная таблица
+wb_reports
+field	description
+report_id	internal UUID
+official_name	официальное название WB
+canonical_name	internal canonical name
+domain	business domain
+source_type	api/xlsx/csv/zip/pdf
+api_endpoint	endpoint
+ingestion_strategy	parser type
+update_frequency	hourly/daily/manual
+schema_version	current schema
+historical_supported	bool
+active	bool
+8. VERIFIED REPORT REGISTRY
+На основе реальных отчетов WB
+conversion_intelligence
+official_name	canonical_name
+Воронка продаж	sales_funnel
+Воронка продаж. Сравнение с периодом	sales_funnel_period_compare
+Воронка продаж. Сравнение с площадкой	sales_funnel_market_compare
+search_intelligence
+official_name	canonical_name
+Поисковые запросы	search_queries
+warehouse_intelligence
+official_name	canonical_name
+История остатков	stock_history
+Поставки по регионам	regional_supplies
+Отчет по остаткам на складе	warehouse_stock
+sales_intelligence
+official_name	canonical_name
+Продажи	sales
+Еженедельная динамика и анализ продаж	weekly_sales_dynamics
+Продажи по регионам	regional_sales
+finance_intelligence
+official_name	canonical_name
+Платное хранение	paid_storage
+Отчет по коэффициенту логистики и хранения	logistics_storage_coefficients
+content_intelligence
+official_name	canonical_name
+Сравнение карточек	product_card_compare
+Оценка товара	product_rating
+customer_intelligence
+official_name	canonical_name
+Портрет покупателя	customer_profile
+9. Canonical Field Registry
+Самое важное ядро
+wb_fields
+field	description
+field_id	UUID
+canonical_name	internal semantic field
+wb_column_name	original WB field
+domain	business domain
+data_type	type
+semantic_type	metric/dimension/entity
+description	semantic meaning
+synonyms	aliases
+unit	%, RUB, qty
+nullable	bool
+pii	bool
+feature_store_enabled	bool
+ml_usable	bool
+10. Пример canonical fields
+SALES DOMAIN
+canonical_name	WB examples
+sku_id	nmID
+order_count	Заказы
+sales_amount	Продажи
+buyout_rate	% выкупа
+returns_count	Возвраты
+seller_price	Цена продавца
+SEARCH DOMAIN
+canonical_name	WB examples
+search_query	Поисковый запрос
+query_frequency	Частотность
+search_position	Позиция
+visibility	Видимость
+query_ctr	CTR
+WAREHOUSE DOMAIN
+canonical_name	WB examples
+warehouse_name	Склад
+stock_qty	Остаток
+days_of_cover	Дней остатка
+regional_cluster	Кластер
+11. Semantic Synonym Engine
+Критически важно
+
+WB часто переименовывает поля.
+
+Пример
+nmID
+Номенклатура
+Артикул WB
+SKU WB
+
+ВСЁ это:
+
+canonical_name = sku_id
+Структура
+wb_field_synonyms
+synonym	canonical_name
+nmID	sku_id
+Артикул WB	sku_id
+Номенклатура	sku_id
+12. Schema Version Registry
+Абсолютно критично
+wb_schema_versions
+field	description
+schema_id	UUID
+report_id	relation
+schema_hash	hash
+detected_at	datetime
+active_from	datetime
+active_to	datetime
+breaking_change	bool
+13. Historical Lineage
+Главный moat
+wb_lineage
+source_report
+    ↓
+raw_file
+    ↓
+parsed_schema
+    ↓
+canonical_mapping
+    ↓
+normalized_fact
+    ↓
+feature_store
+    ↓
+ML model
+    ↓
+dashboard
+14. Semantic Relationship Graph
+Neo4j
+Nodes
+Report
+Field
+Metric
+SKU
+Warehouse
+Category
+SearchQuery
+Campaign
+OfferRule
+Relationships
+REPORT_CONTAINS_FIELD
+FIELD_BELONGS_TO_DOMAIN
+QUERY_AFFECTS_RANKING
+WAREHOUSE_AFFECTS_DELIVERY
+PRICE_AFFECTS_CONVERSION
+AD_AFFECTS_VISIBILITY
+15. Time-Series Historical Registry
+Самое важное
+
+Хранить:
+
+ВСЕ snapshots,
+ВСЕ schema changes,
+ВСЮ эволюцию marketplace.
+Нужно хранить
+daily snapshots
+hourly snapshots
+ranking history
+visibility history
+stock history
+price history
+ad history
+margin history
+query history
+16. Semantic Mapping Engine
+AI-native mapping layer
+Pipeline
+WB File
+    ↓
+Format Detection
+    ↓
+Schema Detection
+    ↓
+Column Embedding
+    ↓
+Semantic Similarity
+    ↓
+Canonical Mapping
+    ↓
+Validation
+    ↓
+Registry Update
+17. LLM-assisted Semantic Intelligence
+Очень важно
+
+LLM должен:
+
+понимать новые схемы,
+infer unknown fields,
+выявлять semantic conflicts,
+автоматически предлагать mappings.
+18. Validation Engine
+Enterprise governance
+Проверки
+schema drift
+missing fields
+type mismatch
+semantic conflicts
+duplicated metrics
+historical inconsistencies
+19. Canonical Metric Registry
+wb_metrics
+metric	description
+ctr	click-through rate
+cvr	conversion rate
+buyout_rate	buyout percentage
+visibility_index	search visibility
+logistics_cost	logistics expenses
+unit_margin	margin per SKU
+stockout_risk	stockout prediction
+20. Feature Store Integration
+Feast
+
+Каждый canonical field должен знать:
+
+feature_name
+feature_group
+training_usage
+inference_usage
+freshness
+21. Dashboard Semantic Layer
+Очень важно
+
+Dashboard НЕ должен обращаться к raw fields.
+
+Только к canonical semantic layer
+Например
+
+НЕ:
+
+Заказы
+
+А:
+
+order_count
+22. Event-driven Registry Updates
+Kafka Topics
+wb.report.detected
+wb.schema.detected
+wb.mapping.created
+wb.schema.changed
+wb.field.deprecated
+wb.semantic.conflict
+23. API Architecture
+REST
+GET /registry/reports
+GET /registry/fields
+GET /registry/domains
+GET /registry/schema-versions
+GET /registry/lineage
+GraphQL
+
+Для:
+
+lineage traversal,
+semantic exploration,
+AI copilots.
+24. Multi-tenant Readiness
+
+Registry должен поддерживать:
+
+organization
+seller
+marketplace
+country
+language
+custom mappings
+25. Главный strategic moat
+
+НЕ ingestion.
+
+НЕ dashboards.
+
+НЕ analytics.
+
+А:
+
+canonical semantic intelligence graph of marketplace ecosystem.
+26. Финальная enterprise-схема
+                ┌──────────────────────┐
+                │   WB REPORTS/APIs    │
+                └──────────┬───────────┘
+                           │
+                ┌──────────▼───────────┐
+                │ INGESTION PLATFORM   │
+                └──────────┬───────────┘
+                           │
+                ┌──────────▼───────────┐
+                │ SCHEMA DETECTION     │
+                └──────────┬───────────┘
+                           │
+                ┌──────────▼───────────┐
+                │ SEMANTIC MAPPING     │
+                └──────────┬───────────┘
+                           │
+        ┌────────────────────────────────────┐
+        │ WB CANONICAL SEMANTIC REGISTRY     │
+        └────────────────────────────────────┘
+\n
+ REPORTS │ FIELDS │ METRICS │ LINEAGE │ GRAPH
+\n
+        ┌────────────────────────────────────┐
+        │ HISTORICAL STORAGE + FEATURE STORE │
+        └────────────────────────────────────┘
+\n
+        ┌────────────────────────────────────┐
+        │ ML / FORECASTING / AI REASONING    │
+        └────────────────────────────────────┘
+\n
+        ┌────────────────────────────────────┐
+        │ DASHBOARDS / AI COPILOTS / APIs    │
+        └────────────────────────────────────┘

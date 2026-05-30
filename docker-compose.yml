@@ -1,0 +1,227 @@
+version: "3.9"
+
+# ═══════════════════════════════════════════════════════════════════
+# WB Intelligent Data Platform — Full Stack Docker Compose
+# ═══════════════════════════════════════════════════════════════════
+#
+# Запуск:           docker-compose up -d
+# Swagger UI:       http://localhost:8000/docs
+# Grafana:          http://localhost:3000  (admin/admin)
+# Prometheus:       http://localhost:9090
+# ═══════════════════════════════════════════════════════════════════
+
+x-common-env: &common-env
+  PYTHONUNBUFFERED: "1"
+  PYTHONDONTWRITEBYTECODE: "1"
+  DB_HOST: postgres
+  DB_PORT: "5432"
+  DB_NAME: ${DB_NAME:-wb_processor}
+  DB_USER: ${DB_USER:-postgres}
+  DB_PASS: ${DB_PASS:-postgres}
+  REDIS_URL: redis://redis:6379/0
+  API_KEY: ${API_KEY:-dev-key-change-in-prod}
+  JWT_SECRET: ${JWT_SECRET:-jwt-secret-change-in-prod}
+  LOG_LEVEL: ${LOG_LEVEL:-INFO}
+  JSON_LOGS: ${JSON_LOGS:-true}
+  ENV: production
+  USE_DB: "true"
+
+x-hc-postgres: &hc-postgres
+  test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-wb_processor}"]
+  interval: 10s
+  timeout: 5s
+  retries: 5
+  start_period: 20s
+
+x-hc-redis: &hc-redis
+  test: ["CMD", "redis-cli", "ping"]
+  interval: 5s
+  timeout: 3s
+  retries: 5
+
+x-hc-http: &hc-http
+  interval: 15s
+  timeout: 5s
+  retries: 3
+  start_period: 10s
+
+services:
+
+  # ─── PostgreSQL ─────────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: wb_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME:-wb_processor}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASS:-postgres}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./devops/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    healthcheck: *hc-postgres
+    networks:
+      - wb_net
+
+  # ─── Redis ──────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: wb_redis
+    restart: unless-stopped
+    command: >
+      redis-server
+      --appendonly yes
+      --maxmemory 256mb
+      --maxmemory-policy allkeys-lru
+      --save 60 1
+    volumes:
+      - redis_data:/data
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    healthcheck: *hc-redis
+    networks:
+      - wb_net
+
+  # ─── API (FastAPI) ───────────────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: devops/Dockerfile.api
+      target: final
+    image: wb_platform/api:latest
+    container_name: wb_api
+    restart: unless-stopped
+    environment:
+      <<: *common-env
+    ports:
+      - "${API_PORT:-8000}:8000"
+    volumes:
+      - ./incoming:/app/incoming
+      - ./processed:/app/processed
+      - ./failed:/app/failed
+      - ./data:/app/data
+      - ./logs:/app/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/stats/health"]
+      <<: *hc-http
+    networks:
+      - wb_net
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"
+
+  # ─── Worker (Pipeline) ──────────────────────────────────────────
+  worker:
+    build:
+      context: .
+      dockerfile: devops/Dockerfile.worker
+      target: final
+    image: wb_platform/worker:latest
+    container_name: wb_worker
+    restart: unless-stopped
+    environment:
+      <<: *common-env
+    volumes:
+      - ./incoming:/app/incoming
+      - ./processed:/app/processed
+      - ./failed:/app/failed
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ../wb_platform:/wb_platform:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - wb_net
+    deploy:
+      replicas: 2
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"
+
+  # ─── Ingestion (Watchdog) ────────────────────────────────────────
+  ingestion:
+    build:
+      context: .
+      dockerfile: devops/Dockerfile.ingestion
+      target: final
+    image: wb_platform/ingestion:latest
+    container_name: wb_ingestion
+    restart: unless-stopped
+    environment:
+      <<: *common-env
+    volumes:
+      - ./incoming:/app/incoming
+      - ./logs:/app/logs
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - wb_net
+
+  # ─── Prometheus ──────────────────────────────────────────────────
+  prometheus:
+    image: prom/prometheus:v2.51.0
+    container_name: wb_prometheus
+    restart: unless-stopped
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--storage.tsdb.retention.time=30d"
+      - "--web.enable-lifecycle"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "${PROMETHEUS_PORT:-9090}:9090"
+    networks:
+      - wb_net
+
+  # ─── Grafana ─────────────────────────────────────────────────────
+  grafana:
+    image: grafana/grafana:10.4.0
+    container_name: wb_grafana
+    restart: unless-stopped
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASS:-admin}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_SERVER_ROOT_URL: "http://localhost:3000"
+      GF_INSTALL_PLUGINS: ""
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    ports:
+      - "${GRAFANA_PORT:-3000}:3000"
+    depends_on:
+      - prometheus
+    networks:
+      - wb_net
+
+volumes:
+  postgres_data:
+  redis_data:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  wb_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

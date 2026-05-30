@@ -1,0 +1,12 @@
+pandas>=2.2.0
+openpyxl>=3.1.0
+psycopg2-binary>=2.9.9
+SQLAlchemy>=2.0.30
+watchdog>=4.0.0
+click>=8.1.0
+rich>=13.7.0
+python-dotenv>=1.0.0
+chardet>=5.2.0
+rapidfuzz>=3.0.0
+pdfplumber>=0.11.0
+pypdf>=4.0.0
