@@ -48,9 +48,10 @@ class ProcessedFileRegistry:
         status: str = "ok",
         row_count: int = 0,
         error: str = "",
+        extra: "dict | None" = None,
     ) -> None:
         data = self._data()
-        data[file_hash] = {
+        record: dict = {
             "file_hash": file_hash,
             "filename": filename,
             "status": status,
@@ -58,6 +59,9 @@ class ProcessedFileRegistry:
             "row_count": row_count,
             "error": error or None,
         }
+        if extra:
+            record["extra"] = extra
+        data[file_hash] = record
         self._write(data)
         logger.debug(f"[registry] {status}: {filename} ({file_hash[:12]}…)")
 
