@@ -502,5 +502,95 @@
     "details": null,
     "timestamp": "2026-05-20T17:49:05.652211",
     "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "D:\\MyProject\\wb_processor\\incoming\\20260517_094036_Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'pvz_fee': 797 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-29T06:46:46.795269",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "D:\\MyProject\\wb_processor\\incoming\\20260517_094036_Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'quantity': 441 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-29T06:46:46.796292",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "D:\\MyProject\\wb_processor\\incoming\\20260517_094036_Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'storage_fee': 797 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-29T06:46:46.796292",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "D:\\MyProject\\wb_processor\\incoming\\20260517_094036_Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'acceptance_fee': 11 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-29T06:46:46.796292",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "D:\\MyProject\\wb_processor\\incoming\\20260517_094036_Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'transport_compensation': 797 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-29T06:46:46.796292",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "D:\\MyProject\\wb_processor\\incoming\\20260517_094036_Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "message": "Колонка 'payment_period_change': 797 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-29T06:46:46.796292",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "D:\\MyProject\\wb_processor\\incoming\\20260517_094038_Ежедневный детализированный отчет №416356120260516_4163561 - 1.xlsx",
+    "message": "Колонка 'pvz_fee': 605 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-29T06:46:48.424778",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "D:\\MyProject\\wb_processor\\incoming\\20260517_094038_Ежедневный детализированный отчет №416356120260516_4163561 - 1.xlsx",
+    "message": "Колонка 'quantity': 396 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-29T06:46:48.424778",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "D:\\MyProject\\wb_processor\\incoming\\20260517_094038_Ежедневный детализированный отчет №416356120260516_4163561 - 1.xlsx",
+    "message": "Колонка 'storage_fee': 605 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-29T06:46:48.425776",
+    "resolved": false
+  },
+  {
+    "severity": "warning",
+    "stage": "normalize",
+    "filepath": "D:\\MyProject\\wb_processor\\incoming\\20260517_094038_Ежедневный детализированный отчет №416356120260516_4163561 - 1.xlsx",
+    "message": "Колонка 'transport_compensation': 605 значений не приведены к типу",
+    "details": null,
+    "timestamp": "2026-05-29T06:46:48.425776",
+    "resolved": false
   }
 ]

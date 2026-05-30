@@ -1623,5 +1623,1008 @@
         "description": "auto:fuzzy_partial@0.60"
       }
     ]
+  },
+  {
+    "id": 5,
+    "name": "auto:recommendations (86)",
+    "struct_hash": "787cd6cab3d61dcd",
+    "category": "external",
+    "subcategory": "custom",
+    "purpose": "analytics",
+    "column_count": 19,
+    "raw_columns": [
+      "Регион",
+      "Склады в регионе",
+      "Артикул продавца",
+      "Размер",
+      "Наименование товара",
+      "Артикул WB",
+      "Баркоды",
+      "Остаток в регионе на 12.05.2026",
+      "Среднее количество заказов в день в регионе, шт",
+      "Среднее количество заказов в день в регионе (прогнозное), шт",
+      "На сколько дней хватит остатков",
+      "Уровень остатка",
+      "Потенциальная потеря выручки за 28 дней, руб.",
+      "Рекомендация",
+      "Все запланированные поставки на 12.05.2026",
+      "Рекомендуем отгрузить (хватит на 14 дней)",
+      "Рекомендуем отгрузить (хватит на 21 день)",
+      "Рекомендуем отгрузить (хватит на 28 дней)",
+      "Рекомендуем отгрузить (хватит на 56 дней)"
+    ],
+    "notes": null,
+    "is_active": true,
+    "created_at": "2026-05-29T06:46:49.044974",
+    "updated_at": "2026-05-29T06:46:49.044974",
+    "fields": [
+      {
+        "source_column": "Регион",
+        "target_field": "region",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:alias_exact@0.88"
+      },
+      {
+        "source_column": "Склады в регионе",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Артикул продавца",
+        "target_field": "vendor_code",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.87"
+      },
+      {
+        "source_column": "Размер",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Наименование товара",
+        "target_field": "name",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:alias_exact@0.88"
+      },
+      {
+        "source_column": "Артикул WB",
+        "target_field": "sku",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:alias_exact@0.88"
+      },
+      {
+        "source_column": "Баркоды",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Остаток в регионе на 12.05.2026",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Среднее количество заказов в день в регионе, шт",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Среднее количество заказов в день в регионе (прогнозное), шт",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "На сколько дней хватит остатков",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Уровень остатка",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Потенциальная потеря выручки за 28 дней, руб.",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Рекомендация",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Все запланированные поставки на 12.05.2026",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Рекомендуем отгрузить (хватит на 14 дней)",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Рекомендуем отгрузить (хватит на 21 день)",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Рекомендуем отгрузить (хватит на 28 дней)",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Рекомендуем отгрузить (хватит на 56 дней)",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "auto:report_2026_5_8",
+    "struct_hash": "15719971091020c3",
+    "category": "wb_report",
+    "subcategory": "custom",
+    "purpose": "analytics",
+    "column_count": 30,
+    "raw_columns": [
+      "Бренд",
+      "Предмет",
+      "Артикул продавца",
+      "Артикул WB",
+      "Объем, л",
+      "Баркод",
+      "В пути до получателей",
+      "В пути возвраты на склад WB",
+      "Всего находится на складах",
+      "Коледино",
+      "Подольск",
+      "Казань",
+      "Электросталь",
+      "Краснодар",
+      "Екатеринбург - Перспективная 14",
+      "Тула",
+      "Белая дача",
+      "Невинномысск",
+      "Рязань (Тюшевское)",
+      "Котовск",
+      "Самара (Новосемейкино)",
+      "Волгоград",
+      "Астана Карагандинское шоссе",
+      "Владимир",
+      "Сарапул",
+      "СПБ Шушары",
+      "Воронеж",
+      "Владивосток",
+      "Пенза",
+      "Ташкент 2"
+    ],
+    "notes": null,
+    "is_active": true,
+    "created_at": "2026-05-29T06:46:49.819016",
+    "updated_at": "2026-05-29T06:46:49.819016",
+    "fields": [
+      {
+        "source_column": "Бренд",
+        "target_field": "brand",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.89"
+      },
+      {
+        "source_column": "Предмет",
+        "target_field": "category",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.89"
+      },
+      {
+        "source_column": "Артикул продавца",
+        "target_field": "vendor_code",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.87"
+      },
+      {
+        "source_column": "Артикул WB",
+        "target_field": "sku",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:alias_exact@0.88"
+      },
+      {
+        "source_column": "Объем, л",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Баркод",
+        "target_field": "barcode",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.87"
+      },
+      {
+        "source_column": "В пути до получателей",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "В пути возвраты на склад WB",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Всего находится на складах",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Коледино",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Подольск",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Казань",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Электросталь",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Краснодар",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Екатеринбург - Перспективная 14",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Тула",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Белая дача",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Невинномысск",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Рязань (Тюшевское)",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Котовск",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Самара (Новосемейкино)",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Волгоград",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Астана Карагандинское шоссе",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Владимир",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Сарапул",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "СПБ Шушары",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Воронеж",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Владивосток",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Пенза",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Ташкент 2",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "auto:Возвраты за с 2026-04-06 по 2026-05-17",
+    "struct_hash": "1694cadf5f088ad2",
+    "category": "external",
+    "subcategory": "custom",
+    "purpose": "analytics",
+    "column_count": 18,
+    "raw_columns": [
+      "Бренд",
+      "Предмет",
+      "Баркод",
+      "Артикул WB",
+      "Штрихкод",
+      "Стикер",
+      "КИЗ",
+      "Unnamed: 7",
+      "Unnamed: 8",
+      "Unnamed: 9",
+      "Unnamed: 10",
+      "Тип",
+      "Дата заказа",
+      "Причина",
+      "Номер сборочного задания",
+      "Srid",
+      "Адрес",
+      "ID"
+    ],
+    "notes": null,
+    "is_active": true,
+    "created_at": "2026-05-29T06:46:50.593014",
+    "updated_at": "2026-05-29T06:46:50.593014",
+    "fields": [
+      {
+        "source_column": "Бренд",
+        "target_field": "brand",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.89"
+      },
+      {
+        "source_column": "Предмет",
+        "target_field": "category",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.89"
+      },
+      {
+        "source_column": "Баркод",
+        "target_field": "barcode",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.87"
+      },
+      {
+        "source_column": "Артикул WB",
+        "target_field": "sku",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:alias_exact@0.88"
+      },
+      {
+        "source_column": "Штрихкод",
+        "target_field": "barcode",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:alias_exact@0.88"
+      },
+      {
+        "source_column": "Стикер",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "КИЗ",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Unnamed: 7",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Unnamed: 8",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Unnamed: 9",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Unnamed: 10",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Тип",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Дата заказа",
+        "target_field": "date",
+        "data_type": "date",
+        "date_format": "%Y-%m-%d",
+        "is_required": false,
+        "description": "auto:alias_exact@0.88"
+      },
+      {
+        "source_column": "Причина",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Номер сборочного задания",
+        "target_field": "assembly_task_id",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.87"
+      },
+      {
+        "source_column": "Srid",
+        "target_field": "srid",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.89"
+      },
+      {
+        "source_column": "Адрес",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "ID",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "auto:Еженедельный отчет 2024-07-15 - 2026-05-17_4163561",
+    "struct_hash": "9c0018990324a5b4",
+    "category": "wb_report",
+    "subcategory": "custom",
+    "purpose": "analytics",
+    "column_count": 21,
+    "raw_columns": [
+      "№ отчета",
+      "Юридическое лицо",
+      "Дата начала",
+      "Дата конца",
+      "Дата формирования",
+      "Тип отчета",
+      "Продажа",
+      "В том числе Компенсация скидки по программе лояльности",
+      "К перечислению за товар",
+      "Согласованная скидка, %",
+      "Стоимость логистики",
+      "Стоимость хранения",
+      "Стоимость операций на приемке",
+      "Прочие удержания/выплаты",
+      "Общая сумма штрафов",
+      "Корректировка Вознаграждения Вайлдберриз (ВВ)",
+      "Стоимость участия в программе лояльности",
+      "Сумма баллов, удержанных по программе лояльности",
+      "Разовое изменение срока перечисления денежных средств",
+      "Итого к оплате",
+      "Валюта"
+    ],
+    "notes": null,
+    "is_active": true,
+    "created_at": "2026-05-29T06:46:51.165116",
+    "updated_at": "2026-05-29T06:46:51.165116",
+    "fields": [
+      {
+        "source_column": "№ отчета",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Юридическое лицо",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Дата начала",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Дата конца",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Дата формирования",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Тип отчета",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Продажа",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "В том числе Компенсация скидки по программе лояльности",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "К перечислению за товар",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Согласованная скидка, %",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Стоимость логистики",
+        "target_field": "logistics",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:alias_exact@0.88"
+      },
+      {
+        "source_column": "Стоимость хранения",
+        "target_field": "logistics",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:alias_exact@0.88"
+      },
+      {
+        "source_column": "Стоимость операций на приемке",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Прочие удержания/выплаты",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Общая сумма штрафов",
+        "target_field": "penalties",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.89"
+      },
+      {
+        "source_column": "Корректировка Вознаграждения Вайлдберриз (ВВ)",
+        "target_field": "commission_correction",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.87"
+      },
+      {
+        "source_column": "Стоимость участия в программе лояльности",
+        "target_field": "loyalty_program_fee",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.87"
+      },
+      {
+        "source_column": "Сумма баллов, удержанных по программе лояльности",
+        "target_field": "loyalty_points_deducted",
+        "data_type": "float",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.87"
+      },
+      {
+        "source_column": "Разовое изменение срока перечисления денежных средств",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Итого к оплате",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Валюта",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "auto:Шаблон обновления цен и скидок от 14.05.2026 14.34",
+    "struct_hash": "ca41578db1ac2e5c",
+    "category": "external",
+    "subcategory": "custom",
+    "purpose": "analytics",
+    "column_count": 14,
+    "raw_columns": [
+      "Бренд",
+      "Категория",
+      "Артикул WB",
+      "Артикул продавца",
+      "Последний баркод",
+      "Остатки WB",
+      "Остатки продавца",
+      "Оборачиваемость",
+      "Текущая цена",
+      "Новая цена, RUB",
+      "Текущая скидка",
+      "Новая скидка",
+      "Цена со скидкой",
+      "Наличие ошибки"
+    ],
+    "notes": null,
+    "is_active": true,
+    "created_at": "2026-05-29T06:46:52.075836",
+    "updated_at": "2026-05-29T06:46:52.075836",
+    "fields": [
+      {
+        "source_column": "Бренд",
+        "target_field": "brand",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.89"
+      },
+      {
+        "source_column": "Категория",
+        "target_field": "category",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:alias_exact@0.88"
+      },
+      {
+        "source_column": "Артикул WB",
+        "target_field": "sku",
+        "data_type": "int",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:alias_exact@0.88"
+      },
+      {
+        "source_column": "Артикул продавца",
+        "target_field": "vendor_code",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": "auto:kb_exact@0.87"
+      },
+      {
+        "source_column": "Последний баркод",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Остатки WB",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Остатки продавца",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Оборачиваемость",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Текущая цена",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Новая цена, RUB",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Текущая скидка",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Новая скидка",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Цена со скидкой",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      },
+      {
+        "source_column": "Наличие ошибки",
+        "target_field": "ignore",
+        "data_type": "str",
+        "date_format": null,
+        "is_required": false,
+        "description": null
+      }
+    ]
   }
 ]

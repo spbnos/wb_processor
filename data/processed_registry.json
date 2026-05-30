@@ -1,0 +1,228 @@
+{
+  "62ca025bb815e8373a80b5d3dc2f3a58a4ade19fd2c82c1bb5ffdcea4c54184b": {
+    "file_hash": "62ca025bb815e8373a80b5d3dc2f3a58a4ade19fd2c82c1bb5ffdcea4c54184b",
+    "filename": "15-5-2026 14 с 14-05-2026 по 14-05-2026.xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:36.105061+00:00",
+    "row_count": 1,
+    "error": null,
+    "extra": {
+      "report_type": "paid_storage",
+      "domain": "finance_intelligence",
+      "db_table": "paid_storage",
+      "period_from": "2026-05-14",
+      "period_to": "2026-05-14"
+    }
+  },
+  "9d3dbef86ad66d1dd3dfc26c941b97538960c1cc3fde98578649f3c626e9d841": {
+    "file_hash": "9d3dbef86ad66d1dd3dfc26c941b97538960c1cc3fde98578649f3c626e9d841",
+    "filename": "20260429_113722_tmp5np_py93.csv",
+    "status": "error",
+    "processed_at": "2026-05-30T08:09:21.732075+00:00",
+    "row_count": 0,
+    "error": "The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all()."
+  },
+  "e93f5396c282fc727dfd0edcf762ea3de1efe1a26bb53228cc8a3eb5775a46f1": {
+    "file_hash": "e93f5396c282fc727dfd0edcf762ea3de1efe1a26bb53228cc8a3eb5775a46f1",
+    "filename": "20260505_035237_Ежедневный детализированный отчет №4163561202605031_4163561 - 1.xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:36.670805+00:00",
+    "row_count": 8,
+    "error": null,
+    "extra": {
+      "report_type": "daily_detailed",
+      "domain": "sales_intelligence",
+      "db_table": "transactions",
+      "period_from": "2026-05-03",
+      "period_to": "2026-05-03"
+    }
+  },
+  "fff8f9433092f60ed54220107f637b6f64036feb1ee259b3a1f45166d5d6b66f": {
+    "file_hash": "fff8f9433092f60ed54220107f637b6f64036feb1ee259b3a1f45166d5d6b66f",
+    "filename": "20260516_170555_Ежедневный детализированный отчет №4163561202605141_4163561 - 1.xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:36.762959+00:00",
+    "row_count": 8,
+    "error": null,
+    "extra": {
+      "report_type": "daily_detailed",
+      "domain": "sales_intelligence",
+      "db_table": "transactions",
+      "period_from": "2026-05-14",
+      "period_to": "2026-05-14"
+    }
+  },
+  "fe25522ef0b2e23fe4b79b497be640cd879cb4e1bd58aee405d10377a3558b79": {
+    "file_hash": "fe25522ef0b2e23fe4b79b497be640cd879cb4e1bd58aee405d10377a3558b79",
+    "filename": "20260517_094034_Ежедневный детализированный отчет №4163561202605151_4163561 - 1.xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:36.864697+00:00",
+    "row_count": 10,
+    "error": null,
+    "extra": {
+      "report_type": "daily_detailed",
+      "domain": "sales_intelligence",
+      "db_table": "transactions",
+      "period_from": "2026-05-15",
+      "period_to": "2026-05-15"
+    }
+  },
+  "faa7c338badd2d5f615a7078a4791ff1cef0e1a47a6551360dad2715e2209fbd": {
+    "file_hash": "faa7c338badd2d5f615a7078a4791ff1cef0e1a47a6551360dad2715e2209fbd",
+    "filename": "20260517_094036_Ежедневный детализированный отчет №416356120260515_4163561 - 1.xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:37.548423+00:00",
+    "row_count": 797,
+    "error": null,
+    "extra": {
+      "report_type": "daily_detailed",
+      "domain": "sales_intelligence",
+      "db_table": "transactions",
+      "period_from": "2026-05-13",
+      "period_to": "2026-05-15"
+    }
+  },
+  "88eafc3c8e18231d167bf1296cca7084013aa72e9de42e14691dfcdc22e73280": {
+    "file_hash": "88eafc3c8e18231d167bf1296cca7084013aa72e9de42e14691dfcdc22e73280",
+    "filename": "20260517_094037_Ежедневный детализированный отчет №4163561202605161_4163561 - 1.xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:37.741380+00:00",
+    "row_count": 18,
+    "error": null,
+    "extra": {
+      "report_type": "daily_detailed",
+      "domain": "sales_intelligence",
+      "db_table": "transactions",
+      "period_from": "2026-05-15",
+      "period_to": "2026-05-16"
+    }
+  },
+  "6dba2d1d98bc619929c00b9ab6eb03e2553f8dd7a4f940b2f79863513c81b24e": {
+    "file_hash": "6dba2d1d98bc619929c00b9ab6eb03e2553f8dd7a4f940b2f79863513c81b24e",
+    "filename": "20260517_094038_Ежедневный детализированный отчет №416356120260516_4163561 - 1.xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:38.345041+00:00",
+    "row_count": 605,
+    "error": null,
+    "extra": {
+      "report_type": "daily_detailed",
+      "domain": "sales_intelligence",
+      "db_table": "transactions",
+      "period_from": "2026-05-14",
+      "period_to": "2026-05-16"
+    }
+  },
+  "71f7413be40503d779de381d2d1874202657c3ef8b4f0ed173872f86ae7cabc6": {
+    "file_hash": "71f7413be40503d779de381d2d1874202657c3ef8b4f0ed173872f86ae7cabc6",
+    "filename": "20260517_094039_История-затрат-Не определено-2026-05-14T00_00_00+03_00-2026-05-14T00_00_00+03_00.xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:38.389456+00:00",
+    "row_count": 15,
+    "error": null,
+    "extra": {
+      "report_type": "ad_cost_history",
+      "domain": "advertising_intelligence",
+      "db_table": "ad_costs",
+      "period_from": "2026-05-14",
+      "period_to": "2026-05-14"
+    }
+  },
+  "174b655b508a855dbc83c45d97cd4a7c245d8c339bd34b63638a52c947518a2e": {
+    "file_hash": "174b655b508a855dbc83c45d97cd4a7c245d8c339bd34b63638a52c947518a2e",
+    "filename": "20260529_064649_recommendations (86).xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:38.749932+00:00",
+    "row_count": 650,
+    "error": null,
+    "extra": {
+      "report_type": "supply_recommendations",
+      "domain": "warehouse_intelligence",
+      "db_table": "supply_recommendations",
+      "period_from": null,
+      "period_to": null
+    }
+  },
+  "d2640a682558cb54c211da960aa29a9c680714ba634e12d62e086203853cb38a": {
+    "file_hash": "d2640a682558cb54c211da960aa29a9c680714ba634e12d62e086203853cb38a",
+    "filename": "20260529_064650_report_2026_5_8.xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:39.066976+00:00",
+    "row_count": 2884,
+    "error": null,
+    "extra": {
+      "report_type": "warehouse_stocks",
+      "domain": "warehouse_intelligence",
+      "db_table": "warehouse_stocks",
+      "period_from": null,
+      "period_to": null
+    }
+  },
+  "e6881cac2ff89469d5751de615fe2a4acc20fccf3ff20699ed3085617285fa4d": {
+    "file_hash": "e6881cac2ff89469d5751de615fe2a4acc20fccf3ff20699ed3085617285fa4d",
+    "filename": "20260529_064650_Возвраты за с 2026-04-06 по 2026-05-17.xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:39.257090+00:00",
+    "row_count": 423,
+    "error": null,
+    "extra": {
+      "report_type": "returns",
+      "domain": "returns_intelligence",
+      "db_table": "returns",
+      "period_from": "2026-04-06",
+      "period_to": "2026-05-14"
+    }
+  },
+  "b5601a148e1ab86b1249c86bebc57ad93310627044f7209811ff780139250e21": {
+    "file_hash": "b5601a148e1ab86b1249c86bebc57ad93310627044f7209811ff780139250e21",
+    "filename": "20260529_064651_Еженедельный отчет 2024-07-15 - 2026-05-17_4163561.xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:39.558904+00:00",
+    "row_count": 191,
+    "error": null,
+    "extra": {
+      "report_type": "weekly_report",
+      "domain": "finance_intelligence",
+      "db_table": "weekly_reports",
+      "period_from": "2024-07-15",
+      "period_to": "2026-05-16"
+    }
+  },
+  "708de0891235b99d0e4463de2278c767822da27ddade40ce2dddce21a1487e90": {
+    "file_hash": "708de0891235b99d0e4463de2278c767822da27ddade40ce2dddce21a1487e90",
+    "filename": "20260529_064651_История-затрат-Не определено-2026-05-18T00_00_00+03_00-2026-05-18T00_00_00+03_00.xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:39.615408+00:00",
+    "row_count": 32,
+    "error": null,
+    "extra": {
+      "report_type": "ad_cost_history",
+      "domain": "advertising_intelligence",
+      "db_table": "ad_costs",
+      "period_from": "2026-05-18",
+      "period_to": "2026-05-18"
+    }
+  },
+  "cd549d08058f440dc47b849aee197892715ef2fd34ec8e4a0c91d4c4996c92fe": {
+    "file_hash": "cd549d08058f440dc47b849aee197892715ef2fd34ec8e4a0c91d4c4996c92fe",
+    "filename": "20260529_064652_Шаблон обновления цен и скидок от 14.05.2026 14.34.xlsx",
+    "status": "ok",
+    "processed_at": "2026-05-30T08:08:39.907173+00:00",
+    "row_count": 1413,
+    "error": null,
+    "extra": {
+      "report_type": "price_template",
+      "domain": "pricing_intelligence",
+      "db_table": "price_templates",
+      "period_from": null,
+      "period_to": null
+    }
+  },
+  "216e78ef8abaea67bed20ab68fd2d180efa31395a3fb5cef0077ef85341adf79": {
+    "file_hash": "216e78ef8abaea67bed20ab68fd2d180efa31395a3fb5cef0077ef85341adf79",
+    "filename": "Актуальные_остатки 04-05-26.xlsx",
+    "status": "error",
+    "processed_at": "2026-05-30T08:09:21.778668+00:00",
+    "row_count": 0,
+    "error": "Cannot read file Актуальные_остатки 04-05-26.xlsx: \"There is no item named 'xl/sharedStrings.xml' in the archive\""
+  }
+}
