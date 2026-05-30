@@ -82,6 +82,14 @@ app.include_router(stats.router,    prefix="/api")
 app.include_router(ml.router,      prefix="/api")
 app.include_router(kb.router,      prefix="/api")
 
+# Analytics routes (domain data - sales, finance, stocks, ads, returns, supply)
+try:
+    from api.routes import analytics as analytics_module
+    app.include_router(analytics_module.router, prefix="/api")
+    logger.info("[main] Analytics router registered")
+except ImportError as _e:
+    logger.warning(f"[main] Analytics router not available: {_e}")
+
 @app.get("/", include_in_schema=False)
 async def root():
     return {
