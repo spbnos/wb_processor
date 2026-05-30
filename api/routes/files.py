@@ -108,3 +108,57 @@ async def get_queue_status(
         low=lengths.get("low", 0),
         dead=lengths.get("dead", 0),
     )
+
+
+@router.post("/process-all", status_code=202)
+async def process_all_incoming(_auth: dict = Depends(require_auth)):
+    """
+    Запускает обработку ВСЕХ файлов в incoming/ в фоновом потоке.
+    Использует CanonicalReportClassifier + SmartMapper fallback.
+    """
+    import threading
+    from config.settings import INCOMING_DIR
+
+    eligible = [
+        f for f in sorted(INCOMING_DIR.glob("*"))
+        if f.is_file() and f.suffix.lower() in {".xlsx",".xls",".csv"}
+        and not f.name.startswith("~$")
+    ]
+    if not eligible:
+        return {"queued": 0, "files": [], "message": "No files in incoming/"}
+
+    def _run():
+        try:
+            from smart_pipeline import SmartPipeline
+            pipeline = SmartPipeline()
+            stats: dict[str,int] = {}
+            for f in eligible:
+                try:
+                    s = pipeline.process_file(f)
+                    stats[s] = stats.get(s,0)+1
+                except Exception as e:
+                    stats["error"] = stats.get("error",0)+1
+                    logger.error(f"[process-all] {f.name}: {e}")
+            logger.info(f"[process-all] Done: {stats}")
+        except Exception as e:
+            logger.error(f"[process-all] Pipeline init failed: {e}", exc_info=True)
+
+    threading.Thread(target=_run, daemon=True).start()
+    return {
+        "queued":  len(eligible),
+        "files":   [f.name for f in eligible],
+        "message": f"Processing {len(eligible)} files via CanonicalReportClassifier",
+    }
+
+
+@router.get("/incoming")
+async def list_incoming(_auth: dict = Depends(require_auth)):
+    """Список файлов в incoming/ ожидающих обработки."""
+    from config.settings import INCOMING_DIR
+    files = [
+        {"name": f.name, "size_kb": round(f.stat().st_size/1024,1), "modified": f.stat().st_mtime}
+        for f in sorted(INCOMING_DIR.glob("*"))
+        if f.is_file() and f.suffix.lower() in {".xlsx",".xls",".csv"}
+        and not f.name.startswith("~$")
+    ]
+    return {"count": len(files), "files": files}
