@@ -45,5 +45,9 @@ export const api = {
   kbStatus:       ()              => req<KBStatus>('/kb/status'),
   kbDocuments:    ()              => req<Record<string,unknown>[]>('/kb/documents'),
   kbReindex:      ()              => req('/kb/index', { method: 'POST' }),
+  analyticsQuery: (endpoint: string, params: string) =>
+    req<Record<string,unknown>>(`/analytics/${endpoint}${params ? '?' + params : ''}`),
   kbField:        (col: string)   => req(`/kb/field?col=${encodeURIComponent(col)}`),
+  processAll:     ()              => req<{queued:number;files:string[];message:string}>('/files/process-all', { method: 'POST' }),
+  listIncoming:   ()              => req<{count:number;files:{name:string;size_kb:number;modified:number}[]}>('/files/incoming'),
 }
