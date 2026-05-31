@@ -56,7 +56,7 @@ REPORT_REGISTRY: list[ReportType] = [
     ReportType(
         report_id="warehouse_stocks", official_name="Остатки на складе",
         domain="warehouse_intelligence",
-        name_patterns=[r"актуальные.{0,5}остатки", r"актуальные_остатки", r"остатки.{0,10}склад", r"report_\d{4}_\d"],
+        name_patterns=[r"остатки.{0,10}склад", r"report_\d{4}_\d"],
         required_cols=["Всего находится на складах","В пути до получателей","Объем, л"],
         parser_strategy="stocks", db_table="warehouse_stocks", col_count_range=(10, 60),
     ),
@@ -73,6 +73,15 @@ REPORT_REGISTRY: list[ReportType] = [
         name_patterns=[r"шаблон.{0,10}цен", r"обновлени.{0,5}цен"],
         required_cols=["Текущая цена","Новая цена, RUB","Текущая скидка","Оборачиваемость"],
         parser_strategy="price_template", db_table="price_templates", col_count_range=(12, 18),
+    ),
+    ReportType(
+        report_id="product_catalog", official_name="Каталог товаров (Актуальные остатки)",
+        domain="product_intelligence",
+        name_patterns=[r"актуальные.{0,5}остатки", r"актуальные_остатки", r"product.{0,5}catalog"],
+        required_cols=["Цена закупочная", "Артикул (Код)", "Наименование"],
+        parser_strategy="product_catalog", db_table="product_catalog",
+        description="Каталог товаров продавца с себестоимостью",
+        col_count_range=(10, 50),
     ),
     ReportType(
         report_id="paid_storage", official_name="Платное хранение",
@@ -131,6 +140,14 @@ class CanonicalReportClassifier:
         try:
             ext = filepath.suffix.lower()
             if ext in (".xlsx", ".xls"):
+                # Use xlsx_utils for WB SharedStrings.xml case bug
+                try:
+                    from core.xlsx_utils import read_excel_safe
+                    result = read_excel_safe(filepath, header=header_row, nrows=5)
+                    if result is not None:
+                        return result
+                except ImportError:
+                    pass
                 for engine in [None, "xlrd"]:
                     try:
                         kw = {"engine": engine} if engine else {}
