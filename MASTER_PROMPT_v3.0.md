@@ -245,3 +245,50 @@ data/loaded/ → FastAPI /api/analytics/* → React Dashboard
 | Период фильтр точность | ~60% | 100% |
 | Схем WB задокументировано | 8 | 25+ |
 | ML predictions active | 0 | 3 |
+---
+
+## 🏪 МАТРИЦА ТОВАРОВ (реализована v3.1)
+
+### API endpoints
+- `GET /api/products/matrix?brand=&category=&sort_by=revenue&limit=500` — полная матрица
+- `GET /api/products/matrix/{sku_id}` — один товар
+- `GET /api/products/brands` — бренды с выручкой
+- `GET /api/products/categories` — категории с ВВ%
+- `POST /api/products/cost?sku_id=X&cost_price=Y` — ручной ввод себестоимости
+- `GET /api/products/export` — CSV выгрузка
+
+### Файл: `api/routes/products.py`
+### Страница: `dashboard/src/pages/ProductMatrix.tsx` → `/products`
+
+### Данные по каждому SKU (из всех источников)
+| Поле | Источник |
+|------|---------|
+| Цена, скидка, оборачиваемость | price_templates |
+| Себестоимость, габариты, вес | product_catalog (Актуальные_остатки) |
+| FBO по складам, в пути | warehouse_stocks |
+| Дни остатка, риск, рек. поставка | supply_recommendations |
+| Продажи, выручка, факт. логистика | transactions |
+| ВВ% FBO/FBS по категории | WB_COMMISSION_RATES (захардкожено из Оферты) |
+| Логистика FBO/FBS расчётная | _estimate_logistics_fbo() по объёму |
+| Юнит-маржа = Цена×(1−ВВ/100)−Лог.−С/С | Calculated |
+| Безубыточная цена | Calculated |
+| ROI | Calculated |
+
+### ⚠ Себестоимость (0/1413 пока)
+Нужно: `venv\Scripts\python reset_and_reprocess.py` → WB_PLATFORM.bat → ЗАПУСТИТЬ
+После этого Актуальные_остатки_fixed.xlsx → product_catalog → 12 260 товаров с С/С
+
+### Ручной ввод С/С
+В UI: кнопка карандаша в столбце С/С → вводим число → POST /api/products/cost
+Сохраняется в `data/manual_costs.json` (персистентно, не перетирается при reset)
+
+### WB Commission rates (обновить когда WB изменит тарифы)
+Файл: `api/routes/products.py` → `WB_COMMISSION_RATES` dict
+Источник: Оферта WB 2024-2025
+
+### Следующие шаги для матрицы
+- [ ] Парсить ВВ% прямо из PDF Оферты (Этап 4.3)
+- [ ] Добавить колонку "Видимость в категории" (из будущих отчётов SEO)
+- [ ] Рейтинг карточки (из будущих отчётов по отзывам)
+- [ ] FBS остатки (когда появятся соответствующие файлы)
+- [ ] История изменения цены/маржи (Этап 5 — snapshots)
