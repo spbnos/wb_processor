@@ -50,4 +50,9 @@ export const api = {
   kbField:        (col: string)   => req(`/kb/field?col=${encodeURIComponent(col)}`),
   processAll:     ()              => req<{queued:number;files:string[];message:string}>('/files/process-all', { method: 'POST' }),
   listIncoming:   ()              => req<{count:number;files:{name:string;size_kb:number;modified:number}[]}>('/files/incoming'),
+  productsMatrix:   (params?: string)        => req<any>(`/products/matrix${params?'?'+params:''}`),
+  productsProduct:  (sku: string)             => req<any>(`/products/matrix/${sku}`),
+  productsBrands:   ()                        => req<any[]>('/products/brands'),
+  productsCategories: ()                      => req<any[]>('/products/categories'),
+  updateCost:       (sku: string, cost:number)=> req<any>(`/products/cost?sku_id=${encodeURIComponent(sku)}&cost_price=${cost}`, {method:'POST'}),
 }

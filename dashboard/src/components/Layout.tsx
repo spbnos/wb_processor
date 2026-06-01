@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom'
-import { Activity, FileUp, GitBranch, Brain, BarChart2, Settings, BookOpen } from 'lucide-react'
+import { Activity, FileUp, GitBranch, Brain, BarChart2, Settings, BookOpen, Grid } from 'lucide-react'
 import { usePolling } from '../hooks/useApi'
 import { api } from '../api/client'
 
@@ -17,6 +17,7 @@ export default function Layout() {
     { to: '/mappings',  icon: Settings,   label: 'Mappings',       badge: null },
     { to: '/ml',        icon: Brain,      label: 'ML Insights',    badge: null },
     { to: '/analytics', icon: BarChart2,  label: 'Analytics',      badge: null },
+    { to: '/products',  icon: Grid,       label: 'Матрица товаров', badge: null },
   ]
 
   return (
