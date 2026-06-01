@@ -90,6 +90,14 @@ try:
 except ImportError as _e:
     logger.warning(f"[main] Analytics router not available: {_e}")
 
+# Product matrix routes
+try:
+    from api.routes import products as products_module
+    app.include_router(products_module.router, prefix="/api")
+    logger.info("[main] Products router registered")
+except ImportError as _e:
+    logger.warning(f"[main] Products router not available: {_e}")
+
 @app.get("/", include_in_schema=False)
 async def root():
     return {
