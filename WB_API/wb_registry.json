@@ -1,0 +1,552 @@
+[
+  {
+    "path": "/content/v2/object/parent/all",
+    "method": "GET",
+    "summary": "Родительские категории товаров{{ /content/v2/object/parent/all }}",
+    "tags": [
+      "Категории, предметы и характеристики"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": false
+  },
+  {
+    "path": "/content/v2/object/all",
+    "method": "GET",
+    "summary": "Список предметов{{ /content/v2/object/all }}",
+    "tags": [
+      "Категории, предметы и характеристики"
+    ],
+    "operationId": null,
+    "parameters": 5,
+    "has_request_body": false
+  },
+  {
+    "path": "/content/v2/object/charcs/{subjectId}",
+    "method": "GET",
+    "summary": "Характеристики предмета{{ /content/v2/object/charcs/{subjectId} }}",
+    "tags": [
+      "Категории, предметы и характеристики"
+    ],
+    "operationId": null,
+    "parameters": 2,
+    "has_request_body": false
+  },
+  {
+    "path": "/content/v2/directory/colors",
+    "method": "GET",
+    "summary": "Цвет{{ /content/v2/directory/colors }}",
+    "tags": [
+      "Категории, предметы и характеристики"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": false
+  },
+  {
+    "path": "/content/v2/directory/kinds",
+    "method": "GET",
+    "summary": "Пол{{ /content/v2/directory/kinds }}",
+    "tags": [
+      "Категории, предметы и характеристики"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": false
+  },
+  {
+    "path": "/content/v2/directory/countries",
+    "method": "GET",
+    "summary": "Страна производства{{ /content/v2/directory/countries }}",
+    "tags": [
+      "Категории, предметы и характеристики"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": false
+  },
+  {
+    "path": "/content/v2/directory/seasons",
+    "method": "GET",
+    "summary": "Сезон{{ /content/v2/directory/seasons }}",
+    "tags": [
+      "Категории, предметы и характеристики"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": false
+  },
+  {
+    "path": "/content/v2/directory/vat",
+    "method": "GET",
+    "summary": "Ставка НДС{{ /content/v2/directory/vat }}",
+    "tags": [
+      "Категории, предметы и характеристики"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": false
+  },
+  {
+    "path": "/content/v2/directory/tnved",
+    "method": "GET",
+    "summary": "ТНВЭД-код{{ /content/v2/directory/tnved }}",
+    "tags": [
+      "Категории, предметы и характеристики"
+    ],
+    "operationId": null,
+    "parameters": 3,
+    "has_request_body": false
+  },
+  {
+    "path": "/api/content/v1/brands",
+    "method": "GET",
+    "summary": "Бренды{{ /api/content/v1/brands }}",
+    "tags": [
+      "Категории, предметы и характеристики"
+    ],
+    "operationId": null,
+    "parameters": 2,
+    "has_request_body": false
+  },
+  {
+    "path": "/content/v2/tags",
+    "method": "GET",
+    "summary": "Список ярлыков{{ /content/v2/tags }}",
+    "tags": [
+      "Ярлыки"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": false
+  },
+  {
+    "path": "/content/v2/tag",
+    "method": "POST",
+    "summary": "Создание ярлыка{{ /content/v2/tag }}",
+    "tags": [
+      "Ярлыки"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v2/tag/{id}",
+    "method": "PATCH",
+    "summary": "Изменение ярлыка{{ /content/v2/tag/{id} }}",
+    "tags": [
+      "Ярлыки"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v2/tag/{id}",
+    "method": "DELETE",
+    "summary": "Удаление ярлыка{{ /content/v2/tag/{id} }}",
+    "tags": [
+      "Ярлыки"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": false
+  },
+  {
+    "path": "/content/v2/tag/nomenclature/link",
+    "method": "POST",
+    "summary": "Управление ярлыками в карточке товара{{ /content/v2/tag/nomenclature/link }}",
+    "tags": [
+      "Ярлыки"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v2/get/cards/list",
+    "method": "POST",
+    "summary": "Список карточек товаров{{ /content/v2/get/cards/list }}",
+    "tags": [
+      "Карточки товаров"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v2/cards/error/list",
+    "method": "POST",
+    "summary": "Список несозданных карточек товаров с ошибками{{ /content/v2/cards/error/list }}",
+    "tags": [
+      "Карточки товаров"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v2/cards/update",
+    "method": "POST",
+    "summary": "Редактирование карточек товаров{{ /content/v2/cards/update }}",
+    "tags": [
+      "Карточки товаров"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v2/cards/moveNm",
+    "method": "POST",
+    "summary": "Объединение и разъединение карточек товаров{{ /content/v2/cards/moveNm }}",
+    "tags": [
+      "Карточки товаров"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v2/cards/delete/trash",
+    "method": "POST",
+    "summary": "Перенос карточек товаров в корзину{{ /content/v2/cards/delete/trash }}",
+    "tags": [
+      "Карточки товаров"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v2/cards/recover",
+    "method": "POST",
+    "summary": "Восстановление карточек товаров из корзины{{ /content/v2/cards/recover }}",
+    "tags": [
+      "Карточки товаров"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v2/get/cards/trash",
+    "method": "POST",
+    "summary": "Список карточек товаров в корзине{{ /content/v2/get/cards/trash }}",
+    "tags": [
+      "Карточки товаров"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v2/cards/limits",
+    "method": "GET",
+    "summary": "Лимиты карточек товаров{{ /content/v2/cards/limits }}",
+    "tags": [
+      "Создание карточек товаров"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": false
+  },
+  {
+    "path": "/content/v2/barcodes",
+    "method": "POST",
+    "summary": "Генерация баркодов{{ /content/v2/barcodes }}",
+    "tags": [
+      "Создание карточек товаров"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v2/cards/upload",
+    "method": "POST",
+    "summary": "Создание карточек товаров{{ /content/v2/cards/upload }}",
+    "tags": [
+      "Создание карточек товаров"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v2/cards/upload/add",
+    "method": "POST",
+    "summary": "Создание карточек товаров с присоединением{{ /content/v2/cards/upload/add }}",
+    "tags": [
+      "Создание карточек товаров"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v3/media/file",
+    "method": "POST",
+    "summary": "Загрузить медиафайл{{ /content/v3/media/file }}",
+    "tags": [
+      "Медиафайлы"
+    ],
+    "operationId": null,
+    "parameters": 2,
+    "has_request_body": true
+  },
+  {
+    "path": "/content/v3/media/save",
+    "method": "POST",
+    "summary": "Загрузить медиафайлы по ссылкам{{ /content/v3/media/save }}",
+    "tags": [
+      "Медиафайлы"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/api/v2/upload/task",
+    "method": "POST",
+    "summary": "Установить цены и скидки{{ /api/v2/upload/task }}",
+    "tags": [
+      "Цены и скидки"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/api/v2/upload/task/size",
+    "method": "POST",
+    "summary": "Установить цены для размеров{{ /api/v2/upload/task/size }}",
+    "tags": [
+      "Цены и скидки"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/api/v2/upload/task/club-discount",
+    "method": "POST",
+    "summary": "Установить скидки WB Клуба{{ /api/v2/upload/task/club-discount }}",
+    "tags": [
+      "Цены и скидки"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/api/discounts-prices/v1/upload/task/b2b/wholesale",
+    "method": "POST",
+    "summary": "Установить оптовые скидки для B2B-продаж{{ /api/discounts-prices/v1/upload/task/b2b/wholesale }}",
+    "tags": [
+      "Цены и скидки"
+    ],
+    "operationId": "postV1UploadTaskB2bWholesale",
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/api/v2/history/tasks",
+    "method": "GET",
+    "summary": "Состояние обработанной загрузки{{ /api/v2/history/tasks }}",
+    "tags": [
+      "Цены и скидки"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": false
+  },
+  {
+    "path": "/api/v2/history/goods/task",
+    "method": "GET",
+    "summary": "Детализация обработанной загрузки{{ /api/v2/history/goods/task }}",
+    "tags": [
+      "Цены и скидки"
+    ],
+    "operationId": null,
+    "parameters": 3,
+    "has_request_body": false
+  },
+  {
+    "path": "/api/v2/buffer/tasks",
+    "method": "GET",
+    "summary": "Состояние необработанной загрузки{{ /api/v2/buffer/tasks }}",
+    "tags": [
+      "Цены и скидки"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": false
+  },
+  {
+    "path": "/api/v2/buffer/goods/task",
+    "method": "GET",
+    "summary": "Детализация необработанной загрузки{{ /api/v2/buffer/goods/task }}",
+    "tags": [
+      "Цены и скидки"
+    ],
+    "operationId": null,
+    "parameters": 3,
+    "has_request_body": false
+  },
+  {
+    "path": "/api/v2/list/goods/filter",
+    "method": "GET",
+    "summary": "Получить товары с ценами{{ /api/v2/list/goods/filter }}",
+    "tags": [
+      "Цены и скидки"
+    ],
+    "operationId": null,
+    "parameters": 3,
+    "has_request_body": false
+  },
+  {
+    "path": "/api/v2/list/goods/filter",
+    "method": "POST",
+    "summary": "Получить товары с ценами по артикулам{{ /api/v2/list/goods/filter }}",
+    "tags": [
+      "Цены и скидки"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/api/v2/list/goods/size/nm",
+    "method": "GET",
+    "summary": "Получить размеры товара с ценами{{ /api/v2/list/goods/size/nm }}",
+    "tags": [
+      "Цены и скидки"
+    ],
+    "operationId": null,
+    "parameters": 3,
+    "has_request_body": false
+  },
+  {
+    "path": "/api/v2/quarantine/goods",
+    "method": "GET",
+    "summary": "Получить товары в карантине{{ /api/v2/quarantine/goods }}",
+    "tags": [
+      "Цены и скидки"
+    ],
+    "operationId": null,
+    "parameters": 2,
+    "has_request_body": false
+  },
+  {
+    "path": "/api/v3/stocks/{warehouseId}",
+    "method": "PUT",
+    "summary": "Обновить остатки товаров{{ /api/v3/stocks/{warehouseId} }}",
+    "tags": [
+      "Остатки на складах продавца"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": true
+  },
+  {
+    "path": "/api/v3/stocks/{warehouseId}",
+    "method": "DELETE",
+    "summary": "Удалить остатки товаров{{ /api/v3/stocks/{warehouseId} }}",
+    "tags": [
+      "Остатки на складах продавца"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": true
+  },
+  {
+    "path": "/api/v3/stocks/{warehouseId}",
+    "method": "POST",
+    "summary": "Получить остатки товаров{{ /api/v3/stocks/{warehouseId} }}",
+    "tags": [
+      "Остатки на складах продавца"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": true
+  },
+  {
+    "path": "/api/v3/offices",
+    "method": "GET",
+    "summary": "Получить список складов WB{{ /api/v3/offices }}",
+    "tags": [
+      "Склады продавца"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": false
+  },
+  {
+    "path": "/api/v3/warehouses",
+    "method": "GET",
+    "summary": "Получить список складов продавца{{ /api/v3/warehouses }}",
+    "tags": [
+      "Склады продавца"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": false
+  },
+  {
+    "path": "/api/v3/warehouses",
+    "method": "POST",
+    "summary": "Создать склад продавца{{ /api/v3/warehouses }}",
+    "tags": [
+      "Склады продавца"
+    ],
+    "operationId": null,
+    "parameters": 0,
+    "has_request_body": true
+  },
+  {
+    "path": "/api/v3/warehouses/{warehouseId}",
+    "method": "PUT",
+    "summary": "Обновить склад продавца{{ /api/v3/warehouses/{warehouseId} }}",
+    "tags": [
+      "Склады продавца"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": true
+  },
+  {
+    "path": "/api/v3/warehouses/{warehouseId}",
+    "method": "DELETE",
+    "summary": "Удалить склад продавца{{ /api/v3/warehouses/{warehouseId} }}",
+    "tags": [
+      "Склады продавца"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": false
+  },
+  {
+    "path": "/api/v3/dbw/warehouses/{warehouseId}/contacts",
+    "method": "GET",
+    "summary": "Список контактов{{ /api/v3/dbw/warehouses/{warehouseId}/contacts }}",
+    "tags": [
+      "Склады продавца"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": false
+  },
+  {
+    "path": "/api/v3/dbw/warehouses/{warehouseId}/contacts",
+    "method": "PUT",
+    "summary": "Обновить список контактов{{ /api/v3/dbw/warehouses/{warehouseId}/contacts }}",
+    "tags": [
+      "Склады продавца"
+    ],
+    "operationId": null,
+    "parameters": 1,
+    "has_request_body": true
+  }
+]

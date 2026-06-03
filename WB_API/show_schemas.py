@@ -8,18 +8,21 @@ with open(
 
 schemas = spec["components"]["schemas"]
 
+print("Schemas:", len(schemas))
+print()
+
 for name, schema in schemas.items():
 
     props = schema.get("properties", {})
 
-    print("\n" + "=" * 80)
-    print(name)
     print("=" * 80)
+    print(name)
 
-    for field, meta in props.items():
+    if props:
+        print("Fields:")
+        for field in props:
+            print("  -", field)
+    else:
+        print("No properties")
 
-        field_type = meta.get("type")
-
-        print(
-            f"{field:<35} {field_type}"
-        )
+    print()
