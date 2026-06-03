@@ -14,6 +14,8 @@ from parsers.domain.returns_parser import ReturnsParser
 from parsers.domain.price_template_parser import PriceTemplateParser
 from parsers.domain.paid_storage_parser import PaidStorageParser
 from parsers.domain.product_catalog_parser import ProductCatalogParser
+from parsers.domain.commission_parser import CommissionParser
+from parsers.domain.rating_parser import RatingParser
 logger = logging.getLogger(__name__)
 
 _PARSERS: dict[str, BaseDomainParser] = {
@@ -26,6 +28,8 @@ _PARSERS: dict[str, BaseDomainParser] = {
     "price_template":  PriceTemplateParser(),
     "storage":         PaidStorageParser(),
     "product_catalog": ProductCatalogParser(),
+    "commission":      CommissionParser(),
+    "rating":          RatingParser(),
 }
 
 class DomainParserFactory:

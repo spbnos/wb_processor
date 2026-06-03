@@ -14,7 +14,8 @@ logger = logging.getLogger(__name__)
 
 _DATA_DIR = Path(__file__).resolve().parent.parent / "data" / "loaded"
 _KNOWN = {"transactions","weekly_reports","ad_costs","warehouse_stocks",
-          "supply_recommendations","returns","price_templates","paid_storage"}
+          "supply_recommendations","returns","price_templates","paid_storage",
+          "product_catalog","wb_commissions","product_ratings"}
 
 @dataclass
 class DomainLoadResult:
@@ -41,7 +42,12 @@ class DomainLoader:
         return self._load_json(result, file_id)
 
     def _load_json(self, result: DomainParseResult, file_id: int) -> DomainLoadResult:
-        table_path = self.data_dir / f"{result.db_table}.json"
+        # Reference tables go to data/ root for direct access by API
+        _REF_TABLES = {"wb_commissions"}
+        if result.db_table in _REF_TABLES:
+            table_path = self.data_dir.parent / f"{result.db_table}.json"
+        else:
+            table_path = self.data_dir / f"{result.db_table}.json"
         source_key = result.filepath.name
         existing: list[dict] = []
         if table_path.exists():

@@ -84,6 +84,25 @@ REPORT_REGISTRY: list[ReportType] = [
         col_count_range=(10, 50),
     ),
     ReportType(
+        report_id="wb_commission_table", official_name="Таблица комиссий WB",
+        domain="reference_intelligence",
+        name_patterns=[r"commission", r"комисс"],
+        required_cols=["Предмет", "Склад WB, %", "Категория"],
+        parser_strategy="commission", db_table="wb_commissions",
+        description="Базовые ставки ВВ% WB по всем предметам (FBO/FBS)",
+        col_count_range=(6, 12),
+    ),
+    ReportType(
+        report_id="product_ratings", official_name="Оценка товара / Рейтинг карточки",
+        domain="content_intelligence",
+        name_patterns=[r"рейтинг", r"оценк", r"rating"],
+        required_cols=["Артикул WB", "Рейтинг карточки", "Рейтинг по отзывам"],
+        header_row=1,
+        parser_strategy="rating", db_table="product_ratings",
+        description="Рейтинг карточек товаров с историей по периодам",
+        col_count_range=(20, 35),
+    ),
+    ReportType(
         report_id="paid_storage", official_name="Платное хранение",
         domain="finance_intelligence",
         name_patterns=[r"платное.{0,5}хранени", r"paid.{0,5}stor"],
@@ -139,6 +158,20 @@ class CanonicalReportClassifier:
     def _read_sample(filepath: Path, header_row: int) -> Optional[pd.DataFrame]:
         try:
             ext = filepath.suffix.lower()
+            # ZIP with xlsx inside (rating reports)
+            if ext == ".zip":
+                import zipfile as _zlib, io as _io
+                with _zlib.ZipFile(filepath) as z:
+                    xlsx_files = [n for n in z.namelist()
+                                  if n.lower().endswith((".xlsx",".xls")) and not n.startswith("__MACOSX")]
+                    if xlsx_files:
+                        with z.open(xlsx_files[0]) as f:
+                            raw = f.read()
+                        try:
+                            return pd.read_excel(_io.BytesIO(raw), sheet_name="Детализация по артикулам", header=1, nrows=3)
+                        except Exception:
+                            return pd.read_excel(_io.BytesIO(raw), header=header_row, nrows=3)
+                return None
             if ext in (".xlsx", ".xls"):
                 # Use xlsx_utils for WB SharedStrings.xml case bug
                 try:
