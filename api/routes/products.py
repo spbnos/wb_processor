@@ -34,6 +34,38 @@ _MANUAL_COSTS = Path(__file__).resolve().parents[2] / "data" / "manual_costs.jso
 
 # ── WB Commission rates (from Оферта 2024-2025) ──────────────────────────────
 # Базовые ставки ВВ% FBO (без НДС) по категориям
+# Loaded from wb_commissions.json at runtime (from commission.xlsx)
+_COMM_CACHE: dict[str, dict] | None = None
+
+def _get_wb_rates(subject: str, category: str = "") -> dict:
+    """Lookup real WB commission rates from loaded table."""
+    global _COMM_CACHE
+    if _COMM_CACHE is None:
+        comm_path = _DATA.parent / "data" / "wb_commissions.json"
+        if not comm_path.exists():
+            comm_path = _DATA / "wb_commissions.json"
+        _COMM_CACHE = {}
+        if comm_path.exists():
+            try:
+                rows = json.loads(comm_path.read_bytes())
+                for r in rows:
+                    subj = str(r.get("subject","")).strip().lower()
+                    if subj:
+                        _COMM_CACHE[subj] = r
+            except Exception:
+                pass
+    subj_key = subject.strip().lower() if subject else ""
+    r = _COMM_CACHE.get(subj_key, {})
+    if not r and category:
+        # Fallback: find by category
+        for row in _COMM_CACHE.values():
+            if str(row.get("category","")).lower() == category.lower():
+                r = row; break
+    fbo = float(r.get("fbo_pct",0) or 15.0)
+    fbs = float(r.get("fbs_wb_pct",0) or fbo)
+    return {"fbo_pct": fbo or 15.0, "fbs_pct": fbs or 15.0, "source": "wb_table" if r else "default"}
+
+# Legacy hardcoded rates as fallback
 WB_COMMISSION_RATES: dict[str, dict] = {
     # Бижутерия и аксессуары
     "Браслеты":          {"fbo_pct": 17.0, "fbs_pct": 17.0},
@@ -182,6 +214,16 @@ def _build_matrix() -> list[dict]:
                 "roi_pct":             0.0,
                 # Meta
                 "data_sources": ["price_template"],
+                # Ratings (from product_ratings)
+                "card_rating":     0.0,
+                "review_rating":   0.0,
+                "reviews_total":   0,
+                "buyout_pct_fact": 0.0,
+                "orders_qty":      0,
+                "is_hidden":       False,
+                "rating_period":   "",
+                # Subject
+                "subject":         _s(r.get("category","")),
             }
 
     # ── 2. Enrich from product_catalog (cost_price + dimensions) ──
@@ -317,12 +359,39 @@ def _build_matrix() -> list[dict]:
         if "transactions" not in target["data_sources"]:
             target["data_sources"].append("transactions")
 
-    # ── 7. Calculate commission + logistics + unit economics ──
+    # ── 7a. Enrich from product_ratings (latest period) ──
+    ratings_data = _load("product_ratings")
+    if ratings_data:
+        for r in ratings_data:
+            sku = _s(r.get("sku_id",""))
+            art = _s(r.get("seller_article",""))
+            target = matrix.get(sku) or matrix.get(art)
+            if target is None: continue
+            target["card_rating"]     = _f(r.get("card_rating"))
+            target["review_rating"]   = _f(r.get("review_rating"))
+            target["reviews_total"]   = int(_f(r.get("reviews_total",0)))
+            target["buyout_pct_fact"] = _f(r.get("buyout_pct",0))
+            target["orders_qty"]      = int(_f(r.get("orders_qty",0)))
+            target["is_hidden"]       = str(r.get("is_hidden","")).lower() in ("true","да","1","yes")
+            target["rating_period"]   = f"{r.get('period_from','')}→{r.get('period_to','')}"
+            if "product_ratings" not in target["data_sources"]:
+                target["data_sources"].append("product_ratings")
+
+    # ── 7b. Calculate commission + logistics + unit economics ──
     for sku, p in matrix.items():
-        cat = p["category"]
-        rates = WB_COMMISSION_RATES.get(cat, WB_COMMISSION_RATES["_default"])
+        cat     = p.get("category","")
+        subject = p.get("subject","") or cat
+        # Dynamic rates from commission table
+        try:
+            rates = _get_wb_rates(subject, cat)
+        except Exception:
+            rates = {"fbo_pct": 15.0, "fbs_pct": 15.0}
+        if not rates.get("fbo_pct"):
+            fallback = WB_COMMISSION_RATES.get(cat, WB_COMMISSION_RATES["_default"])
+            rates["fbo_pct"] = fallback["fbo_pct"]
+            rates["fbs_pct"] = fallback["fbs_pct"]
         p["kvv_fbo_pct"] = rates["fbo_pct"]
-        p["kvv_fbs_pct"] = rates["fbs_pct"]
+        p["kvv_fbs_pct"] = rates.get("fbs_pct", rates["fbo_pct"])
 
         vol = p["volume_l"]
         if vol == 0 and p["weight_kg"] > 0:

@@ -98,6 +98,14 @@ try:
 except ImportError as _e:
     logger.warning(f"[main] Products router not available: {_e}")
 
+# Commissions + deductions + calculator + ratings
+try:
+    from api.routes import commissions as commissions_module
+    app.include_router(commissions_module.router, prefix="/api")
+    logger.info("[main] Commissions router registered")
+except ImportError as _e:
+    logger.warning(f"[main] Commissions router not available: {_e}")
+
 @app.get("/", include_in_schema=False)
 async def root():
     return {
