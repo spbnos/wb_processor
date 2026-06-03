@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Activity, Layers, AlertTriangle, CheckCircle, Upload, RefreshCw } from 'lucide-react'
+import { Activity, Layers, AlertTriangle, CheckCircle, Upload, RefreshCw, Play, FolderOpen } from 'lucide-react'
 import { usePolling } from '../hooks/useApi'
 import { api } from '../api/client'
 import StatCard from '../components/StatCard'
@@ -14,6 +14,20 @@ export default function CommandCenter() {
   const [uploading, setUploading] = useState(false)
   const [lastTask, setLastTask]   = useState<string | null>(null)
   const [taskStatus, setTaskStatus] = useState<string | null>(null)
+  const [processing, setProcessing] = useState(false)
+  const [processResult, setProcessResult] = useState<{queued:number;files:string[]} | null>(null)
+  const { data: incoming } = usePolling(api.listIncoming, 10_000)
+
+  async function handleProcessAll() {
+    setProcessing(true)
+    setProcessResult(null)
+    try {
+      const r = await api.processAll()
+      setProcessResult(r)
+      setTimeout(refetch, 3000)
+    } catch(e) { console.error(e) }
+    finally { setProcessing(false) }
+  }
 
   async function handleDrop(e: React.DragEvent) {
     e.preventDefault(); setDragging(false)
@@ -92,6 +106,14 @@ export default function CommandCenter() {
               icon={<AlertTriangle size={14}/>}
             />
             <StatCard
+              label="В incoming/"
+              value={fmt.num(incoming?.count ?? 0)}
+              sub={(incoming?.count ?? 0) > 0 ? '↑ Ожидают обработки' : 'Все обработаны'}
+              accent={(incoming?.count ?? 0) > 0}
+              glow={(incoming?.count ?? 0) > 0 ? 'amber' : 'none'}
+              icon={<FolderOpen size={14}/>}
+            />
+            <StatCard
               label="Задач в очереди"
               value={fmt.num(queueTotal)}
               sub="Redis queue depth"
@@ -158,6 +180,81 @@ export default function CommandCenter() {
                     </div>
                   )}
                 </>
+              )}
+            </div>
+
+            {/* Process All incoming */}
+            <div style={{
+              background: 'var(--bg-panel)',
+              border: `1px solid ${(incoming?.count ?? 0) > 0 ? 'rgba(245,158,11,0.3)' : 'var(--border-dim)'}`,
+              borderRadius: 'var(--radius-lg)',
+              padding: '20px 22px',
+              display: 'flex', flexDirection: 'column', gap: 14,
+            }}>
+              <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
+                <div>
+                  <div style={{ fontFamily:'var(--font-display)', fontSize:14, fontWeight:700, color:'var(--text-white)' }}>
+                    Обработать входящие
+                  </div>
+                  <div style={{ fontFamily:'var(--font-mono)', fontSize:9, color:'var(--text-dim)', marginTop:3 }}>
+                    CanonicalReportClassifier · {(incoming?.count ?? 0)} файлов в incoming/
+                  </div>
+                </div>
+                <button
+                  onClick={handleProcessAll}
+                  disabled={processing || (incoming?.count ?? 0) === 0}
+                  style={{
+                    display:'flex', alignItems:'center', gap:7,
+                    padding:'8px 16px', borderRadius:'var(--radius-sm)',
+                    background: processing ? 'var(--bg-raised)' : (incoming?.count ?? 0) > 0 ? 'var(--amber-glow)' : 'var(--bg-raised)',
+                    border: `1px solid ${processing ? 'var(--border-dim)' : (incoming?.count ?? 0) > 0 ? 'var(--amber)' : 'var(--border-dim)'}`,
+                    color: processing ? 'var(--text-dim)' : (incoming?.count ?? 0) > 0 ? 'var(--amber)' : 'var(--text-dim)',
+                    fontFamily:'var(--font-mono)', fontSize:11, fontWeight:600,
+                    cursor: processing || (incoming?.count ?? 0) === 0 ? 'not-allowed' : 'pointer',
+                    transition:'all 0.15s', letterSpacing:'0.05em',
+                  }}
+                >
+                  {processing
+                    ? <><RefreshCw size={12} style={{animation:'spin 1s linear infinite'}}/> ОБРАБОТКА…</>
+                    : <><Play size={12}/> ЗАПУСТИТЬ</>
+                  }
+                </button>
+              </div>
+
+              {/* File list */}
+              {(incoming?.files?.length ?? 0) > 0 && (
+                <div style={{ maxHeight:140, overflowY:'auto' }}>
+                  {(incoming?.files ?? []).slice(0, 12).map((f, i) => (
+                    <div key={i} style={{
+                      padding:'4px 8px', marginBottom:2,
+                      background:'var(--bg-raised)', borderRadius:3,
+                      fontFamily:'var(--font-mono)', fontSize:9, color:'var(--text-muted)',
+                      display:'flex', justifyContent:'space-between',
+                    }}>
+                      <span style={{ overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap', maxWidth:'80%' }}>
+                        {f.name}
+                      </span>
+                      <span style={{ color:'var(--text-dim)', flexShrink:0 }}>{f.size_kb}кб</span>
+                    </div>
+                  ))}
+                  {(incoming?.files?.length ?? 0) > 12 && (
+                    <div style={{ fontFamily:'var(--font-mono)', fontSize:9, color:'var(--text-dim)', padding:'4px 8px' }}>
+                      …и ещё {(incoming?.files?.length ?? 0) - 12} файлов
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Result */}
+              {processResult && (
+                <div style={{
+                  padding:'8px 10px', borderRadius:4,
+                  background:'rgba(34,197,94,0.08)', border:'1px solid rgba(34,197,94,0.25)',
+                  fontFamily:'var(--font-mono)', fontSize:10, color:'var(--green)',
+                  display:'flex', alignItems:'center', gap:6,
+                }}>
+                  <CheckCircle size={11}/> Запущена обработка {processResult.queued} файлов
+                </div>
               )}
             </div>
 

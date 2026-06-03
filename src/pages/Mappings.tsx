@@ -7,7 +7,7 @@ import Spinner from '../components/Spinner'
 import { categoryLabel, fmt } from '../utils/format'
 import type { MappingItem } from '../types'
 
-function MappingRow({ m, onDelete }: { m: MappingItem; onDelete: (id: number) => void }) {
+function MappingRow({ m, onDelete }: { m: MappingItem; onDelete: (id: number) => void | Promise<void> }) {
   const [deleting, setDeleting] = useState(false)
 
   async function handleDelete() {
@@ -49,7 +49,7 @@ function MappingRow({ m, onDelete }: { m: MappingItem; onDelete: (id: number) =>
         fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 700,
         color: 'var(--amber)', textAlign: 'center',
       }}>
-        {m.columns}
+        {m.column_count ?? m.columns ?? 0}
       </div>
 
       <Badge label={m.active ? 'ACTIVE' : 'OFF'} variant={m.active ? 'ok' : 'dim'} />

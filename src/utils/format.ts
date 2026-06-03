@@ -1,4 +1,5 @@
 export const fmt = {
+  rub:  (n: number) => new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB', maximumFractionDigits: 0 }).format(n),
   num:  (n: number) => new Intl.NumberFormat('ru-RU').format(n),
   pct:  (n: number) => `${(n * 100).toFixed(1)}%`,
   ms:   (ms: number) => ms < 1000 ? `${ms}ms` : `${(ms/1000).toFixed(1)}s`,
