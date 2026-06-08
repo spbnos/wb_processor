@@ -1,0 +1,825 @@
+Текст ниже существенно усиливает архитектурную часть, но для системы уровня **Minderest / Netstock / Inventory Planner / Anaplan Supply Chain / SAP IBP Lite для маркетплейсов** я бы добавил еще несколько критических блоков, которые обычно забывают на старте и потом переписывают половину системы.
+
+Главные дополнения:
+
+* Канальная аналитика (WB FBO/FBS отдельно, Ozon FBO/FBS отдельно).
+* Финансовое планирование закупок.
+* Планирование контейнеров и MOQ.
+* Автоматический выбор склада поставки WB/Ozon.
+* Расчет упущенной выручки.
+* Управление ассортиментной матрицей.
+* Forecast Explainability.
+* AI Copilot.
+* Data Catalog.
+* Semantic Layer.
+* Canonical Product Registry.
+* Event Sourcing для полной аудируемости.
+* Feature Store.
+* MDM слой.
+* Product Knowledge Graph.
+* Supplier Knowledge Graph.
+* Forecast Hierarchy.
+* Scenario Planning.
+* Budget Constraints Engine.
+* Working Capital Optimization.
+* GMROI Optimizer.
+* Auto Redistribution между складами.
+* Auto Purchase Calendar.
+
+Ниже уже версия уровня Enterprise.
+
+---
+
+# ENTERPRISE MASTER PROMPT
+
+# AI SUPPLY CHAIN PLATFORM FOR WILDBERRIES & OZON
+
+## РОЛЬ ИИ
+
+Ты выступаешь как команда из:
+
+* Principal Solution Architect
+* Principal Data Architect
+* Staff Backend Engineer
+* Senior ML Engineer
+* Senior MLOps Engineer
+* Senior Frontend Architect
+* Senior DevOps Architect
+* Product Director Marketplace SaaS
+* Supply Chain Consultant
+* Inventory Optimization Expert
+
+Спроектируй Enterprise SaaS платформу автоматического управления закупками, запасами и поставками для Wildberries, Ozon и будущего подключения любых маркетплейсов.
+
+Цель системы:
+
+* минимизация Out Of Stock
+* минимизация Dead Stock
+* оптимизация оборотного капитала
+* автоматизация закупок
+* прогнозирование спроса
+* повышение оборачиваемости
+* снижение Lost Sales
+* увеличение GMROI
+
+---
+
+# BUSINESS GOALS
+
+Система должна обеспечивать:
+
+* снижение Lost Sales на 20-40%
+* снижение избыточных запасов на 15-30%
+* увеличение оборачиваемости
+* повышение Service Level
+* снижение ручной работы менеджеров
+
+---
+
+# SCALE TARGET
+
+Поддержка:
+
+* 100+ компаний
+* 1000+ кабинетов WB/Ozon
+* 50000+ SKU
+* 1000000+ записей продаж в сутки
+* 10+ лет истории
+
+---
+
+# MULTI TENANT MODEL
+
+Поддержка:
+
+Tenant
+→ Company
+→ Marketplace Account
+→ Warehouse
+→ Supplier
+→ Product
+→ SKU
+
+Каждая сущность должна быть tenant-aware.
+
+Использовать:
+
+* PostgreSQL Row Level Security
+* Tenant Context
+* Audit Trail
+
+---
+
+# MASTER DATA MANAGEMENT
+
+Создать полноценный MDM слой.
+
+Canonical Product Registry.
+
+Объединять данные из:
+
+* WB
+* Ozon
+* ERP
+* Excel
+* CSV
+
+Один товар должен иметь единый идентификатор независимо от площадки.
+
+Пример:
+
+SKU-0001
+
+WB:
+
+* nmID
+
+Ozon:
+
+* offer_id
+
+ERP:
+
+* internal_id
+
+---
+
+# DATA SOURCES
+
+## Marketplace API
+
+Wildberries:
+
+* остатки
+* продажи
+* заказы
+* реклама
+* карточки
+* отзывы
+* цены
+
+Ozon:
+
+* остатки
+* продажи
+* заказы
+* реклама
+* карточки
+* отзывы
+* цены
+
+---
+
+## Supplier API
+
+Поставщики
+
+* остатки
+* цены
+* MOQ
+* Lead Time
+
+---
+
+## ERP
+
+Подключаемые ERP:
+
+* МойСклад
+* 1С
+* SAP
+* Oracle
+* любые REST API
+
+---
+
+## FILE IMPORTS
+
+Поддержка:
+
+* xlsx
+* xls
+* csv
+* ods
+
+Загрузка любых исторических данных.
+
+---
+
+# DATA PLATFORM
+
+Использовать архитектуру:
+
+RAW
+
+→ BRONZE
+
+→ SILVER
+
+→ GOLD
+
+---
+
+RAW
+
+Неизмененные данные.
+
+---
+
+BRONZE
+
+Стандартизация.
+
+---
+
+SILVER
+
+Очистка.
+
+---
+
+GOLD
+
+Аналитические витрины.
+
+---
+
+# DATABASES
+
+Основная БД:
+
+PostgreSQL 16+
+
+Временные ряды:
+
+TimescaleDB
+
+Поиск:
+
+OpenSearch
+
+Кэш:
+
+Redis
+
+Объектное хранилище:
+
+S3 Compatible
+
+---
+
+# DATA QUALITY ENGINE
+
+Проверять:
+
+* дубликаты
+* пропуски
+* отрицательные остатки
+* невозможные продажи
+* расхождения API и Excel
+
+Каждая ошибка должна иметь статус.
+
+---
+
+# EVENT SOURCING
+
+Каждое изменение хранить как событие.
+
+Примеры:
+
+StockChanged
+
+ForecastUpdated
+
+POCreated
+
+POApproved
+
+GoodsReceived
+
+SupplierDelayed
+
+---
+
+# INVENTORY VISIBILITY
+
+Учитывать:
+
+Основной склад
+
+*
+
+Транзит
+
+*
+
+В пути
+
+*
+
+Производство
+
+*
+
+FBO
+
+*
+
+FBS
+
+*
+
+Возвраты
+
+*
+
+Резерв
+
+*
+
+Непринятые поставки
+
+---
+
+# SUPPLY CHAIN GRAPH
+
+Построить модель:
+
+Supplier
+
+→ Factory
+
+→ Transit
+
+→ Main Warehouse
+
+→ WB
+
+→ Customer
+
+Для каждого этапа хранить Lead Time.
+
+---
+
+# ANALYTICS
+
+## ABC
+
+По выручке.
+
+---
+
+## XYZ
+
+По стабильности спроса.
+
+---
+
+## FSN
+
+Fast
+
+Slow
+
+Non Moving
+
+---
+
+## GMROI
+
+Gross Margin Return On Inventory.
+
+---
+
+## Inventory Turnover
+
+Полная оборачиваемость.
+
+---
+
+## Lost Sales
+
+Расчет упущенной прибыли.
+
+---
+
+# FORECAST ENGINE
+
+Использовать ансамбль моделей.
+
+## Statistical
+
+* Prophet
+* ARIMA
+
+## ML
+
+* CatBoost
+* LightGBM
+* XGBoost
+
+## Deep Learning
+
+* TFT
+* N-BEATS
+
+---
+
+# FEATURE STORE
+
+Фичи:
+
+История продаж
+
+Сезонность
+
+Праздники
+
+CTR
+
+CR
+
+Рейтинг
+
+Отзывы
+
+Цена
+
+Акции
+
+Реклама
+
+Конкуренция
+
+Остатки
+
+Lead Time
+
+Поставщик
+
+---
+
+# FORECAST HIERARCHY
+
+Forecast должен строиться на уровнях:
+
+Company
+
+↓
+
+Category
+
+↓
+
+Brand
+
+↓
+
+Product
+
+↓
+
+SKU
+
+---
+
+# COLD START ENGINE
+
+Для новинок.
+
+Использовать:
+
+Embeddings
+
+*
+
+Similarity Search
+
+*
+
+Category Transfer Learning
+
+---
+
+# DEMAND SENSING
+
+Учитывать последние изменения:
+
+* реклама
+* цена
+* рейтинг
+* отзывы
+* позиции
+
+---
+
+# FORECAST EXPLAINABILITY
+
+Каждый прогноз должен отвечать:
+
+Почему вырос спрос?
+
+Почему снизился спрос?
+
+Какие факторы повлияли?
+
+---
+
+# REPLENISHMENT ENGINE
+
+Поддерживаемые стратегии:
+
+Continuous Review
+
+Periodic Review
+
+Min-Max
+
+EOQ
+
+Dynamic Reorder Point
+
+Service Level Planning
+
+---
+
+# AUTO POLICY SELECTION
+
+AX
+
+→ Aggressive Replenishment
+
+AY
+
+→ Moderate Replenishment
+
+AZ
+
+→ Safety Stock Focus
+
+BX
+
+→ Standard
+
+BZ
+
+→ Controlled
+
+CZ
+
+→ Manual Approval
+
+---
+
+# SAFETY STOCK ENGINE
+
+Учитывать:
+
+* variability demand
+* variability lead time
+* service level
+
+---
+
+# WORKING CAPITAL OPTIMIZER
+
+Система должна учитывать:
+
+* доступный бюджет
+* оборотный капитал
+* кредитные лимиты
+
+Запрещать закупки сверх лимитов.
+
+---
+
+# BUDGET CONSTRAINT ENGINE
+
+Если бюджета недостаточно:
+
+ранжировать товары по:
+
+1. Lost Sales Risk
+2. Маржа
+3. GMROI
+4. ABC класс
+
+---
+
+# SUPPLIER SCORING
+
+Оценивать:
+
+* надежность
+* скорость
+* процент брака
+* процент недопоставки
+* стабильность цены
+
+---
+
+# PURCHASE ORDER ENGINE
+
+Автоматически создавать:
+
+PO Draft
+
+↓
+
+Approval
+
+↓
+
+Supplier Confirmation
+
+↓
+
+Shipment
+
+↓
+
+Receipt
+
+↓
+
+Closed
+
+---
+
+# AUTO PURCHASE CALENDAR
+
+Автоматически планировать закупки на:
+
+* неделю
+* месяц
+* квартал
+
+---
+
+# AUTO REDISTRIBUTION
+
+Между складами.
+
+Если на складе A избыток,
+а на складе B дефицит,
+создавать предложение перемещения.
+
+---
+
+# WHAT IF SIMULATOR
+
+Поддержать сценарии:
+
+Изменение рекламы
+
+Изменение цены
+
+Рост спроса
+
+Задержка поставщика
+
+Смена поставщика
+
+Запуск акции
+
+---
+
+# AI COPILOT
+
+LLM-модуль.
+
+Примеры:
+
+Почему система предлагает заказать 1200 штук?
+
+Что произойдет если увеличить рекламу на 30%?
+
+Какие SKU создают основной риск дефицита?
+
+---
+
+# NOTIFICATIONS
+
+Telegram
+
+Email
+
+Slack
+
+Web Push
+
+---
+
+# FRONTEND
+
+React
+
+TypeScript
+
+TanStack Query
+
+AG Grid
+
+Apache ECharts
+
+---
+
+Главный экран:
+
+Красный:
+меньше 3 дней запаса
+
+Желтый:
+меньше 7 дней
+
+Зеленый:
+больше 14 дней
+
+---
+
+Карточка SKU:
+
+* факт продаж
+* прогноз
+* остаток
+* в пути
+* точка заказа
+* страховой запас
+* прогноз дефицита
+
+---
+
+# SECURITY
+
+RBAC
+
+ABAC
+
+Audit Trail
+
+JWT
+
+OIDC
+
+Keycloak
+
+---
+
+# OBSERVABILITY
+
+Prometheus
+
+Grafana
+
+OpenTelemetry
+
+Sentry
+
+Loki
+
+---
+
+# CI/CD
+
+GitHub Actions
+
+Docker
+
+Helm
+
+Kubernetes
+
+ArgoCD
+
+Terraform
+
+---
+
+# DELIVERABLES
+
+Сформировать:
+
+1. C4 Architecture
+2. DDD Model
+3. Event Storming
+4. ER Diagram
+5. Database Schema
+6. API Specifications
+7. Dagster Assets
+8. dbt Models
+9. ML Pipelines
+10. Feature Store Schema
+11. Frontend Architecture
+12. UX Flows
+13. Repository Structure
+14. CI/CD Architecture
+15. Security Architecture
+16. Monitoring Architecture
+17. Product Backlog
+18. Roadmap 12 Months
+19. Team Structure
+20. Estimate in Person-Days
+
+Все решения должны соответствовать Enterprise-grade практикам 2025-2026 годов и быть готовы к масштабированию без переписывания архитектуры.
+
