@@ -55,4 +55,8 @@ export const api = {
   productsBrands:   ()                        => req<any[]>('/products/brands'),
   productsCategories: ()                      => req<any[]>('/products/categories'),
   updateCost:       (sku: string, cost:number)=> req<any>(`/products/cost?sku_id=${encodeURIComponent(sku)}&cost_price=${cost}`, {method:'POST'}),
+  commissionsQuery: (endpoint: string)        => req<any>(`/commissions/${endpoint}`),
+  commissionsCompute: (body: Record<string,any>) => req<any>('/commissions/calculator/compute', {method:'POST', body:JSON.stringify(body)}),
+  ratingsHistory:   ()                        => req<any>('/commissions/ratings/history'),
+  ratingsPeriod:    (key: string)             => req<any>(`/commissions/ratings/period/${encodeURIComponent(key)}`),
 }
